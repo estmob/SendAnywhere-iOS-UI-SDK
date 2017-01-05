@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:sdk_example/sdk_example.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:paprika_ios_4_sdk.xcodeproj">
    </FileRef>
    <FileRef

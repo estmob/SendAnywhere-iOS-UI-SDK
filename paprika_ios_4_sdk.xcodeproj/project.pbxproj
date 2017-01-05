@@ -7,24 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F5E4D0697B95EC8A73F6324 /* libPods-paprika_ios_4_sdkTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC08F3726A92591D4A3AA608 /* libPods-paprika_ios_4_sdkTests.a */; };
-		2B2C24FD9C928AA3482F5485 /* libPods-paprika_ios_4_sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B6BF96ACACF3E5F5D14C98E /* libPods-paprika_ios_4_sdk.a */; };
-		C208BC8D1E1DE5420087EC64 /* paprika_ios_4_sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C208BC831E1DE5420087EC64 /* paprika_ios_4_sdk.framework */; };
-		C208BC921E1DE5420087EC64 /* paprika_ios_4_sdkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C208BC911E1DE5420087EC64 /* paprika_ios_4_sdkTests.m */; };
-		C208BC941E1DE5420087EC64 /* paprika_ios_4_sdk.h in Headers */ = {isa = PBXBuildFile; fileRef = C208BC861E1DE5420087EC64 /* paprika_ios_4_sdk.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6BD754D4AA82D610A51C856 /* libPods-SendAnywhereSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14EE3DED822CD9F3E8014C60 /* libPods-SendAnywhereSDK.a */; };
 		C208BCCA1E1DE8EC0087EC64 /* SendAnywhereSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C208BCC11E1DE8EC0087EC64 /* SendAnywhereSDK.framework */; };
 		C208BCCF1E1DE8EC0087EC64 /* SendAnywhereSDKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C208BCCE1E1DE8EC0087EC64 /* SendAnywhereSDKTests.m */; };
 		C208BCD11E1DE8EC0087EC64 /* SendAnywhereSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = C208BCC31E1DE8EC0087EC64 /* SendAnywhereSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C208BDC01E1E15CB0087EC64 /* SADebugReceiveViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C208BDBE1E1E15CB0087EC64 /* SADebugReceiveViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C208BDC11E1E15CB0087EC64 /* SADebugReceiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C208BDBF1E1E15CB0087EC64 /* SADebugReceiveViewController.m */; };
+		C2669CBF1E1E213000437C3A /* SendAnywhere.h in Headers */ = {isa = PBXBuildFile; fileRef = C2669CBD1E1E213000437C3A /* SendAnywhere.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2669CC01E1E213000437C3A /* SendAnywhere.m in Sources */ = {isa = PBXBuildFile; fileRef = C2669CBE1E1E213000437C3A /* SendAnywhere.m */; };
+		C2669CC61E1E238100437C3A /* PreferenceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C2669CC41E1E238100437C3A /* PreferenceManager.h */; };
+		C2669CC71E1E238100437C3A /* PreferenceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C2669CC51E1E238100437C3A /* PreferenceManager.m */; };
+		C2669CD31E1E41A200437C3A /* DebugReceiveTableViewDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = C2669CD11E1E41A200437C3A /* DebugReceiveTableViewDataSource.h */; };
+		C2669CD41E1E41A200437C3A /* DebugReceiveTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C2669CD21E1E41A200437C3A /* DebugReceiveTableViewDataSource.m */; };
+		C2669CD71E1E430800437C3A /* DebugReceiveTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = C2669CD51E1E430800437C3A /* DebugReceiveTableViewCell.h */; };
+		C2669CD81E1E430800437C3A /* DebugReceiveTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2669CD61E1E430800437C3A /* DebugReceiveTableViewCell.m */; };
+		C2669CDB1E1E462300437C3A /* Logger.h in Headers */ = {isa = PBXBuildFile; fileRef = C2669CD91E1E462300437C3A /* Logger.h */; };
+		C2669CDC1E1E462300437C3A /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = C2669CDA1E1E462300437C3A /* Logger.m */; };
+		C2669CE11E1E499900437C3A /* EventUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C2669CDF1E1E499900437C3A /* EventUtil.h */; };
+		C2669CE21E1E499900437C3A /* EventUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C2669CE01E1E499900437C3A /* EventUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C208BC8E1E1DE5420087EC64 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C208BC7A1E1DE5420087EC64 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C208BC821E1DE5420087EC64;
-			remoteInfo = paprika_ios_4_sdk;
-		};
 		C208BCAC1E1DE8980087EC64 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C208BCA51E1DE8980087EC64 /* paprika_c.xcodeproj */;
@@ -45,20 +48,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = D09D8A5754F74C5DBFA5F378;
 			remoteInfo = paprika;
-		};
-		C208BCB81E1DE8B20087EC64 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C208BCB01E1DE8A50087EC64 /* paprika.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 9B0A864966DF48F3B8E7C2EB;
-			remoteInfo = paprika;
-		};
-		C208BCBA1E1DE8B20087EC64 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C208BCA51E1DE8980087EC64 /* paprika_c.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 0254E61D64C34C4385D837FF;
-			remoteInfo = paprika_c;
 		};
 		C208BCCB1E1DE8EC0087EC64 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -84,15 +73,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		251B30583E3D564F2167E346 /* Pods-paprika_ios_4_sdkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-paprika_ios_4_sdkTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-paprika_ios_4_sdkTests/Pods-paprika_ios_4_sdkTests.release.xcconfig"; sourceTree = "<group>"; };
-		6089982B575213EBB5DE8FA3 /* Pods-paprika_ios_4_sdk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-paprika_ios_4_sdk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-paprika_ios_4_sdk/Pods-paprika_ios_4_sdk.debug.xcconfig"; sourceTree = "<group>"; };
-		6F5326C3790E6ECF2E0B67E4 /* Pods-paprika_ios_4_sdkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-paprika_ios_4_sdkTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-paprika_ios_4_sdkTests/Pods-paprika_ios_4_sdkTests.debug.xcconfig"; sourceTree = "<group>"; };
+		08A961540954582F724AA9BA /* Pods-paprika_ios_4_sdk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-paprika_ios_4_sdk.release.xcconfig"; path = "Pods/Target Support Files/Pods-paprika_ios_4_sdk/Pods-paprika_ios_4_sdk.release.xcconfig"; sourceTree = "<group>"; };
+		14EE3DED822CD9F3E8014C60 /* libPods-SendAnywhereSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SendAnywhereSDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5148D468C39BABE312A0ABF8 /* Pods-SendAnywhereSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SendAnywhereSDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SendAnywhereSDK/Pods-SendAnywhereSDK.debug.xcconfig"; sourceTree = "<group>"; };
+		6F48382F8669A2C3ECEB05AE /* Pods-paprika_ios_4_sdkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-paprika_ios_4_sdkTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-paprika_ios_4_sdkTests/Pods-paprika_ios_4_sdkTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7812A6B16D08E0BF47E1090E /* Pods-paprika_ios_4_sdkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-paprika_ios_4_sdkTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-paprika_ios_4_sdkTests/Pods-paprika_ios_4_sdkTests.release.xcconfig"; sourceTree = "<group>"; };
 		7B6BF96ACACF3E5F5D14C98E /* libPods-paprika_ios_4_sdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-paprika_ios_4_sdk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC08F3726A92591D4A3AA608 /* libPods-paprika_ios_4_sdkTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-paprika_ios_4_sdkTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C208BC831E1DE5420087EC64 /* paprika_ios_4_sdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = paprika_ios_4_sdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C208BC861E1DE5420087EC64 /* paprika_ios_4_sdk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = paprika_ios_4_sdk.h; sourceTree = "<group>"; };
 		C208BC871E1DE5420087EC64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C208BC8C1E1DE5420087EC64 /* paprika_ios_4_sdkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = paprika_ios_4_sdkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C208BC911E1DE5420087EC64 /* paprika_ios_4_sdkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = paprika_ios_4_sdkTests.m; sourceTree = "<group>"; };
 		C208BC931E1DE5420087EC64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C208BCA51E1DE8980087EC64 /* paprika_c.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = paprika_c.xcodeproj; path = ../paprika_cpplib/build/clib/paprika/paprika_c.xcodeproj; sourceTree = "<group>"; };
@@ -103,31 +92,32 @@
 		C208BCC91E1DE8EC0087EC64 /* SendAnywhereSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SendAnywhereSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C208BCCE1E1DE8EC0087EC64 /* SendAnywhereSDKTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SendAnywhereSDKTests.m; sourceTree = "<group>"; };
 		C208BCD01E1DE8EC0087EC64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FAF51590C0B1FF9ADE042A35 /* Pods-paprika_ios_4_sdk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-paprika_ios_4_sdk.release.xcconfig"; path = "Pods/Target Support Files/Pods-paprika_ios_4_sdk/Pods-paprika_ios_4_sdk.release.xcconfig"; sourceTree = "<group>"; };
+		C208BDBE1E1E15CB0087EC64 /* SADebugReceiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SADebugReceiveViewController.h; sourceTree = "<group>"; };
+		C208BDBF1E1E15CB0087EC64 /* SADebugReceiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SADebugReceiveViewController.m; sourceTree = "<group>"; };
+		C2669CBD1E1E213000437C3A /* SendAnywhere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendAnywhere.h; sourceTree = "<group>"; };
+		C2669CBE1E1E213000437C3A /* SendAnywhere.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendAnywhere.m; sourceTree = "<group>"; };
+		C2669CC21E1E227700437C3A /* Global.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
+		C2669CC41E1E238100437C3A /* PreferenceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferenceManager.h; sourceTree = "<group>"; };
+		C2669CC51E1E238100437C3A /* PreferenceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferenceManager.m; sourceTree = "<group>"; };
+		C2669CD11E1E41A200437C3A /* DebugReceiveTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugReceiveTableViewDataSource.h; sourceTree = "<group>"; };
+		C2669CD21E1E41A200437C3A /* DebugReceiveTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugReceiveTableViewDataSource.m; sourceTree = "<group>"; };
+		C2669CD51E1E430800437C3A /* DebugReceiveTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugReceiveTableViewCell.h; sourceTree = "<group>"; };
+		C2669CD61E1E430800437C3A /* DebugReceiveTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugReceiveTableViewCell.m; sourceTree = "<group>"; };
+		C2669CD91E1E462300437C3A /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
+		C2669CDA1E1E462300437C3A /* Logger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Logger.m; sourceTree = "<group>"; };
+		C2669CDE1E1E469200437C3A /* EventDef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventDef.h; sourceTree = "<group>"; };
+		C2669CDF1E1E499900437C3A /* EventUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventUtil.h; sourceTree = "<group>"; };
+		C2669CE01E1E499900437C3A /* EventUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventUtil.m; sourceTree = "<group>"; };
+		C9AB72D33DED8009666DAE30 /* Pods-SendAnywhereSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SendAnywhereSDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-SendAnywhereSDK/Pods-SendAnywhereSDK.release.xcconfig"; sourceTree = "<group>"; };
+		F25FA646FE87C9EF7B778AC3 /* Pods-paprika_ios_4_sdk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-paprika_ios_4_sdk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-paprika_ios_4_sdk/Pods-paprika_ios_4_sdk.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C208BC7F1E1DE5420087EC64 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2B2C24FD9C928AA3482F5485 /* libPods-paprika_ios_4_sdk.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C208BC891E1DE5420087EC64 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C208BC8D1E1DE5420087EC64 /* paprika_ios_4_sdk.framework in Frameworks */,
-				0F5E4D0697B95EC8A73F6324 /* libPods-paprika_ios_4_sdkTests.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C208BCBD1E1DE8EC0087EC64 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6BD754D4AA82D610A51C856 /* libPods-SendAnywhereSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +137,7 @@
 			children = (
 				7B6BF96ACACF3E5F5D14C98E /* libPods-paprika_ios_4_sdk.a */,
 				BC08F3726A92591D4A3AA608 /* libPods-paprika_ios_4_sdkTests.a */,
+				14EE3DED822CD9F3E8014C60 /* libPods-SendAnywhereSDK.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -154,10 +145,12 @@
 		AB6988147E71F91BE906DADF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6089982B575213EBB5DE8FA3 /* Pods-paprika_ios_4_sdk.debug.xcconfig */,
-				FAF51590C0B1FF9ADE042A35 /* Pods-paprika_ios_4_sdk.release.xcconfig */,
-				6F5326C3790E6ECF2E0B67E4 /* Pods-paprika_ios_4_sdkTests.debug.xcconfig */,
-				251B30583E3D564F2167E346 /* Pods-paprika_ios_4_sdkTests.release.xcconfig */,
+				F25FA646FE87C9EF7B778AC3 /* Pods-paprika_ios_4_sdk.debug.xcconfig */,
+				08A961540954582F724AA9BA /* Pods-paprika_ios_4_sdk.release.xcconfig */,
+				6F48382F8669A2C3ECEB05AE /* Pods-paprika_ios_4_sdkTests.debug.xcconfig */,
+				7812A6B16D08E0BF47E1090E /* Pods-paprika_ios_4_sdkTests.release.xcconfig */,
+				5148D468C39BABE312A0ABF8 /* Pods-SendAnywhereSDK.debug.xcconfig */,
+				C9AB72D33DED8009666DAE30 /* Pods-SendAnywhereSDK.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -165,7 +158,6 @@
 		C208BC791E1DE5420087EC64 = {
 			isa = PBXGroup;
 			children = (
-				C208BCDC1E1DEE2A0087EC64 /* common */,
 				C208BCB01E1DE8A50087EC64 /* paprika.xcodeproj */,
 				C208BCA51E1DE8980087EC64 /* paprika_c.xcodeproj */,
 				C208BC851E1DE5420087EC64 /* paprika_ios_4_sdk */,
@@ -181,8 +173,6 @@
 		C208BC841E1DE5420087EC64 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C208BC831E1DE5420087EC64 /* paprika_ios_4_sdk.framework */,
-				C208BC8C1E1DE5420087EC64 /* paprika_ios_4_sdkTests.xctest */,
 				C208BCC11E1DE8EC0087EC64 /* SendAnywhereSDK.framework */,
 				C208BCC91E1DE8EC0087EC64 /* SendAnywhereSDKTests.xctest */,
 			);
@@ -211,7 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				C208BCAD1E1DE8980087EC64 /* libpaprika_c.a */,
-				C208BCAF1E1DE8980087EC64 /* libsendanywhere.dylib */,
+				C208BCAF1E1DE8980087EC64 /* libsendanywhere.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -227,6 +217,12 @@
 		C208BCC21E1DE8EC0087EC64 /* SendAnywhereSDK */ = {
 			isa = PBXGroup;
 			children = (
+				C2669CDD1E1E463000437C3A /* util */,
+				C2669CCA1E1E3EF100437C3A /* command */,
+				C2669CC31E1E236B00437C3A /* manager */,
+				C2669CC11E1E225F00437C3A /* global */,
+				C2669CB71E1E20ED00437C3A /* main */,
+				C208BDBD1E1DFC640087EC64 /* ui */,
 				C208BCC31E1DE8EC0087EC64 /* SendAnywhereSDK.h */,
 				C208BCC41E1DE8EC0087EC64 /* Info.plist */,
 			);
@@ -242,86 +238,103 @@
 			path = SendAnywhereSDKTests;
 			sourceTree = "<group>";
 		};
-		C208BCDC1E1DEE2A0087EC64 /* common */ = {
+		C208BDBD1E1DFC640087EC64 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				C2669CD01E1E40ED00437C3A /* debug */,
+			);
+			name = ui;
+			sourceTree = "<group>";
+		};
+		C2669CB71E1E20ED00437C3A /* main */ = {
+			isa = PBXGroup;
+			children = (
+				C2669CBD1E1E213000437C3A /* SendAnywhere.h */,
+				C2669CBE1E1E213000437C3A /* SendAnywhere.m */,
+			);
+			name = main;
+			sourceTree = "<group>";
+		};
+		C2669CC11E1E225F00437C3A /* global */ = {
+			isa = PBXGroup;
+			children = (
+				C2669CC21E1E227700437C3A /* Global.h */,
+				C2669CDE1E1E469200437C3A /* EventDef.h */,
+			);
+			name = global;
+			sourceTree = "<group>";
+		};
+		C2669CC31E1E236B00437C3A /* manager */ = {
+			isa = PBXGroup;
+			children = (
+				C2669CC41E1E238100437C3A /* PreferenceManager.h */,
+				C2669CC51E1E238100437C3A /* PreferenceManager.m */,
+			);
+			name = manager;
+			sourceTree = "<group>";
+		};
+		C2669CCA1E1E3EF100437C3A /* command */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = common;
+			name = command;
+			sourceTree = "<group>";
+		};
+		C2669CD01E1E40ED00437C3A /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				C208BDBE1E1E15CB0087EC64 /* SADebugReceiveViewController.h */,
+				C208BDBF1E1E15CB0087EC64 /* SADebugReceiveViewController.m */,
+				C2669CD11E1E41A200437C3A /* DebugReceiveTableViewDataSource.h */,
+				C2669CD21E1E41A200437C3A /* DebugReceiveTableViewDataSource.m */,
+				C2669CD51E1E430800437C3A /* DebugReceiveTableViewCell.h */,
+				C2669CD61E1E430800437C3A /* DebugReceiveTableViewCell.m */,
+			);
+			name = debug;
+			sourceTree = "<group>";
+		};
+		C2669CDD1E1E463000437C3A /* util */ = {
+			isa = PBXGroup;
+			children = (
+				C2669CD91E1E462300437C3A /* Logger.h */,
+				C2669CDA1E1E462300437C3A /* Logger.m */,
+				C2669CDF1E1E499900437C3A /* EventUtil.h */,
+				C2669CE01E1E499900437C3A /* EventUtil.m */,
+			);
+			name = util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		C208BC801E1DE5420087EC64 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C208BC941E1DE5420087EC64 /* paprika_ios_4_sdk.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C208BCBE1E1DE8EC0087EC64 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2669CD31E1E41A200437C3A /* DebugReceiveTableViewDataSource.h in Headers */,
+				C2669CE11E1E499900437C3A /* EventUtil.h in Headers */,
+				C2669CDB1E1E462300437C3A /* Logger.h in Headers */,
+				C2669CBF1E1E213000437C3A /* SendAnywhere.h in Headers */,
 				C208BCD11E1DE8EC0087EC64 /* SendAnywhereSDK.h in Headers */,
+				C208BDC01E1E15CB0087EC64 /* SADebugReceiveViewController.h in Headers */,
+				C2669CD71E1E430800437C3A /* DebugReceiveTableViewCell.h in Headers */,
+				C2669CC61E1E238100437C3A /* PreferenceManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		C208BC821E1DE5420087EC64 /* paprika_ios_4_sdk */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C208BC971E1DE5420087EC64 /* Build configuration list for PBXNativeTarget "paprika_ios_4_sdk" */;
-			buildPhases = (
-				21A17885C66C74ED08E6E190 /* [CP] Check Pods Manifest.lock */,
-				C208BC7E1E1DE5420087EC64 /* Sources */,
-				C208BC7F1E1DE5420087EC64 /* Frameworks */,
-				C208BC801E1DE5420087EC64 /* Headers */,
-				C208BC811E1DE5420087EC64 /* Resources */,
-				8A1969996F20EF6D81C680BA /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C208BCB91E1DE8B20087EC64 /* PBXTargetDependency */,
-				C208BCBB1E1DE8B20087EC64 /* PBXTargetDependency */,
-			);
-			name = paprika_ios_4_sdk;
-			productName = paprika_ios_4_sdk;
-			productReference = C208BC831E1DE5420087EC64 /* paprika_ios_4_sdk.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		C208BC8B1E1DE5420087EC64 /* paprika_ios_4_sdkTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C208BC9A1E1DE5420087EC64 /* Build configuration list for PBXNativeTarget "paprika_ios_4_sdkTests" */;
-			buildPhases = (
-				B7A6D3BF13F6C568774EB9C4 /* [CP] Check Pods Manifest.lock */,
-				C208BC881E1DE5420087EC64 /* Sources */,
-				C208BC891E1DE5420087EC64 /* Frameworks */,
-				C208BC8A1E1DE5420087EC64 /* Resources */,
-				55BE517DB5B8E30B27F89C93 /* [CP] Embed Pods Frameworks */,
-				87562548682FF6E17C1A2A6A /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C208BC8F1E1DE5420087EC64 /* PBXTargetDependency */,
-			);
-			name = paprika_ios_4_sdkTests;
-			productName = paprika_ios_4_sdkTests;
-			productReference = C208BC8C1E1DE5420087EC64 /* paprika_ios_4_sdkTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		C208BCC01E1DE8EC0087EC64 /* SendAnywhereSDK */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C208BCD21E1DE8EC0087EC64 /* Build configuration list for PBXNativeTarget "SendAnywhereSDK" */;
 			buildPhases = (
+				CAE20A5FE3F459710524B6CF /* [CP] Check Pods Manifest.lock */,
 				C208BCBC1E1DE8EC0087EC64 /* Sources */,
 				C208BCBD1E1DE8EC0087EC64 /* Frameworks */,
 				C208BCBE1E1DE8EC0087EC64 /* Headers */,
 				C208BCBF1E1DE8EC0087EC64 /* Resources */,
+				20C09B327A657C193DBD7E41 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -361,16 +374,6 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = do;
 				TargetAttributes = {
-					C208BC821E1DE5420087EC64 = {
-						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = WXATB2S4F3;
-						ProvisioningStyle = Automatic;
-					};
-					C208BC8B1E1DE5420087EC64 = {
-						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = WXATB2S4F3;
-						ProvisioningStyle = Automatic;
-					};
 					C208BCC01E1DE8EC0087EC64 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = WXATB2S4F3;
@@ -405,8 +408,6 @@
 			);
 			projectRoot = "";
 			targets = (
-				C208BC821E1DE5420087EC64 /* paprika_ios_4_sdk */,
-				C208BC8B1E1DE5420087EC64 /* paprika_ios_4_sdkTests */,
 				C208BCC01E1DE8EC0087EC64 /* SendAnywhereSDK */,
 				C208BCC81E1DE8EC0087EC64 /* SendAnywhereSDKTests */,
 			);
@@ -421,10 +422,10 @@
 			remoteRef = C208BCAC1E1DE8980087EC64 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C208BCAF1E1DE8980087EC64 /* libsendanywhere.dylib */ = {
+		C208BCAF1E1DE8980087EC64 /* libsendanywhere.a */ = {
 			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.dylib";
-			path = libsendanywhere.dylib;
+			fileType = archive.ar;
+			path = libsendanywhere.a;
 			remoteRef = C208BCAE1E1DE8980087EC64 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -438,20 +439,6 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
-		C208BC811E1DE5420087EC64 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C208BC8A1E1DE5420087EC64 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C208BCBF1E1DE8EC0087EC64 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -469,37 +456,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		21A17885C66C74ED08E6E190 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		55BE517DB5B8E30B27F89C93 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-paprika_ios_4_sdkTests/Pods-paprika_ios_4_sdkTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		87562548682FF6E17C1A2A6A /* [CP] Copy Pods Resources */ = {
+		20C09B327A657C193DBD7E41 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -511,25 +468,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-paprika_ios_4_sdkTests/Pods-paprika_ios_4_sdkTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SendAnywhereSDK/Pods-SendAnywhereSDK-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8A1969996F20EF6D81C680BA /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-paprika_ios_4_sdk/Pods-paprika_ios_4_sdk-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B7A6D3BF13F6C568774EB9C4 /* [CP] Check Pods Manifest.lock */ = {
+		CAE20A5FE3F459710524B6CF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -547,25 +489,17 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C208BC7E1E1DE5420087EC64 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C208BC881E1DE5420087EC64 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C208BC921E1DE5420087EC64 /* paprika_ios_4_sdkTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C208BCBC1E1DE8EC0087EC64 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2669CD41E1E41A200437C3A /* DebugReceiveTableViewDataSource.m in Sources */,
+				C2669CDC1E1E462300437C3A /* Logger.m in Sources */,
+				C2669CE21E1E499900437C3A /* EventUtil.m in Sources */,
+				C2669CD81E1E430800437C3A /* DebugReceiveTableViewCell.m in Sources */,
+				C2669CC01E1E213000437C3A /* SendAnywhere.m in Sources */,
+				C2669CC71E1E238100437C3A /* PreferenceManager.m in Sources */,
+				C208BDC11E1E15CB0087EC64 /* SADebugReceiveViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,21 +514,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C208BC8F1E1DE5420087EC64 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C208BC821E1DE5420087EC64 /* paprika_ios_4_sdk */;
-			targetProxy = C208BC8E1E1DE5420087EC64 /* PBXContainerItemProxy */;
-		};
-		C208BCB91E1DE8B20087EC64 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = paprika;
-			targetProxy = C208BCB81E1DE8B20087EC64 /* PBXContainerItemProxy */;
-		};
-		C208BCBB1E1DE8B20087EC64 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = paprika_c;
-			targetProxy = C208BCBA1E1DE8B20087EC64 /* PBXContainerItemProxy */;
-		};
 		C208BCCC1E1DE8EC0087EC64 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C208BCC01E1DE8EC0087EC64 /* SendAnywhereSDK */;
@@ -654,7 +573,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -699,7 +618,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -709,72 +628,9 @@
 			};
 			name = Release;
 		};
-		C208BC981E1DE5420087EC64 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6089982B575213EBB5DE8FA3 /* Pods-paprika_ios_4_sdk.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = WXATB2S4F3;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = paprika_ios_4_sdk/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.estmob.paprika-ios-4-sdk";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		C208BC991E1DE5420087EC64 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FAF51590C0B1FF9ADE042A35 /* Pods-paprika_ios_4_sdk.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = WXATB2S4F3;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = paprika_ios_4_sdk/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.estmob.paprika-ios-4-sdk";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		C208BC9B1E1DE5420087EC64 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6F5326C3790E6ECF2E0B67E4 /* Pods-paprika_ios_4_sdkTests.debug.xcconfig */;
-			buildSettings = {
-				DEVELOPMENT_TEAM = WXATB2S4F3;
-				INFOPLIST_FILE = paprika_ios_4_sdkTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.estmob.paprika-ios-4-sdkTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		C208BC9C1E1DE5420087EC64 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 251B30583E3D564F2167E346 /* Pods-paprika_ios_4_sdkTests.release.xcconfig */;
-			buildSettings = {
-				DEVELOPMENT_TEAM = WXATB2S4F3;
-				INFOPLIST_FILE = paprika_ios_4_sdkTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.estmob.paprika-ios-4-sdkTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 		C208BCD31E1DE8EC0087EC64 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5148D468C39BABE312A0ABF8 /* Pods-SendAnywhereSDK.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -793,6 +649,7 @@
 		};
 		C208BCD41E1DE8EC0087EC64 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9AB72D33DED8009666DAE30 /* Pods-SendAnywhereSDK.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -843,24 +700,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C208BC971E1DE5420087EC64 /* Build configuration list for PBXNativeTarget "paprika_ios_4_sdk" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C208BC981E1DE5420087EC64 /* Debug */,
-				C208BC991E1DE5420087EC64 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C208BC9A1E1DE5420087EC64 /* Build configuration list for PBXNativeTarget "paprika_ios_4_sdkTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C208BC9B1E1DE5420087EC64 /* Debug */,
-				C208BC9C1E1DE5420087EC64 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		C208BCD21E1DE8EC0087EC64 /* Build configuration list for PBXNativeTarget "SendAnywhereSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -868,6 +707,7 @@
 				C208BCD41E1DE8EC0087EC64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C208BCD51E1DE8EC0087EC64 /* Build configuration list for PBXNativeTarget "SendAnywhereSDKTests" */ = {
 			isa = XCConfigurationList;
@@ -876,6 +716,7 @@
 				C208BCD71E1DE8EC0087EC64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,3 +1,25 @@
-PODFILE CHECKSUM: 448c3676bf98f7e114b8ddbaa64eba50430ffc7d
+PODS:
+  - CocoaLumberjack (3.0.0):
+    - CocoaLumberjack/Default (= 3.0.0)
+    - CocoaLumberjack/Extensions (= 3.0.0)
+  - CocoaLumberjack/Core (3.0.0)
+  - CocoaLumberjack/Default (3.0.0):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (3.0.0):
+    - CocoaLumberjack/Default
+  - DateTools (1.7.0)
+  - Masonry (1.0.2)
 
-COCOAPODS: 1.1.1
+DEPENDENCIES:
+  - CocoaLumberjack
+  - DateTools
+  - Masonry
+
+SPEC CHECKSUMS:
+  CocoaLumberjack: c823149bccc5519a9447aeb433be7b1212a7d6a5
+  DateTools: 53288ee8b905fdc75897a1e6b5cc0144b14cba60
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+
+PODFILE CHECKSUM: 2670c85f53e00e7a7c241c4e4e0a403aa7eb129f
+
+COCOAPODS: 1.2.0.beta.3
