@@ -4,35 +4,29 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>SendAnywhereSDK.xcscheme</key>
+		<key>Pods-paprika_ios_4_sdk.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>1</integer>
 		</dict>
-		<key>paprika_ios_4_sdk.xcscheme</key>
+		<key>Pods-paprika_ios_4_sdkTests.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>C208BC821E1DE5420087EC64</key>
+		<key>7D16130B075F13E2E07B93107814CC6B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C208BC8B1E1DE5420087EC64</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C208BCC01E1DE8EC0087EC64</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C208BCC81E1DE8EC0087EC64</key>
+		<key>C517E9F1E1AB7A63BB6BB7042547C2F4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
