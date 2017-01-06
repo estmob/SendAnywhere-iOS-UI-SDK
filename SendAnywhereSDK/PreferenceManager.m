@@ -11,7 +11,7 @@
 
 @implementation PreferenceManager
 
-+ (PreferenceManager*)sharedInstance {
++ (instancetype)sharedInstance {
     static dispatch_once_t once;
     static PreferenceManager *shared = nil;
     

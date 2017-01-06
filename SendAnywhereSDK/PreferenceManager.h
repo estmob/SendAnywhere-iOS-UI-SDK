@@ -16,7 +16,7 @@ typedef NS_ENUM(NSInteger, ServerType) {
 
 @interface PreferenceManager : NSObject
 
-+ (PreferenceManager*)sharedInstance;
++ (instancetype)sharedInstance;
 
 - (ServerType)serverType;
 
