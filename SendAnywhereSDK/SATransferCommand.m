@@ -8,6 +8,14 @@
 
 #import "SATransferCommand.h"
 
+@interface SATransferCommand()
+
+
+
+@end
+
 @implementation SATransferCommand
+
+- (void)dispatch
 
 @end

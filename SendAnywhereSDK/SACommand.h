@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <paprika.h>
 
 typedef NS_ENUM(NSInteger, SACommandState) {
     SACommandReady,
@@ -16,19 +17,19 @@ typedef NS_ENUM(NSInteger, SACommandState) {
 
 @class SACommand;
 @protocol SACommandPrepareDelegate <NSObject>
-
+@optional
 - (void)didUpdateAuthToken:(SACommand*)sender token:(NSString*)token;
 - (void)didUpdateDeviceID:(SACommand*)sender deviceId:(NSString*)deviceId;
 
 @end
 
 @protocol SACommandNotifyDelegate <NSObject>
-
+@optional
 - (void)willCommandStart:(SACommand*)sender;
 - (void)didCommandFinish:(SACommand*)sender;
 
-- (void)willTaskStart:(SACommand*)sender;
-- (void)didTaskPrepre:(SACommand*)sender detailedState:(NSInteger)detailedState param:(id)param;
+- (void)willTaskStart:(SACommand*)sender task:(PaprikaTask)task;
+- (void)didTaskPrepare:(SACommand*)sender detailedState:(NSInteger)detailedState param:(id)param;
 - (void)didTaskNotify:(SACommand*)sender state:(NSInteger)state detailedState:(NSInteger)detailedState param:(id)param;
 - (void)didTaskFinish:(SACommand*)sender detailedState:(NSInteger)detailedState param:(id)param;
 - (void)didTaskError:(SACommand*)sender detailedState:(NSInteger)detailedState param:(id)param;
@@ -36,7 +37,7 @@ typedef NS_ENUM(NSInteger, SACommandState) {
 @end
 
 @protocol SACommandErrorDelegate <NSObject>
-
+@optional
 - (void)requireLogin:(SACommand*)sender;
 - (void)serverAuthentication:(SACommand*)sender;
 - (void)serverNetwork:(SACommand*)sender;
