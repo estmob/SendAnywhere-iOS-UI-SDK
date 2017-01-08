@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+#define PREFERENCE_SERVER_TYPE @"SAServerType"
+#define PREFERENCE_TRANSFER_EXPIRE_TIME @"SATransferExpireTime"
+
 typedef NS_ENUM(NSInteger, ServerType) {
     ServerTypeApi,
     ServerTypeStaging,
@@ -19,6 +22,7 @@ typedef NS_ENUM(NSInteger, ServerType) {
 + (instancetype)sharedInstance;
 
 - (ServerType)serverType;
+- (NSTimeInterval)transferExpireTime;
 
 
 @end

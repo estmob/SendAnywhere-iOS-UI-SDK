@@ -27,15 +27,24 @@
     if (bundle == nil) {
         return ServerTypeApi;
     }
-    
-    NSNumber *type = [bundle objectForInfoDictionaryKey:@"SAServerType"];
+    NSNumber *type = [bundle objectForInfoDictionaryKey:PREFERENCE_SERVER_TYPE];
     if (type == nil) {
-        DDLogDebug(@"SAServerType not found in plist file.");
+        DDLogDebug(@"%@ not found in plist file.", PREFERENCE_SERVER_TYPE);
         return ServerTypeApi;
     }
-    
     return type.integerValue;
-    
+}
+
+- (NSTimeInterval)transferExpireTime {
+    NSBundle *bundle = [NSBundle mainBundle];
+    if (bundle == nil) {
+        return 0;
+    }
+    NSNumber *time = [bundle objectForInfoDictionaryKey:PREFERENCE_TRANSFER_EXPIRE_TIME];
+    if (time == nil) {
+        return 0;
+    }
+    return time.doubleValue;
 }
 
 @end

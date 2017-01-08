@@ -12,7 +12,8 @@
 #import "CocoaLumberjack.h"
 #import "EventDef.h"
 
-extern DDLogLevel ddLogLevel; 
+extern DDLogLevel ddLogLevel;
 
+#define DEFAULT_TRANSFER_EXPIRE_TIME (10 * 60)
 
 #endif /* Global_h */

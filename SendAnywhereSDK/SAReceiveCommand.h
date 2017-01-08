@@ -8,6 +8,19 @@
 
 #import "SATransferCommand.h"
 
+@class SAReceiveCommand;
+@protocol SAReceiveErrorDelegate <NSObject>
+@optional
+- (void)didReceiveErrorDownloadPathNotExists:(SAReceiveCommand*)sender;
+- (void)didReceiveErrorKeyNotExists:(SAReceiveCommand*)sender;
+- (void)didReceiveErrorNoDiskSpace:(SAReceiveCommand*)sender;
+
+@end
+
 @interface SAReceiveCommand : SATransferCommand
+
+@property (nonatomic, retain) id<SACommandErrorDelegate, SATransferErrorDelegate, SAReceiveErrorDelegate> errorDelegate;
+
+- (void)setParamWithKey:(NSString *)key destDir:(NSString*)destDir;
 
 @end
