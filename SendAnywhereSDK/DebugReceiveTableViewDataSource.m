@@ -39,6 +39,9 @@
         if (log) {
             [self.msgList addObject:log];
             [tableView reloadData];
+            [tableView layoutIfNeeded];
+            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.msgList.count - 1 inSection:0];
+            [tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionBottom];
         }
     }];
 }

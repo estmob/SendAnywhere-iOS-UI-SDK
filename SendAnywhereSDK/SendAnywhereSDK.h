@@ -17,5 +17,9 @@ FOUNDATION_EXPORT const unsigned char SendAnywhereSDKVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <SendAnywhereSDK/PublicHeader.h>
 
 #import <SendAnywhereSDK/SendAnywhere.h>
+#import <SendAnywhereSDK/SACommand.h>
+#import <SendAnywhereSDK/SATransferCommand.h>
+#import <SendAnywhereSDK/SAReceiveCommand.h>
+
 #import <SendAnywhereSDK/SADebugReceiveViewController.h>
 

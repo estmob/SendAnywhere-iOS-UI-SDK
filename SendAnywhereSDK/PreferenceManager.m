@@ -8,6 +8,13 @@
 
 #import "PreferenceManager.h"
 #import "Global.h"
+@import UIKit;
+
+@interface PreferenceManager()
+
+@property (nonatomic, retain) NSUserDefaults *userDefaults;
+
+@end
 
 @implementation PreferenceManager
 
@@ -22,17 +29,35 @@
     return shared;
 }
 
-- (ServerType)serverType {
+- (instancetype)init {
+    if (self = [super init]) {
+        self.userDefaults = [NSUserDefaults standardUserDefaults];
+    }
+    return self;
+}
+
+- (NSString*)serverDomain {
     NSBundle *bundle = [NSBundle mainBundle];
     if (bundle == nil) {
-        return ServerTypeApi;
+        return @"api";
     }
-    NSNumber *type = [bundle objectForInfoDictionaryKey:PREFERENCE_SERVER_TYPE];
-    if (type == nil) {
-        DDLogDebug(@"%@ not found in plist file.", PREFERENCE_SERVER_TYPE);
-        return ServerTypeApi;
+    NSString *domain = [bundle objectForInfoDictionaryKey:PREFERENCE_SERVER_DOMAIN];
+    if (domain == nil) {
+        return @"api";
     }
-    return type.integerValue;
+    return domain;
+}
+
+- (NSString*)profileName {
+    NSBundle *bundle = [NSBundle mainBundle];
+    if (bundle == nil) {
+        return [UIDevice currentDevice].name;
+    }
+    NSString *name = [bundle objectForInfoDictionaryKey:PREFERENCE_PROFILE_NAME];
+    if (name == nil) {
+        return [UIDevice currentDevice].name;
+    }
+    return name;
 }
 
 - (NSTimeInterval)transferExpireTime {
@@ -45,6 +70,22 @@
         return 0;
     }
     return time.doubleValue;
+}
+
+- (NSString*)deviceID {
+    return [self.userDefaults stringForKey:@"sa_device_id"];
+}
+
+- (void)setDeviceID:(NSString *)deviceID {
+    [self.userDefaults setValue:deviceID forKey:@"sa_device_id"];
+}
+
+- (NSString*)devicePassword {
+    return [self.userDefaults stringForKey:@"sa_device_password"];
+}
+
+- (void)setDevicePassword:(NSString *)devicePassword {
+    [self.userDefaults setValue:devicePassword forKey:@"sa_device_password"];
 }
 
 @end

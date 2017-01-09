@@ -21,6 +21,12 @@
 
 @property (nonatomic, retain) id<SACommandErrorDelegate, SATransferErrorDelegate, SAReceiveErrorDelegate> errorDelegate;
 
+@property (nonatomic, retain) NSString *licenseUrl;
+
+- (void)executeWithKey:(NSString*)key destDir:(NSString*)destDir;
+- (void)executeWithKey:(NSString*)key destDir:(NSString*)destDir dispatchQueue:(dispatch_queue_t)dispatchQueue;
+
+- (void)setParamWithKey:(NSString *)key;
 - (void)setParamWithKey:(NSString *)key destDir:(NSString*)destDir;
 
 @end

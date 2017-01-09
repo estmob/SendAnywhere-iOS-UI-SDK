@@ -10,6 +10,9 @@
 
 @interface SACommand (private)
 
+@property (nonatomic, readonly) NSMutableArray *prepareObservers;
+@property (nonatomic, readonly) NSMutableArray *errorObservers;
+
 - (void)handleCommandStart;
 - (void)handleTaskPrepare:(PaprikaState)state detailedState:(PaprikaDetailedState)detailedState param:(id)param;
 - (void)handleTaskNotify:(PaprikaState)state detailedState:(PaprikaDetailedState)detailedState param:(id)param;
@@ -18,6 +21,7 @@
 - (void)dispatchTaskPrepare:(NSInteger)state detailedState:(NSInteger)detailedState param:(id)param;
 - (void)dispatchTaskError:(NSInteger)state detailedState:(NSInteger)detailedState param:(id)param;
 
+- (PaprikaTask)currentTask;
 - (void)processTaskResult:(PaprikaTask)task;
 
 @end

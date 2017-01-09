@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <paprika.h>
+#import "paprika.h"
+
+#define SA_COMMAND_PARAM_TYPE @"type"
 
 typedef NS_ENUM(NSInteger, SACommandState) {
     SACommandReady,
@@ -48,10 +50,6 @@ typedef NS_ENUM(NSInteger, SACommandState) {
 
 @interface SACommand : NSObject
 
-@property (nonatomic, retain) id<SACommandPrepareDelegate> prepareDelegate;
-@property (nonatomic, retain) id<SACommandNotifyDelegate> notifyDelegate;
-@property (nonatomic, retain) id<SACommandErrorDelegate> errorDelegate;
-
 @property (nonatomic, readonly) PaprikaState state;
 @property (nonatomic, readonly) PaprikaDetailedState detailedState;
 @property (nonatomic, readonly) PaprikaDetailedState lastError;
@@ -63,20 +61,29 @@ typedef NS_ENUM(NSInteger, SACommandState) {
 @property (nonatomic, readonly) BOOL isCanceledByOpponent;
 @property (nonatomic, readonly) BOOL hasError;
 
-@property (nonatomic, assign) BOOL pause;
-
 @property (nonatomic, readonly) NSString *stateString;
 @property (nonatomic, readonly) NSString *detailedString;
 @property (nonatomic, readonly) NSString *lastErrorString;
 
-
 - (void)execute;
 - (void)executeWithDispatchQueue:(dispatch_queue_t)dispatchQueue;
+- (void)cancel;
 
 - (void)setOptionWithKey:(PaprikaOptionKey)key value:(id)value;
 - (void)setParamWithKey:(NSString*)key value:(id)value;
 - (id)paramForKey:(NSString*)key;
+- (void)clearmParams;
 
 - (id)valueForKey:(PaprikaValue)key defaultValue:(id)defaultValue;
+
+- (void)addPrepareObserver:(id<SACommandPrepareDelegate>)observer;
+- (void)addNotifyObserver:(id<SACommandNotifyDelegate>)observer;
+- (void)addErrorObserver:(id<SACommandErrorDelegate>)observer;
+
+- (void)removePrepareObserver:(id<SACommandPrepareDelegate>)observer;
+- (void)removeNotifyObserver:(id<SACommandNotifyDelegate>)observer;
+- (void)removeErrorObserver:(id<SACommandErrorDelegate>)observer;
+
+
 
 @end

@@ -8,21 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
-#define PREFERENCE_SERVER_TYPE @"SAServerType"
+#define PREFERENCE_SERVER_DOMAIN @"SAServerDomain"
+#define PREFERENCE_PROFILE_NAME @"SAProfileName"
 #define PREFERENCE_TRANSFER_EXPIRE_TIME @"SATransferExpireTime"
-
-typedef NS_ENUM(NSInteger, ServerType) {
-    ServerTypeApi,
-    ServerTypeStaging,
-    ServerTypeTest
-};
 
 @interface PreferenceManager : NSObject
 
 + (instancetype)sharedInstance;
 
-- (ServerType)serverType;
-- (NSTimeInterval)transferExpireTime;
+@property (nonatomic, readonly) NSString *serverDomain;
+@property (nonatomic, readonly) NSString *profileName;
+@property (nonatomic, readonly) NSTimeInterval transferExpireTime;
 
+@property (nonatomic, retain) NSString *deviceID;
+@property (nonatomic, retain) NSString *devicePassword;
 
 @end

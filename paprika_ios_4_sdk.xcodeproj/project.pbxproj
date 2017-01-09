@@ -19,11 +19,11 @@
 		C23FBDF01E21C74F00391982 /* SATransferCommand+TypeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C23FBDEE1E21C74F00391982 /* SATransferCommand+TypeUtils.m */; };
 		C23FBDF31E226EAF00391982 /* NSString+sa.h in Headers */ = {isa = PBXBuildFile; fileRef = C23FBDF11E226EAF00391982 /* NSString+sa.h */; };
 		C23FBDF41E226EAF00391982 /* NSString+sa.m in Sources */ = {isa = PBXBuildFile; fileRef = C23FBDF21E226EAF00391982 /* NSString+sa.m */; };
-		C25400B11E1F2728001595EE /* SACommand.h in Headers */ = {isa = PBXBuildFile; fileRef = C25400AF1E1F2728001595EE /* SACommand.h */; };
+		C25400B11E1F2728001595EE /* SACommand.h in Headers */ = {isa = PBXBuildFile; fileRef = C25400AF1E1F2728001595EE /* SACommand.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C25400B21E1F2728001595EE /* SACommand.m in Sources */ = {isa = PBXBuildFile; fileRef = C25400B01E1F2728001595EE /* SACommand.m */; };
-		C25400BA1E1F2738001595EE /* SATransferCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = C25400B81E1F2738001595EE /* SATransferCommand.h */; };
+		C25400BA1E1F2738001595EE /* SATransferCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = C25400B81E1F2738001595EE /* SATransferCommand.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C25400BB1E1F2738001595EE /* SATransferCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = C25400B91E1F2738001595EE /* SATransferCommand.m */; };
-		C25400BE1E1F2769001595EE /* SAReceiveCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = C25400BC1E1F2769001595EE /* SAReceiveCommand.h */; };
+		C25400BE1E1F2769001595EE /* SAReceiveCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = C25400BC1E1F2769001595EE /* SAReceiveCommand.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C25400BF1E1F2769001595EE /* SAReceiveCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = C25400BD1E1F2769001595EE /* SAReceiveCommand.m */; };
 		C25400C21E1F316D001595EE /* TransferManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C25400C01E1F316D001595EE /* TransferManager.h */; };
 		C25400C31E1F316D001595EE /* TransferManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C25400C11E1F316D001595EE /* TransferManager.m */; };
@@ -46,7 +46,7 @@
 		C2669CC01E1E213000437C3A /* SendAnywhere.m in Sources */ = {isa = PBXBuildFile; fileRef = C2669CBE1E1E213000437C3A /* SendAnywhere.m */; };
 		C2669CC61E1E238100437C3A /* PreferenceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C2669CC41E1E238100437C3A /* PreferenceManager.h */; };
 		C2669CC71E1E238100437C3A /* PreferenceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C2669CC51E1E238100437C3A /* PreferenceManager.m */; };
-		C2669CD31E1E41A200437C3A /* DebugReceiveTableViewDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = C2669CD11E1E41A200437C3A /* DebugReceiveTableViewDataSource.h */; };
+		C2669CD31E1E41A200437C3A /* DebugReceiveTableViewDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = C2669CD11E1E41A200437C3A /* DebugReceiveTableViewDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C2669CD41E1E41A200437C3A /* DebugReceiveTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C2669CD21E1E41A200437C3A /* DebugReceiveTableViewDataSource.m */; };
 		C2669CD71E1E430800437C3A /* DebugReceiveTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = C2669CD51E1E430800437C3A /* DebugReceiveTableViewCell.h */; };
 		C2669CD81E1E430800437C3A /* DebugReceiveTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2669CD61E1E430800437C3A /* DebugReceiveTableViewCell.m */; };
@@ -54,6 +54,13 @@
 		C2669CDC1E1E462300437C3A /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = C2669CDA1E1E462300437C3A /* Logger.m */; };
 		C2669CE11E1E499900437C3A /* EventUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C2669CDF1E1E499900437C3A /* EventUtil.h */; };
 		C2669CE21E1E499900437C3A /* EventUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C2669CE01E1E499900437C3A /* EventUtil.m */; };
+		C26DB29E1E2338A600B62EAF /* StringUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C26DB29C1E2338A600B62EAF /* StringUtil.h */; };
+		C26DB29F1E2338A600B62EAF /* StringUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C26DB29D1E2338A600B62EAF /* StringUtil.m */; };
+		C26DB2A71E233B4600B62EAF /* CommonUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C26DB2A51E233B4600B62EAF /* CommonUtil.h */; };
+		C26DB2A81E233B4600B62EAF /* CommonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C26DB2A61E233B4600B62EAF /* CommonUtil.m */; };
+		C26DB2AB1E233D8800B62EAF /* CommandManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C26DB2A91E233D8800B62EAF /* CommandManager.h */; };
+		C26DB2AC1E233D8800B62EAF /* CommandManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C26DB2AA1E233D8800B62EAF /* CommandManager.m */; };
+		C26DB2B21E235BCF00B62EAF /* paprika.h in Headers */ = {isa = PBXBuildFile; fileRef = C26DB2AF1E235B5200B62EAF /* paprika.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,14 +96,14 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = C208BCB01E1DE8A50087EC64 /* paprika.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 0D3C4D813D6144789B3BFE3F;
+			remoteGlobalIDString = A436CB83FE53432693D5C2FD;
 			remoteInfo = paprika;
 		};
 		C208BCDA1E1DE8F80087EC64 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C208BCA51E1DE8980087EC64 /* paprika_c.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 2D6CBE5C98B8470FB4816AB1;
+			remoteGlobalIDString = 80E3837881B34147A3F88C16;
 			remoteInfo = sendanywhere;
 		};
 /* End PBXContainerItemProxy section */
@@ -164,6 +171,14 @@
 		C2669CDE1E1E469200437C3A /* EventDef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventDef.h; sourceTree = "<group>"; };
 		C2669CDF1E1E499900437C3A /* EventUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventUtil.h; sourceTree = "<group>"; };
 		C2669CE01E1E499900437C3A /* EventUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventUtil.m; sourceTree = "<group>"; };
+		C26DB29C1E2338A600B62EAF /* StringUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringUtil.h; sourceTree = "<group>"; };
+		C26DB29D1E2338A600B62EAF /* StringUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringUtil.m; sourceTree = "<group>"; };
+		C26DB2A51E233B4600B62EAF /* CommonUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonUtil.h; sourceTree = "<group>"; };
+		C26DB2A61E233B4600B62EAF /* CommonUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonUtil.m; sourceTree = "<group>"; };
+		C26DB2A91E233D8800B62EAF /* CommandManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommandManager.h; sourceTree = "<group>"; };
+		C26DB2AA1E233D8800B62EAF /* CommandManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommandManager.m; sourceTree = "<group>"; };
+		C26DB2AE1E235B5200B62EAF /* paprika_sdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = paprika_sdk.h; path = ../../paprika_cpplib/clib/paprika/paprika_sdk.h; sourceTree = "<group>"; };
+		C26DB2AF1E235B5200B62EAF /* paprika.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = paprika.h; path = ../../paprika_cpplib/clib/paprika/paprika.h; sourceTree = "<group>"; };
 		C9AB72D33DED8009666DAE30 /* Pods-SendAnywhereSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SendAnywhereSDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-SendAnywhereSDK/Pods-SendAnywhereSDK.release.xcconfig"; sourceTree = "<group>"; };
 		F25FA646FE87C9EF7B778AC3 /* Pods-paprika_ios_4_sdk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-paprika_ios_4_sdk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-paprika_ios_4_sdk/Pods-paprika_ios_4_sdk.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -301,10 +316,10 @@
 		C208BCC21E1DE8EC0087EC64 /* SendAnywhereSDK */ = {
 			isa = PBXGroup;
 			children = (
+				C26DB2AD1E235AB300B62EAF /* paprika */,
 				C23FBDE41E20E1A000391982 /* private */,
 				C23FBDDA1E20E0F300391982 /* category */,
 				C2669CDD1E1E463000437C3A /* util */,
-				C2669CCA1E1E3EF100437C3A /* command */,
 				C2669CC31E1E236B00437C3A /* manager */,
 				C2669CC11E1E225F00437C3A /* global */,
 				C2669CB71E1E20ED00437C3A /* main */,
@@ -335,6 +350,7 @@
 		C23FBDDA1E20E0F300391982 /* category */ = {
 			isa = PBXGroup;
 			children = (
+				C2669CCA1E1E3EF100437C3A /* command */,
 				C23FBDED1E21C74F00391982 /* SATransferCommand+TypeUtils.h */,
 				C23FBDEE1E21C74F00391982 /* SATransferCommand+TypeUtils.m */,
 				C23FBDF11E226EAF00391982 /* NSString+sa.h */,
@@ -377,6 +393,8 @@
 				C2669CC51E1E238100437C3A /* PreferenceManager.m */,
 				C25400C01E1F316D001595EE /* TransferManager.h */,
 				C25400C11E1F316D001595EE /* TransferManager.m */,
+				C26DB2A91E233D8800B62EAF /* CommandManager.h */,
+				C26DB2AA1E233D8800B62EAF /* CommandManager.m */,
 			);
 			name = manager;
 			sourceTree = "<group>";
@@ -414,8 +432,21 @@
 				C2669CDA1E1E462300437C3A /* Logger.m */,
 				C2669CDF1E1E499900437C3A /* EventUtil.h */,
 				C2669CE01E1E499900437C3A /* EventUtil.m */,
+				C26DB29C1E2338A600B62EAF /* StringUtil.h */,
+				C26DB29D1E2338A600B62EAF /* StringUtil.m */,
+				C26DB2A51E233B4600B62EAF /* CommonUtil.h */,
+				C26DB2A61E233B4600B62EAF /* CommonUtil.m */,
 			);
 			name = util;
+			sourceTree = "<group>";
+		};
+		C26DB2AD1E235AB300B62EAF /* paprika */ = {
+			isa = PBXGroup;
+			children = (
+				C26DB2AE1E235B5200B62EAF /* paprika_sdk.h */,
+				C26DB2AF1E235B5200B62EAF /* paprika.h */,
+			);
+			name = paprika;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -425,20 +456,24 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C25400B11E1F2728001595EE /* SACommand.h in Headers */,
+				C26DB2A71E233B4600B62EAF /* CommonUtil.h in Headers */,
 				C2669CD31E1E41A200437C3A /* DebugReceiveTableViewDataSource.h in Headers */,
+				C25400B11E1F2728001595EE /* SACommand.h in Headers */,
+				C26DB2B21E235BCF00B62EAF /* paprika.h in Headers */,
+				C25400BE1E1F2769001595EE /* SAReceiveCommand.h in Headers */,
+				C25400BA1E1F2738001595EE /* SATransferCommand.h in Headers */,
 				C2669CE11E1E499900437C3A /* EventUtil.h in Headers */,
 				C25400C21E1F316D001595EE /* TransferManager.h in Headers */,
 				C23FBDF31E226EAF00391982 /* NSString+sa.h in Headers */,
-				C25400BA1E1F2738001595EE /* SATransferCommand.h in Headers */,
 				C2669CDB1E1E462300437C3A /* Logger.h in Headers */,
+				C26DB29E1E2338A600B62EAF /* StringUtil.h in Headers */,
 				C2669CBF1E1E213000437C3A /* SendAnywhere.h in Headers */,
 				C23FBDE71E20E1B400391982 /* SACommand+private.h in Headers */,
 				C208BCD11E1DE8EC0087EC64 /* SendAnywhereSDK.h in Headers */,
 				C208BDC01E1E15CB0087EC64 /* SADebugReceiveViewController.h in Headers */,
 				C23FBDEF1E21C74F00391982 /* SATransferCommand+TypeUtils.h in Headers */,
-				C25400BE1E1F2769001595EE /* SAReceiveCommand.h in Headers */,
 				C2669CD71E1E430800437C3A /* DebugReceiveTableViewCell.h in Headers */,
+				C26DB2AB1E233D8800B62EAF /* CommandManager.h in Headers */,
 				C2669CC61E1E238100437C3A /* PreferenceManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -617,16 +652,19 @@
 				C2669CD41E1E41A200437C3A /* DebugReceiveTableViewDataSource.m in Sources */,
 				C25400B21E1F2728001595EE /* SACommand.m in Sources */,
 				C2669CDC1E1E462300437C3A /* Logger.m in Sources */,
+				C26DB2AC1E233D8800B62EAF /* CommandManager.m in Sources */,
 				C2669CE21E1E499900437C3A /* EventUtil.m in Sources */,
 				C25400BB1E1F2738001595EE /* SATransferCommand.m in Sources */,
 				C2669CD81E1E430800437C3A /* DebugReceiveTableViewCell.m in Sources */,
 				C25400C31E1F316D001595EE /* TransferManager.m in Sources */,
 				C23FBDF41E226EAF00391982 /* NSString+sa.m in Sources */,
 				C2669CC01E1E213000437C3A /* SendAnywhere.m in Sources */,
+				C26DB29F1E2338A600B62EAF /* StringUtil.m in Sources */,
 				C2669CC71E1E238100437C3A /* PreferenceManager.m in Sources */,
 				C208BDC11E1E15CB0087EC64 /* SADebugReceiveViewController.m in Sources */,
 				C25400BF1E1F2769001595EE /* SAReceiveCommand.m in Sources */,
 				C23FBDF01E21C74F00391982 /* SATransferCommand+TypeUtils.m in Sources */,
+				C26DB2A81E233B4600B62EAF /* CommonUtil.m in Sources */,
 				C23FBDE81E20E1B400391982 /* SACommand+private.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

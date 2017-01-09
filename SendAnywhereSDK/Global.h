@@ -14,6 +14,8 @@
 
 extern DDLogLevel ddLogLevel;
 
+#define SERVER_ADDRESS @"send-anywhere.com/api/v1/"
+
 #define DEFAULT_TRANSFER_EXPIRE_TIME (10 * 60)
 
 #endif /* Global_h */

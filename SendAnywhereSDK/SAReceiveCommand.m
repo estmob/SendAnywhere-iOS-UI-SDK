@@ -18,9 +18,41 @@
 @implementation SAReceiveCommand
 @dynamic errorDelegate;
 
+- (void)executeWithKey:(NSString*)key destDir:(NSString*)destDir {
+    [self setParamWithKey:key destDir:destDir];
+    
+    [super execute];
+}
+
+- (void)executeWithKey:(NSString*)key destDir:(NSString*)destDir dispatchQueue:(dispatch_queue_t)dispatchQueue {
+    [self setParamWithKey:key destDir:destDir];
+    
+    [super executeWithDispatchQueue:dispatchQueue];
+}
+
+- (void)setParamWithKey:(NSString *)key {
+    [super clearmParams];
+    [super setParamWithKey:SA_COMMAND_PARAM_TYPE value:@([key containsString:@"://"] ? 4 : 0)];
+    [super setParamWithKey:SA_TRANSFER_PARAM_KEY value:key];
+}
+
 - (void)setParamWithKey:(NSString *)key destDir:(NSString *)destDir {
+    [super clearmParams];
+    [super setParamWithKey:SA_COMMAND_PARAM_TYPE value:@([key containsString:@"://"] ? 5 : 1)];
     [super setParamWithKey:SA_TRANSFER_PARAM_KEY value:key];
     [super setParamWithKey:SA_TRANSFER_PARAM_DESTDIR value:destDir];
+}
+
+- (NSString*)devicePeerID {
+    NSString *peerID = [super devicePeerID];
+    
+    return peerID;
+}
+
+- (NSString*)licenseUrl {
+    PaprikaTask task = [super currentTask];
+    
+    return @"";
 }
 
 #pragma mark - handlers
@@ -62,7 +94,7 @@
 - (void)processTaskResult:(PaprikaTask)task {
     [super processTaskResult:task];
     
-    // ERROR_LINK_SHARING_KEY : 안드로이드에 이거 있는데 이 부분 처리해야 하나?
+    
 }
 
 @end

@@ -19,7 +19,6 @@ NSInteger simpleProgressMaximum = 10000;
 @property (nonatomic, readwrite) NSInteger sizeToTransfer;
 @property (nonatomic, readwrite) NSInteger sizeTransferred;
 @property (nonatomic, readwrite) NSString *transferID;
-@property (nonatomic, readwrite) SATransferType transferType;
 @property (nonatomic, readwrite) PaprikaTransferMode transferMode;
 
 @property (nonatomic, readwrite) NSArray *fileList;
@@ -33,14 +32,20 @@ NSInteger simpleProgressMaximum = 10000;
 @property (nonatomic, readwrite) BOOL fileListUpdated;
 @property (nonatomic, readwrite) BOOL transferPaused;
 
+@property (nonatomic, retain) NSMutableArray *transferObservers;
+
 @end
 
 @implementation SATransferCommand
 
-@dynamic prepareDelegate;
-@dynamic errorDelegate;
+- (instancetype)init {
+    if (self = [super init]) {
+        self.transferObservers = [NSMutableArray array];
+    }
+    return self;
+}
 
-- (SATransferFileStatus)getFileStatusWithIndex:(NSInteger)index {
+- (SATransferFileStatus)fileStatusWithIndex:(NSInteger)index {
     PaprikaTransferFileState fileState;
     NSValue *value = [self.fileList objectAtIndex:index];
     [value getValue:&fileState];
@@ -51,6 +56,31 @@ NSInteger simpleProgressMaximum = 10000;
     }
     return SATransferFileStatusIdle;
 }
+
+- (void)addPrepareObserver:(id<SACommandPrepareDelegate, SATransferPrepareDelegate>)observer {
+    [super addPrepareObserver:observer];
+}
+
+- (void)addErrorObserver:(id<SACommandErrorDelegate, SATransferErrorDelegate>)observer {
+    [super addErrorObserver:observer];
+}
+
+- (void)addTransferObserver:(id<SATranferNotifyDelegate>)observer {
+    [self.transferObservers addObject:observer];
+}
+
+- (void)removePrepareObserver:(id<SACommandPrepareDelegate, SATransferPrepareDelegate>)observer {
+    [super removePrepareObserver:observer];
+}
+
+- (void)removeErrorObserver:(id<SACommandErrorDelegate, SATransferErrorDelegate>)observer {
+    [super removeErrorObserver:observer];
+}
+
+- (void)removeTransferObserver:(id<SATranferNotifyDelegate>)observer {
+    [self.transferObservers removeObject:observer];
+}
+
 
 #pragma mark - handlers
 
@@ -118,18 +148,24 @@ NSInteger simpleProgressMaximum = 10000;
         case PAPRIKA_DETAILED_STATE_TRANSFERRING_START_NEW_FILE:
             if (self.sizeTransferred == 0) {
                 self.transferStarted = YES;
-                if ([self.transferDelegate respondsToSelector:@selector(willTransferStart:)]) {
-                    [self.transferDelegate willTransferStart:self];
+                for (id observer in self.transferObservers) {
+                    if ([observer respondsToSelector:@selector(willTransferStart:)]) {
+                        [observer willTransferStart:self];
+                    }
                 }
                 [self.activeFileSet addObject:param];
-                if ([self.transferDelegate respondsToSelector:@selector(willTransferFileStart:fileIndex:fileCount:fileState:)]) {
-                    [self.transferDelegate willTransferFileStart:self fileIndex:index fileCount:self.fileList.count fileState:fileState];
+                for (id observer in self.transferObservers) {
+                    if ([observer respondsToSelector:@selector(willTransferFileStart:fileIndex:fileCount:fileState:)]) {
+                        [observer willTransferFileStart:self fileIndex:index fileCount:self.fileList.count fileState:fileState];
+                    }
                 }
             }
             break;
         case PAPRIKA_DETAILED_STATE_TRANSFERRING_END_FILE:
-            if ([self.transferDelegate respondsToSelector:@selector(didTransferFileFinish:fileIndex:fileCount:fileState:)]) {
-                [self.transferDelegate didTransferFileFinish:self fileIndex:index fileCount:self.fileList.count fileState:fileState];
+            for (id observer in self.transferObservers) {
+                if ([observer respondsToSelector:@selector(didTransferFileFinish:fileIndex:fileCount:fileState:)]) {
+                    [observer didTransferFileFinish:self fileIndex:index fileCount:self.fileList.count fileState:fileState];
+                }
             }
             [self.activeFileSet removeObject:param];
             self.sizeTransferred += fileState.size;
@@ -137,8 +173,10 @@ NSInteger simpleProgressMaximum = 10000;
             if (++self.finishedFileCount == self.fileList.count) {
                 [self.activeFileSet removeAllObjects];
                 self.sizeTransferred = self.sizeToTransfer;
-                if ([self.transferDelegate respondsToSelector:@selector(didTransferFinish:)]) {
-                    [self.transferDelegate didTransferFinish:self];
+                for (id observer in self.transferObservers) {
+                    if ([observer respondsToSelector:@selector(didTransferFinish:)]) {
+                        [observer didTransferFinish:self];
+                    }
                 }
             }
             [self handleFileProgress:self.connectionMode fileIndex:index fileState:fileState];
@@ -179,33 +217,45 @@ NSInteger simpleProgressMaximum = 10000;
     
     switch (detailedState) {
         case PAPRIKA_DETAILED_STATE_PREPARING_REQUEST_KEY:
-            if ([self.prepareDelegate respondsToSelector:@selector(didTransferRequestKey:)]) {
-                [self.prepareDelegate didTransferRequestKey:self];
+            for (id observer in self.prepareObservers) {
+                if ([observer respondsToSelector:@selector(didTransferRequestKey:)]) {
+                    [observer didTransferRequestKey:self];
+                }
             }
             break;
         case PAPRIKA_DETAILED_STATE_PREPARING_UPDATED_KEY:
-            if ([self.prepareDelegate respondsToSelector:@selector(didTransferKeyUpdated:key:)]) {
-                [self.prepareDelegate didTransferKeyUpdated:self key:(NSString*)param];
+            for (id observer in self.prepareObservers) {
+                if ([observer respondsToSelector:@selector(didTransferKeyUpdated:key:)]) {
+                    [observer didTransferKeyUpdated:self key:(NSString*)param];
+                }
             }
             break;
         case PAPRIKA_DETAILED_STATE_PREPARING_REQUEST_MODE:
-            if ([self.prepareDelegate respondsToSelector:@selector(didTransferRequestMode:)]) {
-                [self.prepareDelegate didTransferRequestMode:self];
+            for (id observer in self.prepareObservers) {
+                if ([observer respondsToSelector:@selector(didTransferRequestMode:)]) {
+                    [observer didTransferRequestMode:self];
+                }
             }
             break;
         case PAPRIKA_DETAILED_STATE_PREPARING_UPDATED_MODE:
-            if ([self.prepareDelegate respondsToSelector:@selector(didTransferModeUpdated:)]) {
-                [self.prepareDelegate didTransferModeUpdated:self];
+            for (id observer in self.prepareObservers) {
+                if ([observer respondsToSelector:@selector(didTransferModeUpdated:)]) {
+                    [observer didTransferModeUpdated:self];
+                }
             }
             break;
         case PAPRIKA_DETAILED_STATE_PREPARING_UPDATED_FILE_LIST:
-            if ([self.prepareDelegate respondsToSelector:@selector(didTransferFileListUpdated:fileStates:)]) {
-                [self.prepareDelegate didTransferFileListUpdated:self fileStates:(NSArray*)param];
+            for (id observer in self.prepareObservers) {
+                if ([observer respondsToSelector:@selector(didTransferFileListUpdated:fileStates:)]) {
+                    [observer didTransferFileListUpdated:self fileStates:(NSArray*)param];
+                }
             }
             break;
         case PAPRIKA_DETAILED_STATE_PREPARING_WAIT_NETWORK:
-            if ([self.prepareDelegate respondsToSelector:@selector(didTransferWaitForTheNetwork:)]) {
-                [self.prepareDelegate didTransferWaitForTheNetwork:self];
+            for (id observer in self.prepareObservers) {
+                if ([observer respondsToSelector:@selector(didTransferWaitForTheNetwork:)]) {
+                    [observer didTransferWaitForTheNetwork:self];
+                }
             }
             break;
     }
@@ -217,38 +267,48 @@ NSInteger simpleProgressMaximum = 10000;
     
     switch (detailedState) {
         case PAPRIKA_DETAILED_STATE_ERROR_FILE_NETWORK:
-            if ([self.errorDelegate respondsToSelector:@selector(didTransferErrorFileNetwork:)]) {
-                [self.errorDelegate didTransferErrorFileNetwork:self];
+            for (id observer in self.errorObservers) {
+                if ([observer respondsToSelector:@selector(didTransferErrorFileNetwork:)]) {
+                    [observer didTransferErrorFileNetwork:self];
+                }
             }
             break;
         case PAPRIKA_DETAILED_STATE_ERROR_FILE_WRONG_PROTOCOL:
-            if ([self.errorDelegate respondsToSelector:@selector(didTransferErrorFileWrongProtocol:)]) {
-                [self.errorDelegate didTransferErrorFileWrongProtocol:self];
+            for (id observer in self.errorObservers) {
+                if ([observer respondsToSelector:@selector(didTransferErrorFileWrongProtocol:)]) {
+                    [observer didTransferErrorFileWrongProtocol:self];
+                }
             }
 //        case PAPRIKA_DETAILED_STATE_ERROR_FILE_BY_PEER:
+//                for (id observer in self.errorObservers) {
 //            if ([self.errorDelegate respondsToSelector:@selector(fileByPeer:)]) {
 //                [self.errorDelegate fileByPeer:self];
 //            }
+//              }
 //            break;
     }
 }
 
 - (void)dispatchFileProgress:(SAConnectionMode)mode fileIndex:(NSInteger)fileIndex fileState:(PaprikaTransferFileState)fileState {
-    if ([self.transferDelegate respondsToSelector:@selector(didTransferFileProgress:mode:done:max:fileIndex:fileState:)]) {
-        [self.transferDelegate didTransferFileProgress:self mode:mode done:fileState.sent max:fileState.size fileIndex:fileIndex fileState:fileState];
+    for (id observer in self.transferObservers) {
+        if ([observer respondsToSelector:@selector(didTransferFileProgress:mode:done:max:fileIndex:fileState:)]) {
+            [observer didTransferFileProgress:self mode:mode done:fileState.sent max:fileState.size fileIndex:fileIndex fileState:fileState];
+        }
     }
 }
 
 - (void)dispatchSimpleProgress:(NSInteger)fileIndex fileState:(PaprikaTransferFileState)fileState {
-    if ([self.transferDelegate respondsToSelector:@selector(didTransferSimpleProgress:progress:max:fileIndex:fileState:)]) {
-        [self.transferDelegate didTransferSimpleProgress:self progress:self.progress max:simpleProgressMaximum fileIndex:fileIndex fileState:fileState];
+    for (id observer in self.transferObservers) {
+        if ([observer respondsToSelector:@selector(didTransferSimpleProgress:progress:max:fileIndex:fileState:)]) {
+            [observer didTransferSimpleProgress:self progress:self.progress max:simpleProgressMaximum fileIndex:fileIndex fileState:fileState];
+        }
     }
 }
 
 #pragma mark - properties
 
 - (NSString*)devicePeerID {
-    return [super getValueWithKey:PAPRIKA_VALUE_TRANSFER_PEER_DEVICE_ID defaultValue:@""];
+    return [super valueForKey:PAPRIKA_VALUE_TRANSFER_PEER_DEVICE_ID defaultValue:@""];
 }
 
 - (NSTimeInterval)expireTime {
@@ -256,11 +316,11 @@ NSInteger simpleProgressMaximum = 10000;
         return _expireTime;
     }
     
-    return [[super getValueWithKey:PAPRIKA_VALUE_UPLOAD_EXPIRES_TIME defaultValue:@(DEFAULT_TRANSFER_EXPIRE_TIME)] doubleValue];
+    return [[super valueForKey:PAPRIKA_VALUE_UPLOAD_EXPIRES_TIME defaultValue:@(DEFAULT_TRANSFER_EXPIRE_TIME)] doubleValue];
 }
 
 - (NSString*)transferKey {
-    return [super getValueWithKey:PAPRIKA_VALUE_TRANSFER_KEY defaultValue:@""];
+    return [super valueForKey:PAPRIKA_VALUE_TRANSFER_KEY defaultValue:@""];
 }
 
 #pragma mark - helpers

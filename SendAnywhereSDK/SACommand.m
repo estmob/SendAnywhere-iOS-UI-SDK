@@ -8,6 +8,7 @@
 
 #import "SACommand.h"
 #import "Global.h"
+#import "PreferenceManager.h"
 
 static dispatch_queue_t commandDispatchQueue = nil;
 
@@ -17,8 +18,6 @@ static dispatch_queue_t commandDispatchQueue = nil;
 @property (nonatomic, assign) NSTimeInterval startedTime;
 @property (nonatomic, readwrite) NSTimeInterval finishedTime;
 
-@property (nonatomic, assign) PaprikaTask currentTask;
-
 @property (nonatomic, readwrite) PaprikaState state;
 @property (nonatomic, readwrite) PaprikaDetailedState detailedState;
 @property (nonatomic, readwrite) PaprikaDetailedState lastError;
@@ -27,15 +26,36 @@ static dispatch_queue_t commandDispatchQueue = nil;
 
 @property (nonatomic, assign) BOOL canceled;
 @property (nonatomic, assign) BOOL used;
+@property (nonatomic, assign) BOOL paused;
+@property (nonatomic, retain) dispatch_semaphore_t sem;
 
-@property (nonatomic, assign) paprika_listener_function taskNotifyListener;
+@property (atomic, retain) NSMutableArray *taskQueue;
 
 @property (nonatomic, retain) NSMutableDictionary *optionDic;
 @property (nonatomic, retain) NSMutableDictionary *paramDic;
 
+@property (nonatomic, retain) NSMutableArray *prepareObservers;
+@property (nonatomic, retain) NSMutableArray *notifyObservers;
+@property (nonatomic, retain) NSMutableArray *errorObservers;
+
+@property (nonatomic, assign) PaprikaAuthToken authToken;
+@property (nonatomic, assign) PaprikaOption taskOption;
+
 @end
 
 @implementation SACommand
+
+void taskNotifyListener(PaprikaState state,
+              PaprikaDetailedState detailedState,
+              const void* param,
+              void* userptr){
+    
+    SACommand *weakSelf = (__bridge SACommand*)userptr;
+    
+    id obj = (__bridge id)param;
+    [weakSelf handleTaskNotify:state detailedState:detailedState param:obj];
+    
+}
 
 - (instancetype)init {
     if (self = [super init]) {
@@ -47,23 +67,27 @@ static dispatch_queue_t commandDispatchQueue = nil;
         self.status = SACommandReady;
         self.used = NO;
         self.canceled = NO;
+        self.paused = NO;
+        
+        self.sem = dispatch_semaphore_create(0);
+        
         self.finishedState = PAPRIKA_DETAILED_STATE_UNKNOWN;
+        
+        self.taskQueue = [NSMutableArray array];
         
         self.optionDic = [NSMutableDictionary dictionary];
         self.paramDic = [NSMutableDictionary dictionary];
         
-        __weak SACommand *weakSelf = self;
-        
-        self.taskNotifyListener = (__bridge void *)^(PaprikaState state,
-                                               PaprikaDetailedState detailedState,
-                                               const void* param,
-                                               void* userptr){
-            id obj = (__bridge id)userptr;
-            [weakSelf handleTaskNotify:state detailedState:detailedState param:obj];
-            
-        };
+        self.prepareObservers = [NSMutableArray array];
+        self.notifyObservers = [NSMutableArray array];
+        self.errorObservers = [NSMutableArray array];
     }
     return self;
+}
+
+- (void)dealloc {
+    paprika_auth_close(self.authToken);
+    paprika_option_close(self.taskOption);
 }
 
 - (void)execute {
@@ -85,11 +109,13 @@ static dispatch_queue_t commandDispatchQueue = nil;
         
         [self resetState];
         
-        self.currentTask = [self createTask];
-        if (self.currentTask == nil) {
+        PaprikaTask task = [self createTask];
+        if (task == nil) {
             DDLogInfo(@"Task is nil.");
         } else {
+            [self enqueueTask:task];
             DDLogInfo(@"Task create.");
+            [self setAuthToken];
             [self setOptionValues];
             [self handleTaskStart];
             
@@ -97,13 +123,20 @@ static dispatch_queue_t commandDispatchQueue = nil;
                 self.state = PAPRIKA_STATE_FINISHED;
                 self.detailedState = PAPRIKA_DETAILED_STATE_FINISHED_CANCEL;
             } else {
-                paprika_set_listner(self.currentTask, self.taskNotifyListener, 0);
+                __weak SACommand *weakSelf = self;
+                paprika_set_listner(task, taskNotifyListener, (__bridge void *)(weakSelf));
                 DDLogInfo(@"Task starting");
-                paprika_start(self.currentTask);
+                paprika_start(task);
                 DDLogInfo(@"Task awaiting");
-                paprika_wait(self.currentTask);
+                paprika_wait(task);
                 DDLogInfo(@"Task finished");
-                [self processTaskResult];
+                [self processTaskResult:task];
+            }
+            
+            if (!self.canceled && self.paused) {
+                DDLogInfo(@"Task waiting loop began...");
+                dispatch_semaphore_wait(self.sem, DISPATCH_TIME_FOREVER);                
+                DDLogInfo(@"Task waiting loop ended");
             }
         }
         
@@ -114,8 +147,27 @@ static dispatch_queue_t commandDispatchQueue = nil;
     });
 }
 
+- (void)cancel {
+    self.canceled = YES;
+    @synchronized (self) {
+        for (NSValue *value in self.taskQueue) {
+            PaprikaTask task = [value pointerValue];
+            paprika_cancel(task);
+        }
+    }
+}
+
 - (void)setOptionWithKey:(PaprikaOptionKey)key value:(id)value {
     self.optionDic[@(key)] = value;
+    
+    switch ((NSInteger)key) {
+        case PAPRIKA_OPTION_API_SERVER:
+            DDLogInfo(@"Server : %@", value);
+            break;
+        case PAPRIKA_OPTION_PROFILE_NAME:
+            DDLogInfo(@"Profile : %@", value);
+            break;
+    }
 }
 
 - (void)setParamWithKey:(NSString*)key value:(id)value {
@@ -126,12 +178,45 @@ static dispatch_queue_t commandDispatchQueue = nil;
     return self.paramDic[key];
 }
 
+- (void)clearmParams {
+    [self.paramDic removeAllObjects];
+}
+
 - (id)valueForKey:(PaprikaValue)key defaultValue:(id)defaultValue {
+    PaprikaTask task = [self currentTask];
+    if (task == 0) {
+        return defaultValue;
+    }
+    
     void *param;
-    paprika_get_value(self.currentTask, key, param);
+    paprika_get_value(task, key, param);
     
     
     return defaultValue;
+}
+
+- (void)addPrepareObserver:(id<SACommandPrepareDelegate>)observer {
+    [self.prepareObservers addObject:observer];
+}
+
+- (void)addNotifyObserver:(id<SACommandNotifyDelegate>)observer {
+    [self.notifyObservers addObject:observer];
+}
+
+- (void)addErrorObserver:(id<SACommandErrorDelegate>)observer {
+    [self.errorObservers addObject:observer];
+}
+
+- (void)removePrepareObserver:(id<SACommandPrepareDelegate>)observer {
+    [self.prepareObservers removeObject:observer];
+}
+
+- (void)removeNotifyObserver:(id<SACommandNotifyDelegate>)observer {
+    [self.notifyObservers removeObject:observer];
+}
+
+- (void)removeErrorObserver:(id<SACommandErrorDelegate>)observer {
+    [self.errorObservers removeObject:observer];
 }
 
 #pragma mark - handlers
@@ -145,7 +230,6 @@ static dispatch_queue_t commandDispatchQueue = nil;
     self.status = SACommandFinished;
     self.finishedTime = [[NSDate date] timeIntervalSince1970];
     [self dispatchCommandFinish];
-    paprika_close(self.currentTask);
 }
 
 - (void)handleTaskStart {
@@ -185,6 +269,10 @@ static dispatch_queue_t commandDispatchQueue = nil;
 - (void)handleTaskFinish:(PaprikaState)state detailedState:(PaprikaDetailedState)detailedState param:(id)param {
     self.finishedState = detailedState;
     [self dispatchTaskFinish:state detailedState:detailedState param:param];
+    PaprikaTask task = [self dequeueTask];
+    if (task != 0) {
+        paprika_close(task);
+    }
 }
 
 - (void)handleTaskError:(PaprikaState)state detailedState:(PaprikaDetailedState)detailedState param:(id)param {
@@ -195,83 +283,111 @@ static dispatch_queue_t commandDispatchQueue = nil;
 #pragma mark - dispatchers
 
 - (void)dispatchCommandStart {
-    if ([self.notifyDelegate respondsToSelector:@selector(willCommandStart:)]) {
-        [self.notifyDelegate willCommandStart:self];
+    for (id observer in self.notifyObservers) {
+        if ([observer respondsToSelector:@selector(willCommandStart:)]) {
+            [observer willCommandStart:self];
+        }
     }
 }
 
 - (void)dispatchCommandFinish {
-    if ([self.notifyDelegate respondsToSelector:@selector(didCommandFinish:)]) {
-        [self.notifyDelegate didCommandFinish:self];
+    for (id observer in self.notifyObservers) {
+        if ([observer respondsToSelector:@selector(didCommandFinish:)]) {
+            [observer didCommandFinish:self];
+        }
     }
 }
 
 - (void)dispatchTaskStart:(PaprikaTask)task {
-    if ([self.notifyDelegate respondsToSelector:@selector(willTaskStart:task:)]) {
-        [self.notifyDelegate willTaskStart:self task:task];
+    for (id observer in self.notifyObservers) {
+        if ([observer respondsToSelector:@selector(willTaskStart:task:)]) {
+            [observer willTaskStart:self task:task];
+        }
     }
 }
 
 - (void)dispatchTaskNotify:(PaprikaState)state detailedState:(PaprikaDetailedState)detailedState param:(id)param {
-    if ([self.notifyDelegate respondsToSelector:@selector(didTaskNotify:state:detailedState:param:)])  {
-        [self.notifyDelegate didTaskNotify:self state:state detailedState:detailedState param:param];
+    for (id observer in self.notifyObservers) {
+        if ([observer respondsToSelector:@selector(didTaskNotify:state:detailedState:param:)])  {
+            [observer didTaskNotify:self state:state detailedState:detailedState param:param];
+        }
     }
 }
 
 - (void)dispatchTaskPrepare:(PaprikaState)state detailedState:(PaprikaDetailedState)detailedState param:(id)param {
-    if ([self.notifyDelegate respondsToSelector:@selector(didTaskPrepare:detailedState:param:)])  {
-        [self.notifyDelegate didTaskPrepare:self detailedState:detailedState param:param];
+    for (id observer in self.notifyObservers) {
+        if ([observer respondsToSelector:@selector(didTaskPrepare:detailedState:param:)])  {
+            [observer didTaskPrepare:self detailedState:detailedState param:param];
+        }
     }
     
     switch ((NSInteger)detailedState) {
         case PAPRIKA_DETAILED_STATE_PREPARING_UPDATED_AUTH_TOKEN:
-            if ([self.prepareDelegate respondsToSelector:@selector(didUpdateAuthToken:token:)]) {
-                [self.prepareDelegate didUpdateAuthToken:self token:param];
+            for (id observer in self.prepareObservers) {
+                if ([observer respondsToSelector:@selector(didUpdateAuthToken:token:)]) {
+                    [observer didUpdateAuthToken:self token:param];
+                }
             }
             break;
         case PAPRIKA_DETAILED_STATE_PREPARING_UPDATED_DEVICE_ID:
-            if ([self.prepareDelegate respondsToSelector:@selector(didUpdateDeviceID:deviceId:)]) {
-                [self.prepareDelegate didUpdateDeviceID:self deviceId:param];
+            for (id observer in self.prepareObservers) {
+                if ([observer respondsToSelector:@selector(didUpdateDeviceID:deviceId:)]) {
+                    [observer didUpdateDeviceID:self deviceId:param];
+                }
             }
             break;
     }
 }
 
 - (void)dispatchTaskFinish:(PaprikaState)state detailedState:(PaprikaDetailedState)detailedState param:(id)param {
-    if ([self.notifyDelegate respondsToSelector:@selector(didTaskFinish:detailedState:param:)])  {
-        [self.notifyDelegate didTaskFinish:self detailedState:detailedState param:param];
+    for (id observer in self.notifyObservers) {
+        if ([observer respondsToSelector:@selector(didTaskFinish:detailedState:param:)])  {
+            [observer didTaskFinish:self detailedState:detailedState param:param];
+        }
     }
 }
 
 - (void)dispatchTaskError:(PaprikaState)state detailedState:(PaprikaDetailedState)detailedState param:(id)param {
-    if ([self.notifyDelegate respondsToSelector:@selector(didTaskError:detailedState:param:)])  {
-        [self.notifyDelegate didTaskError:self detailedState:detailedState param:param];
+    for (id observer in self.notifyObservers) {
+        if ([observer respondsToSelector:@selector(didTaskError:detailedState:param:)])  {
+            [observer didTaskError:self detailedState:detailedState param:param];
+        }
     }
     
     switch ((NSInteger)detailedState) {
         case PAPRIKA_DETAILED_STATE_ERROR_REQUIRED_LOGIN:
-            if ([self.errorDelegate respondsToSelector:@selector(didErrorRequireLogin:)]) {
-                [self.errorDelegate didErrorRequireLogin:self];
+            for (id observer in self.errorObservers) {
+                if ([observer respondsToSelector:@selector(didErrorRequireLogin:)]) {
+                    [observer didErrorRequireLogin:self];
+                }
             }
             break;
         case PAPRIKA_DETAILED_STATE_ERROR_SERVER_AUTHENTICATION:
-            if ([self.errorDelegate respondsToSelector:@selector(didErrorServerAuthentication:)]) {
-                [self.errorDelegate didErrorServerAuthentication:self];
+            for (id observer in self.errorObservers) {
+                if ([observer respondsToSelector:@selector(didErrorServerAuthentication:)]) {
+                    [observer didErrorServerAuthentication:self];
+                }
             }
             break;
         case PAPRIKA_DETAILED_STATE_ERROR_WRONG_API_KEY:
-            if ([self.errorDelegate respondsToSelector:@selector(didErrorWrongAPIKey:)]) {
-                [self.errorDelegate didErrorWrongAPIKey:self];
+            for (id observer in self.errorObservers) {
+                if ([observer respondsToSelector:@selector(didErrorWrongAPIKey:)]) {
+                    [observer didErrorWrongAPIKey:self];
+                }
             }
             break;
         case PAPRIKA_DETAILED_STATE_ERROR_SERVER_WRONG_PROTOCOL:
-            if ([self.errorDelegate respondsToSelector:@selector(didErrorServerWrongProtocol:)]) {
-                [self.errorDelegate didErrorServerWrongProtocol:self];
+            for (id observer in self.errorObservers) {
+                if ([observer respondsToSelector:@selector(didErrorServerWrongProtocol:)]) {
+                    [observer didErrorServerWrongProtocol:self];
+                }
             }
             break;
         case PAPRIKA_DETAILED_STATE_ERROR_SERVER_NETWORK:
-            if ([self.errorDelegate respondsToSelector:@selector(didErrorServerNetwork:)]) {
-                [self.errorDelegate didErrorServerNetwork:self];
+            for (id observer in self.errorObservers) {
+                if ([observer respondsToSelector:@selector(didErrorServerNetwork:)]) {
+                    [observer didErrorServerNetwork:self];
+                }
             }
             break;
     }
@@ -283,12 +399,74 @@ static dispatch_queue_t commandDispatchQueue = nil;
     return nil;
 }
 
-- (void)setOptionValues {
+- (void)setAuthToken {
+    PaprikaTask task = [self currentTask];
+    if (task == 0) {
+        return;
+    }
     
+    NSString *deviceID = [PreferenceManager sharedInstance].deviceID;
+    NSString *password = [PreferenceManager sharedInstance].devicePassword;
+    if (deviceID.length == 0 || password.length == 0) {
+        self.authToken = paprika_auth_create();
+    } else {
+        self.authToken = paprika_auth_create_with_deviceid(deviceID.UTF8String, password.UTF8String);
+    }
+}
+
+- (void)setOptionValues {
+    PaprikaTask task = [self currentTask];
+    if (task == 0) {
+        return;
+    }
+    self.taskOption = paprika_option_create();
+    [self.optionDic enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+        PaprikaOptionKey optKey = (PaprikaOptionKey)[key integerValue];
+        const void *value = 0;
+        if ([obj isKindOfClass:[NSValue class]]) {
+            value = [obj pointerValue];
+        } else if ([obj isKindOfClass:[NSNumber class]]) {
+            value = (const void *)[obj integerValue];
+        } else if ([obj isKindOfClass:[NSString class]]) {
+            value = [obj UTF8String];
+        } else {
+            return;
+        }
+        paprika_option_set_value(self.taskOption, optKey, value);
+    }];
+    
+    paprika_set_option(task, self.taskOption);
 }
 
 - (void)processTaskResult:(PaprikaTask)task {
     
+}
+
+- (PaprikaTask)currentTask {
+    @synchronized (self) {
+        if (self.taskQueue.count == 0) {
+            return 0;
+        }
+        return [[self.taskQueue objectAtIndex:0] pointerValue];
+    }
+}
+
+- (void)enqueueTask:(PaprikaTask)task {
+    @synchronized (self) {
+        NSValue *value = [NSValue valueWithPointer:task];
+        [self.taskQueue addObject:value];
+    }
+}
+
+- (PaprikaTask)dequeueTask {
+    @synchronized (self) {
+        if (self.taskQueue.count == 0) {
+            return 0;
+        }
+        PaprikaTask task = [[self.taskQueue objectAtIndex:0] pointerValue];
+        [self.taskQueue removeObjectAtIndex:0];
+        return task;
+    }
 }
 
 #pragma mark - properties
@@ -313,6 +491,14 @@ static dispatch_queue_t commandDispatchQueue = nil;
     return self.lastError != PAPRIKA_DETAILED_STATE_UNKNOWN;
 }
 
+- (void)setPaused:(BOOL)paused {
+    _paused = paused;
+    
+    if (!paused && _sem != nil) {
+        dispatch_semaphore_signal(_sem);
+    }
+}
+
 #pragma mark - helpers
 
 - (void)resetState {
@@ -324,5 +510,6 @@ static dispatch_queue_t commandDispatchQueue = nil;
     self.state = state;
     self.detailedState = detailedState;
 }
+
 
 @end

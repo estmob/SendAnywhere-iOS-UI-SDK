@@ -14,6 +14,8 @@
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         self.lbMsg = [[UILabel alloc] initWithFrame:self.contentView.bounds];
         self.lbMsg.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        self.lbMsg.font = [UIFont systemFontOfSize:11];
+        self.lbMsg.numberOfLines = 0;
         [self.contentView addSubview:self.lbMsg];
     }
     return self;    

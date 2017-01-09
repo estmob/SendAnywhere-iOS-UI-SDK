@@ -9,6 +9,7 @@
 #import "SendAnywhere.h"
 #import "CocoaLumberjack.h"
 #import "Logger.h"
+#import "paprika.h"
 
 DDLogLevel ddLogLevel = DDLogLevelOff;
 
@@ -33,6 +34,8 @@ DDLogLevel ddLogLevel = DDLogLevelOff;
 
 - (void)initializeWithKey:(NSString*)apiKey debugLevel:(SADebugLevel)debugLevel {
     self.apiKey = apiKey;
+    
+    paprika_set_apikey(apiKey.UTF8String);
     
     DDLogInfo(@"api key : %@", apiKey);
     

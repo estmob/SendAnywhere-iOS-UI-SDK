@@ -11,7 +11,7 @@
 extern NSInteger simpleProgressMaximum;
 
 #define SA_TRANSFER_PARAM_KEY @"key"
-#define SA_TRANSFER_PARAM_DESTDIR @"DestDir"
+#define SA_TRANSFER_PARAM_DESTDIR @"dest_dir"
 
 typedef NS_ENUM(NSInteger, SAConnectionMode) {
     SAConnectionActive,
@@ -51,11 +51,11 @@ typedef NS_ENUM(NSInteger, SATransferType) {
 @optional
 - (void)willTransferStart:(SATransferCommand*)sender;
 - (void)willTransferFileStart:(SATransferCommand*)sender fileIndex:(NSInteger)fileIndex fileCount:(NSInteger)fileCount fileState:(PaprikaTransferFileState)fileState;
-- (void)didTransferFileProgress:(SATransferCommand*)sender mode:(SAConnectionMode)mode done:(long)done max:(long)max fileIndex:(NSInteger)fileIndex fileState:(PaprikaTransferFileState)fileState;
+- (void)didTransferFileProgress:(SATransferCommand*)sender mode:(SAConnectionMode)mode done:(long long)done max:(long long)max fileIndex:(NSInteger)fileIndex fileState:(PaprikaTransferFileState)fileState;
 - (void)didTransferSimpleProgress:(SATransferCommand*)sender progress:(NSInteger)progress max:(NSInteger)max fileIndex:(NSInteger)fileIndex fileState:(PaprikaTransferFileState)fileState;
 - (void)didTransferFileFinish:(SATransferCommand*)sender fileIndex:(NSInteger)fileIndex fileCount:(NSInteger)fileCount fileState:(PaprikaTransferFileState)fileState;
 - (void)didTransferFinish:(SATransferCommand*)sender;
-- (void)willTranferPause:(SATransferCommand*)sender;
+- (void)willTransferPause:(SATransferCommand*)sender;
 - (void)didTransferResume:(SATransferCommand*)sender;
 
 @end
@@ -70,9 +70,7 @@ typedef NS_ENUM(NSInteger, SATransferType) {
 
 @interface SATransferCommand : SACommand
 
-@property (nonatomic, retain) id<SACommandPrepareDelegate, SATransferPrepareDelegate> prepareDelegate;
-@property (nonatomic, retain) id<SACommandErrorDelegate, SATransferErrorDelegate> errorDelegate;
-@property (nonatomic, retain) id<SATranferNotifyDelegate> transferDelegate;
+@property (nonatomic, assign) SATransferType transferType;
 
 @property (nonatomic, readonly) NSString *devicePeerID;
 @property (nonatomic, readonly) NSTimeInterval expireTime;
@@ -81,7 +79,6 @@ typedef NS_ENUM(NSInteger, SATransferType) {
 @property (nonatomic, readonly) NSInteger sizeToTransfer;
 @property (nonatomic, readonly) NSInteger sizeTransferred;
 @property (nonatomic, readonly) NSString *transferID;
-@property (nonatomic, readonly) SATransferType transferType;
 @property (nonatomic, readonly) PaprikaTransferMode transferMode;
 
 @property (nonatomic, readonly) NSArray *fileList;
@@ -90,6 +87,14 @@ typedef NS_ENUM(NSInteger, SATransferType) {
 @property (nonatomic, readonly) BOOL fileListUpdated;
 @property (nonatomic, readonly) BOOL transferPaused;
 
-- (SATransferFileStatus)getFileStatusWithIndex:(NSInteger)index;
+- (SATransferFileStatus)fileStatusWithIndex:(NSInteger)index;
+
+- (void)addPrepareObserver:(id<SACommandPrepareDelegate, SATransferPrepareDelegate>)observer;
+- (void)addErrorObserver:(id<SACommandErrorDelegate, SATransferErrorDelegate>)observer;
+- (void)addTransferObserver:(id<SATranferNotifyDelegate>)observer;
+
+- (void)removePrepareObserver:(id<SACommandPrepareDelegate, SATransferPrepareDelegate>)observer;
+- (void)removeErrorObserver:(id<SACommandErrorDelegate, SATransferErrorDelegate>)observer;
+- (void)removeTransferObserver:(id<SATranferNotifyDelegate>)observer;
 
 @end

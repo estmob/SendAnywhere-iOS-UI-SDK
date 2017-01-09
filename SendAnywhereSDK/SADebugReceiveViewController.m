@@ -10,13 +10,19 @@
 #import "Global.h"
 #import "Masonry.h"
 #import "DebugReceiveTableViewDataSource.h"
+#import "StringUtil.h"
+#import "CommonUtil.h"
+#import "SAReceiveCommand.h"
+#import "CommandManager.h"
 
-@interface SADebugReceiveViewController () <UITableViewDelegate>
+@interface SADebugReceiveViewController () <UITableViewDelegate, SATransferPrepareDelegate, SATranferNotifyDelegate, SATransferErrorDelegate>
 
 @property (nonatomic, retain) UITextField *tfInput;
 @property (nonatomic, retain) UIButton *btnSend;
 @property (nonatomic, retain) UITableView *tableView;
 @property (nonatomic, retain) DebugReceiveTableViewDataSource *dataSource;
+
+@property (nonatomic, retain) SAReceiveCommand *command;
 
 @end
 
@@ -88,13 +94,100 @@
     
 }
 
+#pragma mark - internal
+
+- (void)cancelTransfer {
+    if (self.command != nil) {
+        [self.command cancel];
+        self.command = nil;
+    }
+}
+
 #pragma mark - events
 
 - (void)didPressReceive:(UIButton*)sender {
     NSString *key = self.tfInput.text;
     self.tfInput.text = @"";
     
+    [self cancelTransfer];
+    
+    key = [StringUtil extractKey:key];
     DDLogDebug(@"receive key : %@", key);
+    
+    NSString * destDir = [CommonUtil documentPath];
+    
+    self.command = [[CommandManager sharedInstance] makeManagedReceiveCommand];
+    self.command.transferType = SATransferTypeReceive;
+    [self.command executeWithKey:key destDir:destDir];
+}
+
+#pragma mark - prepare observer
+
+- (void)didTransferFileListUpdated:(SATransferCommand *)sender fileStates:(NSArray *)fileState {
+    
+}
+
+- (void)didTransferKeyUpdated:(SATransferCommand *)sender key:(NSString *)key {
+   
+}
+
+- (void)didTransferModeUpdated:(SATransferCommand *)sender {
+    
+}
+
+- (void)didTransferRequestKey:(SATransferCommand *)sender {
+    
+}
+
+- (void)didTransferRequestMode:(SATransferCommand *)sender {
+    
+}
+
+- (void)didTransferWaitForTheNetwork:(SATransferCommand *)sender {
+    
+}
+
+#pragma mark - transfer observer
+
+- (void)willTransferStart:(SATransferCommand *)sender {
+    
+}
+
+- (void)willTransferFileStart:(SATransferCommand *)sender fileIndex:(NSInteger)fileIndex fileCount:(NSInteger)fileCount fileState:(PaprikaTransferFileState)fileState {
+    
+}
+
+- (void)didTransferFileProgress:(SATransferCommand *)sender mode:(SAConnectionMode)mode done:(long long)done max:(long long)max fileIndex:(NSInteger)fileIndex fileState:(PaprikaTransferFileState)fileState {
+    
+}
+
+- (void)didTransferSimpleProgress:(SATransferCommand *)sender progress:(NSInteger)progress max:(NSInteger)max fileIndex:(NSInteger)fileIndex fileState:(PaprikaTransferFileState)fileState {
+    
+}
+
+- (void)didTransferFileFinish:(SATransferCommand *)sender fileIndex:(NSInteger)fileIndex fileCount:(NSInteger)fileCount fileState:(PaprikaTransferFileState)fileState {
+    
+}
+
+- (void)didTransferFinish:(SATransferCommand *)sender {
+    
+}
+
+- (void)willTransferPause:(SATransferCommand *)sender {
+    
+}
+
+- (void)didTransferResume:(SATransferCommand *)sender {
+    
+}
+
+#pragma mark - error observer
+
+- (void)didTransferErrorFileNetwork:(SATransferCommand *)sender {
+    
+}
+
+- (void)didTransferErrorFileWrongProtocol:(SATransferCommand *)sender {
     
 }
 
