@@ -20,6 +20,8 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>Use camera for scanning QR code.</string>
 	<key>SAServerDomain</key>
 	<string>test</string>
 	<key>UILaunchStoryboardName</key>

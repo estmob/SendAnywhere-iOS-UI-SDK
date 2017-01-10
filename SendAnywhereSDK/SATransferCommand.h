@@ -61,7 +61,7 @@ typedef NS_ENUM(NSInteger, SATransferType) {
 @end
 
 @protocol SATransferErrorDelegate <NSObject>
-
+@optional
 - (void)didTransferErrorFileByPeer:(SATransferCommand*)sender;
 - (void)didTransferErrorFileNetwork:(SATransferCommand*)sender;
 - (void)didTransferErrorFileWrongProtocol:(SATransferCommand*)sender;

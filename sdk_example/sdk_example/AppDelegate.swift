@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SendAnywhereSDK
+import PaprikaSDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

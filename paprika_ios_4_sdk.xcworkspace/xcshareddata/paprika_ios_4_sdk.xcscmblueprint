@@ -10,7 +10,7 @@
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "DD8E4214-2E27-497A-A864-264BDE0BB96D",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "3D5E04DD79ABA16F4A8C8FBF1CAD9CEE0CF931C7" : "paprika_ios_4_sdk\/",
-    "B9F47DF572EB47964ACCF9BE2FBC0C2337BB6816" : ".."
+    "B9F47DF572EB47964ACCF9BE2FBC0C2337BB6816" : "paprika_cpplib\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "paprika_ios_4_sdk",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,

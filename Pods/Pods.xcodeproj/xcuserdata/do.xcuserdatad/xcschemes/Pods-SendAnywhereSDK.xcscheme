@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'D6A8939ED362CB14B9DCC58CED0955C0'
+               BlueprintIdentifier = 'FC8491DA9EAAAF18342067094F7BA921'
                BlueprintName = 'Pods-SendAnywhereSDK'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-SendAnywhereSDK.a'>

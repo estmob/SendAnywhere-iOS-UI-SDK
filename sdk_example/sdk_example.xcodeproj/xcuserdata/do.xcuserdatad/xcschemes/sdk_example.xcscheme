@@ -28,9 +28,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C208BCC01E1DE8EC0087EC64"
-               BuildableName = "SendAnywhereSDK.framework"
-               BlueprintName = "SendAnywhereSDK"
+               BlueprintIdentifier = "C2D796001E24CB9E004B2E10"
+               BuildableName = "PaprikaSDK.framework"
+               BlueprintName = "PaprikaSDK"
                ReferencedContainer = "container:../paprika_ios_4_sdk.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

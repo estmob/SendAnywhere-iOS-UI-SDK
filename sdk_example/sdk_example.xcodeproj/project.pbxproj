@@ -14,8 +14,8 @@
 		C208BD881E1DF7540087EC64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C208BD861E1DF7540087EC64 /* LaunchScreen.storyboard */; };
 		C208BD931E1DF7550087EC64 /* sdk_exampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C208BD921E1DF7550087EC64 /* sdk_exampleTests.swift */; };
 		C208BD9E1E1DF7550087EC64 /* sdk_exampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C208BD9D1E1DF7550087EC64 /* sdk_exampleUITests.swift */; };
-		C2669CAD1E1E17C600437C3A /* SendAnywhereSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C208BDAB1E1DF7620087EC64 /* SendAnywhereSDK.framework */; };
-		C2669CAE1E1E17C600437C3A /* SendAnywhereSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C208BDAB1E1DF7620087EC64 /* SendAnywhereSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C2C73D791E24E2AF0032E9EA /* PaprikaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2C73D781E24E2AF0032E9EA /* PaprikaSDK.framework */; };
+		C2C73D7A1E24E2AF0032E9EA /* PaprikaSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C2C73D781E24E2AF0032E9EA /* PaprikaSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,13 +36,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		C2669CAF1E1E17C600437C3A /* Embed Frameworks */ = {
+		C2D796691E24E0F0004B2E10 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C2669CAE1E1E17C600437C3A /* SendAnywhereSDK.framework in Embed Frameworks */,
+				C2C73D7A1E24E2AF0032E9EA /* PaprikaSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,6 +64,8 @@
 		C208BD9D1E1DF7550087EC64 /* sdk_exampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sdk_exampleUITests.swift; sourceTree = "<group>"; };
 		C208BD9F1E1DF7550087EC64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C208BDAB1E1DF7620087EC64 /* SendAnywhereSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SendAnywhereSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2C73D781E24E2AF0032E9EA /* PaprikaSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PaprikaSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2D7966D1E24E1BF004B2E10 /* PaprikaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PaprikaSDK.framework; path = "../build/Debug-iphoneos/PaprikaSDK.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2669CAD1E1E17C600437C3A /* SendAnywhereSDK.framework in Frameworks */,
+				C2C73D791E24E2AF0032E9EA /* PaprikaSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,8 +97,9 @@
 		C208BD711E1DF7540087EC64 = {
 			isa = PBXGroup;
 			children = (
-				C208BD7C1E1DF7540087EC64 /* sdk_example */,
+				C2C73D781E24E2AF0032E9EA /* PaprikaSDK.framework */,
 				C208BD911E1DF7550087EC64 /* sdk_exampleTests */,
+				C208BD7C1E1DF7540087EC64 /* sdk_example */,
 				C208BD9C1E1DF7550087EC64 /* sdk_exampleUITests */,
 				C208BD7B1E1DF7540087EC64 /* Products */,
 				C208BDAF1E1DF7C80087EC64 /* Frameworks */,
@@ -133,7 +136,7 @@
 				C208BD941E1DF7550087EC64 /* Info.plist */,
 			);
 			path = sdk_exampleTests;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		C208BD9C1E1DF7550087EC64 /* sdk_exampleUITests */ = {
 			isa = PBXGroup;
@@ -147,6 +150,7 @@
 		C208BDAF1E1DF7C80087EC64 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C2D7966D1E24E1BF004B2E10 /* PaprikaSDK.framework */,
 				C208BDAB1E1DF7620087EC64 /* SendAnywhereSDK.framework */,
 			);
 			name = Frameworks;
@@ -162,7 +166,7 @@
 				C208BD761E1DF7540087EC64 /* Sources */,
 				C208BD771E1DF7540087EC64 /* Frameworks */,
 				C208BD781E1DF7540087EC64 /* Resources */,
-				C2669CAF1E1E17C600437C3A /* Embed Frameworks */,
+				C2D796691E24E0F0004B2E10 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

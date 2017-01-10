@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SendAnywhereSDK
+import PaprikaSDK
 
 class ViewController: UIViewController {
 
