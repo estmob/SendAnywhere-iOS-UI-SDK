@@ -9,6 +9,7 @@
 #import "SACommand.h"
 #import "Global.h"
 #import "PreferenceManager.h"
+#import "PaprikaUtil.h"
 
 static dispatch_queue_t commandDispatchQueue = nil;
 
@@ -52,7 +53,8 @@ void taskNotifyListener(PaprikaState state,
     
     SACommand *weakSelf = (__bridge SACommand*)userptr;
     
-    id obj = (__bridge id)param;
+    id obj = [PaprikaUtil convertParam:param state:detailedState];
+    
     [weakSelf handleTaskNotify:state detailedState:detailedState param:obj];
     
 }

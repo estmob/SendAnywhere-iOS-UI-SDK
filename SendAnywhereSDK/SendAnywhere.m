@@ -13,6 +13,13 @@
 
 DDLogLevel ddLogLevel = DDLogLevelOff;
 
+void paprika_debuglog(int code, const char *msg) {
+    if (msg == 0) {
+        return;
+    }
+    DDLogDebug(@"paprika debug log : %s", msg);
+}
+
 @interface SendAnywhere ()
 
 @property (nonatomic, retain) NSString *apiKey;
@@ -36,8 +43,9 @@ DDLogLevel ddLogLevel = DDLogLevelOff;
     self.apiKey = apiKey;
     
     paprika_set_apikey(apiKey.UTF8String);
-    
     DDLogInfo(@"api key : %@", apiKey);
+    
+    paprika_set_debuglog_callback(paprika_debuglog, 0);
     
     [self prepareLogWithLevel:debugLevel];
 }

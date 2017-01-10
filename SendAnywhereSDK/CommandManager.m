@@ -37,7 +37,7 @@
         NSString *profileName = [[PreferenceManager sharedInstance] profileName];
         
         self.options = @{
-//                         @(PAPRIKA_OPTION_API_SERVER): address,
+                         @(PAPRIKA_OPTION_API_SERVER): address,
                          @(PAPRIKA_OPTION_SERVER_REGION): @"",
                          @(PAPRIKA_OPTION_PUSH_ID): @"",
                          @(PAPRIKA_OPTION_PUSH_SERVER): @"",

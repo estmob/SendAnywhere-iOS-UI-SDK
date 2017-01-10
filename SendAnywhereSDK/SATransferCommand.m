@@ -134,6 +134,11 @@ NSInteger simpleProgressMaximum = 10000;
 }
 
 - (void)handleTransferNotify:(PaprikaState)state detailedState:(PaprikaDetailedState)detailedState param:(id)param {
+    if (param == nil) {
+        DDLogInfo(@"notify param is nil !!");
+        return;
+    }
+    
     PaprikaTransferFileState fileState;
     [param getValue:&fileState];
     NSInteger index = [self.fileMap[param] integerValue];

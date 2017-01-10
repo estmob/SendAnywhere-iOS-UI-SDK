@@ -16,7 +16,6 @@
 @end
 
 @implementation SAReceiveCommand
-@dynamic errorDelegate;
 
 - (void)executeWithKey:(NSString*)key destDir:(NSString*)destDir {
     [self setParamWithKey:key destDir:destDir];
@@ -55,6 +54,14 @@
     return @"";
 }
 
+- (void)addErrorObserver:(id<SACommandErrorDelegate,SATransferErrorDelegate,SAReceiveErrorDelegate>)observer {
+    [super addErrorObserver:observer];
+}
+
+- (void)removeErrorObserver:(id<SACommandErrorDelegate,SATransferErrorDelegate,SAReceiveErrorDelegate>)observer {
+    [super removeErrorObserver:observer];
+}
+
 #pragma mark - handlers
 
 #pragma mark - dispatchers
@@ -64,18 +71,24 @@
     
     switch ((NSInteger)detailedState) {
         case PAPRIKA_DETAILED_STATE_ERROR_FILE_NO_DISK_SPACE:
-            if ([self.errorDelegate respondsToSelector:@selector(didReceiveErrorNoDiskSpace:)]) {
-                [self.errorDelegate didReceiveErrorNoDiskSpace:self];
+            for (id observer in self.errorObservers) {
+                if ([observer respondsToSelector:@selector(didReceiveErrorNoDiskSpace:)]) {
+                    [observer didReceiveErrorNoDiskSpace:self];
+                }
             }
             break;
         case PAPRIKA_DETAILED_STATE_ERROR_FILE_NO_DOWNLOAD_PATH:
-            if ([self.errorDelegate respondsToSelector:@selector(didReceiveErrorDownloadPathNotExists:)]) {
-                [self.errorDelegate didReceiveErrorDownloadPathNotExists:self];
+            for (id observer in self.errorObservers) {
+                if ([observer respondsToSelector:@selector(didReceiveErrorDownloadPathNotExists:)]) {
+                    [observer didReceiveErrorDownloadPathNotExists:self];
+                }
             }
             break;
         case PAPRIKA_DETAILED_STATE_ERROR_NO_EXIST_KEY:
-            if ([self.errorDelegate respondsToSelector:@selector(didReceiveErrorKeyNotExists:)]) {
-                [self.errorDelegate didReceiveErrorKeyNotExists:self];
+            for (id observer in self.errorObservers) {
+                if ([observer respondsToSelector:@selector(didReceiveErrorKeyNotExists:)]) {
+                    [observer didReceiveErrorKeyNotExists:self];
+                }
             }
             break;
     }

@@ -28,7 +28,6 @@
 		C25400C21E1F316D001595EE /* TransferManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C25400C01E1F316D001595EE /* TransferManager.h */; };
 		C25400C31E1F316D001595EE /* TransferManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C25400C11E1F316D001595EE /* TransferManager.m */; };
 		C25400C51E1F4D53001595EE /* libpaprika.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C208BCB71E1DE8A50087EC64 /* libpaprika.a */; };
-		C25400C61E1F4DA6001595EE /* libsendanywhere.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C208BCAF1E1DE8980087EC64 /* libsendanywhere.a */; };
 		C25400D01E1F4DC3001595EE /* libboost_filesystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C25400C71E1F4DC3001595EE /* libboost_filesystem.a */; };
 		C25400D11E1F4DC3001595EE /* libboost_regex.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C25400C81E1F4DC3001595EE /* libboost_regex.a */; };
 		C25400D21E1F4DC3001595EE /* libboost_system.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C25400C91E1F4DC3001595EE /* libboost_system.a */; };
@@ -61,6 +60,9 @@
 		C26DB2AB1E233D8800B62EAF /* CommandManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C26DB2A91E233D8800B62EAF /* CommandManager.h */; };
 		C26DB2AC1E233D8800B62EAF /* CommandManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C26DB2AA1E233D8800B62EAF /* CommandManager.m */; };
 		C26DB2B21E235BCF00B62EAF /* paprika.h in Headers */ = {isa = PBXBuildFile; fileRef = C26DB2AF1E235B5200B62EAF /* paprika.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C26DB2B71E246F9000B62EAF /* libpaprika_c.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C208BCAD1E1DE8980087EC64 /* libpaprika_c.a */; };
+		C26DB2BC1E247E6100B62EAF /* PaprikaUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C26DB2BA1E247E6100B62EAF /* PaprikaUtil.h */; };
+		C26DB2BD1E247E6100B62EAF /* PaprikaUtil.mm in Sources */ = {isa = PBXBuildFile; fileRef = C26DB2BB1E247E6100B62EAF /* PaprikaUtil.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,12 +101,12 @@
 			remoteGlobalIDString = A436CB83FE53432693D5C2FD;
 			remoteInfo = paprika;
 		};
-		C208BCDA1E1DE8F80087EC64 /* PBXContainerItemProxy */ = {
+		C26DB2B81E246FA200B62EAF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C208BCA51E1DE8980087EC64 /* paprika_c.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 80E3837881B34147A3F88C16;
-			remoteInfo = sendanywhere;
+			remoteGlobalIDString = 90C14DF3908C4BB1B469B897;
+			remoteInfo = paprika_c;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -179,6 +181,11 @@
 		C26DB2AA1E233D8800B62EAF /* CommandManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommandManager.m; sourceTree = "<group>"; };
 		C26DB2AE1E235B5200B62EAF /* paprika_sdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = paprika_sdk.h; path = ../../paprika_cpplib/clib/paprika/paprika_sdk.h; sourceTree = "<group>"; };
 		C26DB2AF1E235B5200B62EAF /* paprika.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = paprika.h; path = ../../paprika_cpplib/clib/paprika/paprika.h; sourceTree = "<group>"; };
+		C26DB2B31E24627700B62EAF /* libSystem.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libSystem.tbd; path = usr/lib/libSystem.tbd; sourceTree = SDKROOT; };
+		C26DB2BA1E247E6100B62EAF /* PaprikaUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaprikaUtil.h; sourceTree = "<group>"; };
+		C26DB2BB1E247E6100B62EAF /* PaprikaUtil.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PaprikaUtil.mm; sourceTree = "<group>"; };
+		C26DB2BE1E249E7000B62EAF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		C26DB2C01E24B45100B62EAF /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		C9AB72D33DED8009666DAE30 /* Pods-SendAnywhereSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SendAnywhereSDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-SendAnywhereSDK/Pods-SendAnywhereSDK.release.xcconfig"; sourceTree = "<group>"; };
 		F25FA646FE87C9EF7B778AC3 /* Pods-paprika_ios_4_sdk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-paprika_ios_4_sdk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-paprika_ios_4_sdk/Pods-paprika_ios_4_sdk.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -188,6 +195,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C26DB2B71E246F9000B62EAF /* libpaprika_c.a in Frameworks */,
 				C25400E01E1F920B001595EE /* SystemConfiguration.framework in Frameworks */,
 				C25400DE1E1F91EA001595EE /* CoreTelephony.framework in Frameworks */,
 				C25400DC1E1F8FFF001595EE /* libc++.tbd in Frameworks */,
@@ -201,7 +209,6 @@
 				C25400D61E1F4DC3001595EE /* libmicrohttpd.a in Frameworks */,
 				C25400D71E1F4DC3001595EE /* libssl.a in Frameworks */,
 				C25400D81E1F4DC3001595EE /* liburiparser.a in Frameworks */,
-				C25400C61E1F4DA6001595EE /* libsendanywhere.a in Frameworks */,
 				C25400C51E1F4D53001595EE /* libpaprika.a in Frameworks */,
 				A6BD754D4AA82D610A51C856 /* libPods-SendAnywhereSDK.a in Frameworks */,
 			);
@@ -221,6 +228,9 @@
 		0B2977D142CD11FF0F80A99B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C26DB2C01E24B45100B62EAF /* libstdc++.tbd */,
+				C26DB2BE1E249E7000B62EAF /* Security.framework */,
+				C26DB2B31E24627700B62EAF /* libSystem.tbd */,
 				C25400DF1E1F920B001595EE /* SystemConfiguration.framework */,
 				C25400DD1E1F91EA001595EE /* CoreTelephony.framework */,
 				C25400DB1E1F8FFF001595EE /* libc++.tbd */,
@@ -436,6 +446,8 @@
 				C26DB29D1E2338A600B62EAF /* StringUtil.m */,
 				C26DB2A51E233B4600B62EAF /* CommonUtil.h */,
 				C26DB2A61E233B4600B62EAF /* CommonUtil.m */,
+				C26DB2BA1E247E6100B62EAF /* PaprikaUtil.h */,
+				C26DB2BB1E247E6100B62EAF /* PaprikaUtil.mm */,
 			);
 			name = util;
 			sourceTree = "<group>";
@@ -458,6 +470,7 @@
 			files = (
 				C26DB2A71E233B4600B62EAF /* CommonUtil.h in Headers */,
 				C2669CD31E1E41A200437C3A /* DebugReceiveTableViewDataSource.h in Headers */,
+				C26DB2BC1E247E6100B62EAF /* PaprikaUtil.h in Headers */,
 				C25400B11E1F2728001595EE /* SACommand.h in Headers */,
 				C26DB2B21E235BCF00B62EAF /* paprika.h in Headers */,
 				C25400BE1E1F2769001595EE /* SAReceiveCommand.h in Headers */,
@@ -495,8 +508,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				C26DB2B91E246FA200B62EAF /* PBXTargetDependency */,
 				C208BCD91E1DE8F80087EC64 /* PBXTargetDependency */,
-				C208BCDB1E1DE8F80087EC64 /* PBXTargetDependency */,
 			);
 			name = SendAnywhereSDK;
 			productName = SendAnywhereSDK;
@@ -651,6 +664,7 @@
 			files = (
 				C2669CD41E1E41A200437C3A /* DebugReceiveTableViewDataSource.m in Sources */,
 				C25400B21E1F2728001595EE /* SACommand.m in Sources */,
+				C26DB2BD1E247E6100B62EAF /* PaprikaUtil.mm in Sources */,
 				C2669CDC1E1E462300437C3A /* Logger.m in Sources */,
 				C26DB2AC1E233D8800B62EAF /* CommandManager.m in Sources */,
 				C2669CE21E1E499900437C3A /* EventUtil.m in Sources */,
@@ -690,10 +704,10 @@
 			name = paprika;
 			targetProxy = C208BCD81E1DE8F80087EC64 /* PBXContainerItemProxy */;
 		};
-		C208BCDB1E1DE8F80087EC64 /* PBXTargetDependency */ = {
+		C26DB2B91E246FA200B62EAF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = sendanywhere;
-			targetProxy = C208BCDA1E1DE8F80087EC64 /* PBXContainerItemProxy */;
+			name = paprika_c;
+			targetProxy = C26DB2B81E246FA200B62EAF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

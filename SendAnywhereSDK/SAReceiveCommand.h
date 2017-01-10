@@ -19,12 +19,13 @@
 
 @interface SAReceiveCommand : SATransferCommand
 
-@property (nonatomic, retain) id<SACommandErrorDelegate, SATransferErrorDelegate, SAReceiveErrorDelegate> errorDelegate;
-
 @property (nonatomic, retain) NSString *licenseUrl;
 
 - (void)executeWithKey:(NSString*)key destDir:(NSString*)destDir;
 - (void)executeWithKey:(NSString*)key destDir:(NSString*)destDir dispatchQueue:(dispatch_queue_t)dispatchQueue;
+
+- (void)addErrorObserver:(id<SACommandErrorDelegate,SATransferErrorDelegate,SAReceiveErrorDelegate>)observer;
+- (void)removeErrorObserver:(id<SACommandErrorDelegate,SATransferErrorDelegate,SAReceiveErrorDelegate>)observer;
 
 - (void)setParamWithKey:(NSString *)key;
 - (void)setParamWithKey:(NSString *)key destDir:(NSString*)destDir;

@@ -108,16 +108,20 @@
 - (void)didPressReceive:(UIButton*)sender {
     NSString *key = self.tfInput.text;
     self.tfInput.text = @"";
+    [self.view endEditing:YES];
     
     [self cancelTransfer];
     
     key = [StringUtil extractKey:key];
     DDLogDebug(@"receive key : %@", key);
     
-    NSString * destDir = [CommonUtil documentPath];
-    
     self.command = [[CommandManager sharedInstance] makeManagedReceiveCommand];
     self.command.transferType = SATransferTypeReceive;
+    [self.command addTransferObserver:self];
+    [self.command addPrepareObserver:self];
+    [self.command addErrorObserver:self];
+    
+    NSString *destDir = [CommonUtil documentPath];
     [self.command executeWithKey:key destDir:destDir];
 }
 
@@ -194,7 +198,7 @@
 #pragma mark - tableView
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 40;
+    return 60;
 }
 
 @end
