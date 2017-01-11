@@ -10,8 +10,6 @@
 		2A9EF97886E7D52297A75A23 /* libPods-paprika_sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC096BC98CCFB1C2FAB83AB3 /* libPods-paprika_sdk.a */; };
 		3E017753874FE05092252E73 /* libPods-SendAnywhereSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14EE3DED822CD9F3E8014C60 /* libPods-SendAnywhereSDK.a */; };
 		A6BD754D4AA82D610A51C856 /* libPods-SendAnywhereSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14EE3DED822CD9F3E8014C60 /* libPods-SendAnywhereSDK.a */; };
-		C208BCCA1E1DE8EC0087EC64 /* SendAnywhereSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C208BCC11E1DE8EC0087EC64 /* SendAnywhereSDK.framework */; };
-		C208BCCF1E1DE8EC0087EC64 /* SendAnywhereSDKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C208BCCE1E1DE8EC0087EC64 /* SendAnywhereSDKTests.m */; };
 		C208BCD11E1DE8EC0087EC64 /* SendAnywhereSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = C208BCC31E1DE8EC0087EC64 /* SendAnywhereSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C208BDC11E1E15CB0087EC64 /* DebugReceiveMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C208BDBF1E1E15CB0087EC64 /* DebugReceiveMainViewController.m */; };
 		C23FBDE71E20E1B400391982 /* SACommand+private.h in Headers */ = {isa = PBXBuildFile; fileRef = C23FBDE51E20E1B400391982 /* SACommand+private.h */; };
@@ -149,13 +147,6 @@
 			remoteGlobalIDString = D09D8A5754F74C5DBFA5F378;
 			remoteInfo = paprika;
 		};
-		C208BCCB1E1DE8EC0087EC64 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C208BC7A1E1DE5420087EC64 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C208BCC01E1DE8EC0087EC64;
-			remoteInfo = SendAnywhereSDK;
-		};
 		C208BCD81E1DE8F80087EC64 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C208BCB01E1DE8A50087EC64 /* paprika.xcodeproj */;
@@ -202,9 +193,6 @@
 		C208BCC11E1DE8EC0087EC64 /* SendAnywhereSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SendAnywhereSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C208BCC31E1DE8EC0087EC64 /* SendAnywhereSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SendAnywhereSDK.h; sourceTree = "<group>"; };
 		C208BCC41E1DE8EC0087EC64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C208BCC91E1DE8EC0087EC64 /* SendAnywhereSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SendAnywhereSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C208BCCE1E1DE8EC0087EC64 /* SendAnywhereSDKTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SendAnywhereSDKTests.m; sourceTree = "<group>"; };
-		C208BCD01E1DE8EC0087EC64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C208BDBE1E1E15CB0087EC64 /* DebugReceiveMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugReceiveMainViewController.h; sourceTree = "<group>"; };
 		C208BDBF1E1E15CB0087EC64 /* DebugReceiveMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugReceiveMainViewController.m; sourceTree = "<group>"; };
 		C23FBDE51E20E1B400391982 /* SACommand+private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SACommand+private.h"; sourceTree = "<group>"; };
@@ -299,14 +287,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C208BCC61E1DE8EC0087EC64 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C208BCCA1E1DE8EC0087EC64 /* SendAnywhereSDK.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C2D7961A1E24CB9E004B2E10 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -381,7 +361,6 @@
 				C208BCB01E1DE8A50087EC64 /* paprika.xcodeproj */,
 				C208BCA51E1DE8980087EC64 /* paprika_c.xcodeproj */,
 				C208BCC21E1DE8EC0087EC64 /* SendAnywhereSDK */,
-				C208BCCD1E1DE8EC0087EC64 /* SendAnywhereSDKTests */,
 				C208BC841E1DE5420087EC64 /* Products */,
 				AB6988147E71F91BE906DADF /* Pods */,
 				0B2977D142CD11FF0F80A99B /* Frameworks */,
@@ -392,7 +371,6 @@
 			isa = PBXGroup;
 			children = (
 				C208BCC11E1DE8EC0087EC64 /* SendAnywhereSDK.framework */,
-				C208BCC91E1DE8EC0087EC64 /* SendAnywhereSDKTests.xctest */,
 				C2D796461E24CB9E004B2E10 /* PaprikaSDK.framework */,
 			);
 			name = Products;
@@ -430,15 +408,6 @@
 				C208BDBD1E1DFC640087EC64 /* ui */,
 			);
 			path = SendAnywhereSDK;
-			sourceTree = "<group>";
-		};
-		C208BCCD1E1DE8EC0087EC64 /* SendAnywhereSDKTests */ = {
-			isa = PBXGroup;
-			children = (
-				C208BCCE1E1DE8EC0087EC64 /* SendAnywhereSDKTests.m */,
-				C208BCD01E1DE8EC0087EC64 /* Info.plist */,
-			);
-			path = SendAnywhereSDKTests;
 			sourceTree = "<group>";
 		};
 		C208BDBD1E1DFC640087EC64 /* ui */ = {
@@ -669,24 +638,6 @@
 			productReference = C208BCC11E1DE8EC0087EC64 /* SendAnywhereSDK.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		C208BCC81E1DE8EC0087EC64 /* SendAnywhereSDKTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C208BCD51E1DE8EC0087EC64 /* Build configuration list for PBXNativeTarget "SendAnywhereSDKTests" */;
-			buildPhases = (
-				C208BCC51E1DE8EC0087EC64 /* Sources */,
-				C208BCC61E1DE8EC0087EC64 /* Frameworks */,
-				C208BCC71E1DE8EC0087EC64 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C208BCCC1E1DE8EC0087EC64 /* PBXTargetDependency */,
-			);
-			name = SendAnywhereSDKTests;
-			productName = SendAnywhereSDKTests;
-			productReference = C208BCC91E1DE8EC0087EC64 /* SendAnywhereSDKTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		C2D796001E24CB9E004B2E10 /* PaprikaSDK */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C2D796431E24CB9E004B2E10 /* Build configuration list for PBXNativeTarget "PaprikaSDK" */;
@@ -715,15 +666,11 @@
 		C208BC7A1E1DE5420087EC64 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = do;
 				TargetAttributes = {
 					C208BCC01E1DE8EC0087EC64 = {
-						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = WXATB2S4F3;
-						ProvisioningStyle = Automatic;
-					};
-					C208BCC81E1DE8EC0087EC64 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = WXATB2S4F3;
 						ProvisioningStyle = Automatic;
@@ -757,7 +704,6 @@
 			projectRoot = "";
 			targets = (
 				C208BCC01E1DE8EC0087EC64 /* SendAnywhereSDK */,
-				C208BCC81E1DE8EC0087EC64 /* SendAnywhereSDKTests */,
 				C2D796001E24CB9E004B2E10 /* PaprikaSDK */,
 			);
 		};
@@ -793,13 +739,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2A218651E24E45000B462A4 /* PaprikaSDK-Info.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C208BCC71E1DE8EC0087EC64 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -903,14 +842,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C208BCC51E1DE8EC0087EC64 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C208BCCF1E1DE8EC0087EC64 /* SendAnywhereSDKTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C2D796061E24CB9E004B2E10 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -941,11 +872,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C208BCCC1E1DE8EC0087EC64 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C208BCC01E1DE8EC0087EC64 /* SendAnywhereSDK */;
-			targetProxy = C208BCCB1E1DE8EC0087EC64 /* PBXContainerItemProxy */;
-		};
 		C208BCD91E1DE8F80087EC64 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = paprika;
@@ -1113,28 +1039,6 @@
 			};
 			name = Release;
 		};
-		C208BCD61E1DE8EC0087EC64 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = WXATB2S4F3;
-				INFOPLIST_FILE = SendAnywhereSDKTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.estmob.SendAnywhereSDKTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		C208BCD71E1DE8EC0087EC64 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = WXATB2S4F3;
-				INFOPLIST_FILE = SendAnywhereSDKTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.estmob.SendAnywhereSDKTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 		C2D796441E24CB9E004B2E10 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7ADCC007F57CA7F5DC1B45BA /* Pods-paprika_sdk.debug.xcconfig */;
@@ -1192,15 +1096,6 @@
 			buildConfigurations = (
 				C208BCD31E1DE8EC0087EC64 /* Debug */,
 				C208BCD41E1DE8EC0087EC64 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C208BCD51E1DE8EC0087EC64 /* Build configuration list for PBXNativeTarget "SendAnywhereSDKTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C208BCD61E1DE8EC0087EC64 /* Debug */,
-				C208BCD71E1DE8EC0087EC64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

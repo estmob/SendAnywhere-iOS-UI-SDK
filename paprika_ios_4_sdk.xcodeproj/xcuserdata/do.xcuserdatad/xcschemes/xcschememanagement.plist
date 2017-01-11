@@ -7,7 +7,7 @@
 		<key>PaprikaSDK.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>13</integer>
+			<integer>9</integer>
 		</dict>
 		<key>SendAnywhereSDK.xcscheme</key>
 		<dict>
@@ -33,6 +33,11 @@
 			<true/>
 		</dict>
 		<key>C208BCC81E1DE8EC0087EC64</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C2A21B0F1E263D1000B462A4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
