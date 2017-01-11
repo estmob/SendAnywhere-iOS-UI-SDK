@@ -7,10 +7,15 @@
 //
 
 #import "CommonUtil.h"
+#import "SendAnywhere.h"
 
 @implementation CommonUtil
 
 + (NSString*)documentPath {
+    if ([SendAnywhere sharedInstance].rootPath.length > 0) {
+        return [SendAnywhere sharedInstance].rootPath;
+    }
+    
     return NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject;
 }
 

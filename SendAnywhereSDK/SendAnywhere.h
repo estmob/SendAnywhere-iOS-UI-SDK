@@ -19,8 +19,11 @@ typedef NS_ENUM(NSInteger, SADebugLevel) {
 
 @interface SendAnywhere : NSObject
 
+@property (nonatomic, retain) NSString *rootPath;
+@property (nonatomic, assign) SADebugLevel debugLevel;
+
 + (SendAnywhere*)sharedInstance;
 
-- (void)initializeWithKey:(NSString*)apiKey debugLevel:(SADebugLevel)debugLevel;
+- (void)initializeWithKey:(NSString*)apiKey;
 
 @end

@@ -14,6 +14,4 @@
 #import "SATransferCommand.h"
 #import "SAReceiveCommand.h"
 
-#import "SADebugReceiveViewController.h"
-
 #endif /* SendAnywhereSDK_Headers_h */

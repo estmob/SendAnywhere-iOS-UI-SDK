@@ -11,4 +11,6 @@
 
 #import "SendAnywhereSDK_Headers.h"
 
+#import "SADebugReceiveViewController.h"
+
 #endif /* PaprikaSDK_Headers_h */

@@ -42,7 +42,7 @@
         return @"api";
     }
     NSString *domain = [bundle objectForInfoDictionaryKey:PREFERENCE_SERVER_DOMAIN];
-    if (domain == nil) {
+    if (domain.length == 0) {
         return @"api";
     }
     return domain;
@@ -54,7 +54,7 @@
         return [UIDevice currentDevice].name;
     }
     NSString *name = [bundle objectForInfoDictionaryKey:PREFERENCE_PROFILE_NAME];
-    if (name == nil) {
+    if (name.length == 0) {
         return [UIDevice currentDevice].name;
     }
     return name;

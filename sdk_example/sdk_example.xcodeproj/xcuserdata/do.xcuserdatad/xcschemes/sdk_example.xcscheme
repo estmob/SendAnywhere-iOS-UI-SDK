@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C208BD791E1DF7540087EC64"
-               BuildableName = "sdk_example.app"
-               BlueprintName = "sdk_example"
-               ReferencedContainer = "container:sdk_example.xcodeproj">
+               BlueprintIdentifier = "C208BCC01E1DE8EC0087EC64"
+               BuildableName = "SendAnywhereSDK.framework"
+               BlueprintName = "SendAnywhereSDK"
+               ReferencedContainer = "container:../paprika_ios_4_sdk.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -28,10 +28,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C2D796001E24CB9E004B2E10"
-               BuildableName = "PaprikaSDK.framework"
-               BlueprintName = "PaprikaSDK"
-               ReferencedContainer = "container:../paprika_ios_4_sdk.xcodeproj">
+               BlueprintIdentifier = "C208BD791E1DF7540087EC64"
+               BuildableName = "sdk_example.app"
+               BlueprintName = "sdk_example"
+               ReferencedContainer = "container:sdk_example.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

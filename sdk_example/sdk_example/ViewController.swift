@@ -7,13 +7,12 @@
 //
 
 import UIKit
-import PaprikaSDK
+import SendAnywhereSDK
 
 class ViewController: UIViewController {
 
     @IBAction func didPressSAReceiveBtn(_ sender: UIButton) {
-        let vc = SADebugReceiveViewController()
-        self.present(vc, animated: true, completion: nil)
+        
     }
     
     override func viewDidLoad() {

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import PaprikaSDK
+import SendAnywhereSDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,7 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        SendAnywhere.sharedInstance().initialize(withKey: "74703d8de1ef2bdc8b16f903451968de", debugLevel: .verbose)
+        SendAnywhere.sharedInstance().initialize(withKey: "74703d8de1ef2bdc8b16f903451968de")
+        SendAnywhere.sharedInstance().debugLevel = .verbose
         
         return true
     }
