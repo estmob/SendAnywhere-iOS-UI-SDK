@@ -24,10 +24,7 @@
 - (void)executeWithKey:(NSString*)key destDir:(NSString*)destDir;
 - (void)executeWithKey:(NSString*)key destDir:(NSString*)destDir dispatchQueue:(dispatch_queue_t)dispatchQueue;
 
-- (void)addErrorObserver:(id<SACommandErrorDelegate,SATransferErrorDelegate,SAReceiveErrorDelegate>)observer;
-- (void)removeErrorObserver:(id<SACommandErrorDelegate,SATransferErrorDelegate,SAReceiveErrorDelegate>)observer;
-
-- (void)setParamWithKey:(NSString *)key;
-- (void)setParamWithKey:(NSString *)key destDir:(NSString*)destDir;
+- (void)setParamWithTransferKey:(NSString *)key;
+- (void)setParamWithTransferKey:(NSString *)key destDir:(NSString*)destDir;
 
 @end

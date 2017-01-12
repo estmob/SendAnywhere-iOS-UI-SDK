@@ -76,13 +76,13 @@ typedef NS_ENUM(NSInteger, SACommandState) {
 
 - (id)valueForKey:(PaprikaValue)key defaultValue:(id)defaultValue;
 
-- (void)addPrepareObserver:(id<SACommandPrepareDelegate>)observer;
-- (void)addNotifyObserver:(id<SACommandNotifyDelegate>)observer;
-- (void)addErrorObserver:(id<SACommandErrorDelegate>)observer;
+- (void)addPrepareObserver:(id)observer;
+- (void)addNotifyObserver:(id)observer;
+- (void)addErrorObserver:(id)observer;
 
-- (void)removePrepareObserver:(id<SACommandPrepareDelegate>)observer;
-- (void)removeNotifyObserver:(id<SACommandNotifyDelegate>)observer;
-- (void)removeErrorObserver:(id<SACommandErrorDelegate>)observer;
+- (void)removePrepareObserver:(id)observer;
+- (void)removeNotifyObserver:(id)observer;
+- (void)removeErrorObserver:(id)observer;
 
 
 

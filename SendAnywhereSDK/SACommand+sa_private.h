@@ -1,5 +1,5 @@
 //
-//  SACommand+private.h
+//  SACommand+sa_private.h
 //  paprika_ios_4_sdk
 //
 //  Created by do on 07/01/2017.
@@ -8,7 +8,7 @@
 
 #import "SACommand.h"
 
-@interface SACommand (private)
+@interface SACommand (sa_private)
 
 @property (nonatomic, readonly) NSMutableArray *prepareObservers;
 @property (nonatomic, readonly) NSMutableArray *errorObservers;

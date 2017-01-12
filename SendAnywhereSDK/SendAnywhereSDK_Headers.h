@@ -12,6 +12,7 @@
 #import "SendAnywhere.h"
 #import "SACommand.h"
 #import "SATransferCommand.h"
+#import "SASendCommand.h"
 #import "SAReceiveCommand.h"
 
 #endif /* SendAnywhereSDK_Headers_h */

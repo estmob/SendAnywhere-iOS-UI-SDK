@@ -12,8 +12,8 @@
 		A6BD754D4AA82D610A51C856 /* libPods-SendAnywhereSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14EE3DED822CD9F3E8014C60 /* libPods-SendAnywhereSDK.a */; };
 		C208BCD11E1DE8EC0087EC64 /* SendAnywhereSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = C208BCC31E1DE8EC0087EC64 /* SendAnywhereSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C208BDC11E1E15CB0087EC64 /* DebugReceiveMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C208BDBF1E1E15CB0087EC64 /* DebugReceiveMainViewController.m */; };
-		C23FBDE71E20E1B400391982 /* SACommand+private.h in Headers */ = {isa = PBXBuildFile; fileRef = C23FBDE51E20E1B400391982 /* SACommand+private.h */; };
-		C23FBDE81E20E1B400391982 /* SACommand+private.m in Sources */ = {isa = PBXBuildFile; fileRef = C23FBDE61E20E1B400391982 /* SACommand+private.m */; };
+		C23FBDE71E20E1B400391982 /* SACommand+sa_private.h in Headers */ = {isa = PBXBuildFile; fileRef = C23FBDE51E20E1B400391982 /* SACommand+sa_private.h */; };
+		C23FBDE81E20E1B400391982 /* SACommand+sa_private.m in Sources */ = {isa = PBXBuildFile; fileRef = C23FBDE61E20E1B400391982 /* SACommand+sa_private.m */; };
 		C23FBDEF1E21C74F00391982 /* SATransferCommand+TypeUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = C23FBDED1E21C74F00391982 /* SATransferCommand+TypeUtils.h */; };
 		C23FBDF01E21C74F00391982 /* SATransferCommand+TypeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C23FBDEE1E21C74F00391982 /* SATransferCommand+TypeUtils.m */; };
 		C23FBDF31E226EAF00391982 /* NSString+sa.h in Headers */ = {isa = PBXBuildFile; fileRef = C23FBDF11E226EAF00391982 /* NSString+sa.h */; };
@@ -66,6 +66,10 @@
 		C2A21B091E2636ED00B462A4 /* SendAnywhere.h in Headers */ = {isa = PBXBuildFile; fileRef = C2669CBD1E1E213000437C3A /* SendAnywhere.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C2A21B0A1E26370600B462A4 /* SATransferCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = C25400B81E1F2738001595EE /* SATransferCommand.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C2A21B0B1E26371600B462A4 /* SAReceiveCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = C25400BC1E1F2769001595EE /* SAReceiveCommand.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2A21BC71E276AE200B462A4 /* SASendCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = C2A21BC51E276AE200B462A4 /* SASendCommand.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2A21BC81E276AE200B462A4 /* SASendCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = C2A21BC51E276AE200B462A4 /* SASendCommand.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2A21BC91E276AE200B462A4 /* SASendCommand.mm in Sources */ = {isa = PBXBuildFile; fileRef = C2A21BC61E276AE200B462A4 /* SASendCommand.mm */; };
+		C2A21BCA1E276AE200B462A4 /* SASendCommand.mm in Sources */ = {isa = PBXBuildFile; fileRef = C2A21BC61E276AE200B462A4 /* SASendCommand.mm */; };
 		C2D796071E24CB9E004B2E10 /* DebugReceiveTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C2669CD21E1E41A200437C3A /* DebugReceiveTableViewDataSource.m */; };
 		C2D796081E24CB9E004B2E10 /* SACommand.m in Sources */ = {isa = PBXBuildFile; fileRef = C25400B01E1F2728001595EE /* SACommand.m */; };
 		C2D796091E24CB9E004B2E10 /* PaprikaUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C26DB2BB1E247E6100B62EAF /* PaprikaUtil.m */; };
@@ -84,7 +88,7 @@
 		C2D796161E24CB9E004B2E10 /* SAReceiveCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = C25400BD1E1F2769001595EE /* SAReceiveCommand.m */; };
 		C2D796171E24CB9E004B2E10 /* SATransferCommand+TypeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C23FBDEE1E21C74F00391982 /* SATransferCommand+TypeUtils.m */; };
 		C2D796181E24CB9E004B2E10 /* CommonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C26DB2A61E233B4600B62EAF /* CommonUtil.m */; };
-		C2D796191E24CB9E004B2E10 /* SACommand+private.m in Sources */ = {isa = PBXBuildFile; fileRef = C23FBDE61E20E1B400391982 /* SACommand+private.m */; };
+		C2D796191E24CB9E004B2E10 /* SACommand+sa_private.m in Sources */ = {isa = PBXBuildFile; fileRef = C23FBDE61E20E1B400391982 /* SACommand+sa_private.m */; };
 		C2D7961B1E24CB9E004B2E10 /* libpaprika_c.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C208BCAD1E1DE8980087EC64 /* libpaprika_c.a */; };
 		C2D7961C1E24CB9E004B2E10 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C25400DF1E1F920B001595EE /* SystemConfiguration.framework */; };
 		C2D7961D1E24CB9E004B2E10 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C25400DD1E1F91EA001595EE /* CoreTelephony.framework */; };
@@ -115,7 +119,7 @@
 		C2D796381E24CB9E004B2E10 /* StringUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C26DB29C1E2338A600B62EAF /* StringUtil.h */; };
 		C2D796391E24CB9E004B2E10 /* DebugReceiveMainViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C208BDBE1E1E15CB0087EC64 /* DebugReceiveMainViewController.h */; };
 		C2D7963A1E24CB9E004B2E10 /* SendAnywhere.h in Headers */ = {isa = PBXBuildFile; fileRef = C2669CBD1E1E213000437C3A /* SendAnywhere.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C2D7963B1E24CB9E004B2E10 /* SACommand+private.h in Headers */ = {isa = PBXBuildFile; fileRef = C23FBDE51E20E1B400391982 /* SACommand+private.h */; };
+		C2D7963B1E24CB9E004B2E10 /* SACommand+sa_private.h in Headers */ = {isa = PBXBuildFile; fileRef = C23FBDE51E20E1B400391982 /* SACommand+sa_private.h */; };
 		C2D7963D1E24CB9E004B2E10 /* SATransferCommand+TypeUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = C23FBDED1E21C74F00391982 /* SATransferCommand+TypeUtils.h */; };
 		C2D7963E1E24CB9E004B2E10 /* DebugReceiveTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = C2669CD51E1E430800437C3A /* DebugReceiveTableViewCell.h */; };
 		C2D7963F1E24CB9E004B2E10 /* CommandManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C26DB2A91E233D8800B62EAF /* CommandManager.h */; };
@@ -151,28 +155,28 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = C208BCB01E1DE8A50087EC64 /* paprika.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = E73425B8C867408D9A1E51D8;
+			remoteGlobalIDString = AFC672AF96F742518A949B54;
 			remoteInfo = paprika;
 		};
 		C2A21B051E2635CE00B462A4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C208BCA51E1DE8980087EC64 /* paprika_c.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = C045F1D400DE4813BF0785D2;
+			remoteGlobalIDString = 495592EB38B544C5A3198C43;
 			remoteInfo = sendanywhere;
 		};
 		C2D796021E24CB9E004B2E10 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C208BCA51E1DE8980087EC64 /* paprika_c.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = DC1E64D2275E48998397013C;
+			remoteGlobalIDString = 05EE156055DE486286FCDC3D;
 			remoteInfo = paprika_c;
 		};
 		C2D796041E24CB9E004B2E10 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C208BCB01E1DE8A50087EC64 /* paprika.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = E73425B8C867408D9A1E51D8;
+			remoteGlobalIDString = AFC672AF96F742518A949B54;
 			remoteInfo = paprika;
 		};
 /* End PBXContainerItemProxy section */
@@ -195,8 +199,8 @@
 		C208BCC41E1DE8EC0087EC64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C208BDBE1E1E15CB0087EC64 /* DebugReceiveMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugReceiveMainViewController.h; sourceTree = "<group>"; };
 		C208BDBF1E1E15CB0087EC64 /* DebugReceiveMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugReceiveMainViewController.m; sourceTree = "<group>"; };
-		C23FBDE51E20E1B400391982 /* SACommand+private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SACommand+private.h"; sourceTree = "<group>"; };
-		C23FBDE61E20E1B400391982 /* SACommand+private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SACommand+private.m"; sourceTree = "<group>"; };
+		C23FBDE51E20E1B400391982 /* SACommand+sa_private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SACommand+sa_private.h"; sourceTree = "<group>"; };
+		C23FBDE61E20E1B400391982 /* SACommand+sa_private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SACommand+sa_private.m"; sourceTree = "<group>"; };
 		C23FBDED1E21C74F00391982 /* SATransferCommand+TypeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SATransferCommand+TypeUtils.h"; sourceTree = "<group>"; };
 		C23FBDEE1E21C74F00391982 /* SATransferCommand+TypeUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SATransferCommand+TypeUtils.m"; sourceTree = "<group>"; };
 		C23FBDF11E226EAF00391982 /* NSString+sa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+sa.h"; sourceTree = "<group>"; };
@@ -255,6 +259,9 @@
 		C2A218661E24E4BD00B462A4 /* SendAnywhereSDK_Headers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SendAnywhereSDK_Headers.h; sourceTree = "<group>"; };
 		C2A218671E24E52000B462A4 /* PaprikaSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaprikaSDK.h; sourceTree = "<group>"; };
 		C2A2186A1E24E59D00B462A4 /* PaprikaSDK_Headers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaprikaSDK_Headers.h; sourceTree = "<group>"; };
+		C2A21B731E27086500B462A4 /* libSystem.B.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libSystem.B.tbd; path = usr/lib/libSystem.B.tbd; sourceTree = SDKROOT; };
+		C2A21BC51E276AE200B462A4 /* SASendCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SASendCommand.h; sourceTree = "<group>"; };
+		C2A21BC61E276AE200B462A4 /* SASendCommand.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SASendCommand.mm; sourceTree = "<group>"; };
 		C2D796461E24CB9E004B2E10 /* PaprikaSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PaprikaSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2D796581E24D9B3004B2E10 /* ScanQRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanQRViewController.h; sourceTree = "<group>"; };
 		C2D796591E24D9B3004B2E10 /* ScanQRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanQRViewController.m; sourceTree = "<group>"; };
@@ -316,6 +323,7 @@
 		0B2977D142CD11FF0F80A99B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C2A21B731E27086500B462A4 /* libSystem.B.tbd */,
 				C26DB2C01E24B45100B62EAF /* libstdc++.tbd */,
 				C26DB2BE1E249E7000B62EAF /* Security.framework */,
 				C26DB2B31E24627700B62EAF /* libSystem.tbd */,
@@ -405,7 +413,6 @@
 				C2669CC31E1E236B00437C3A /* manager */,
 				C2669CC11E1E225F00437C3A /* global */,
 				C2669CB71E1E20ED00437C3A /* main */,
-				C208BDBD1E1DFC640087EC64 /* ui */,
 			);
 			path = SendAnywhereSDK;
 			sourceTree = "<group>";
@@ -422,7 +429,6 @@
 		C23FBDDA1E20E0F300391982 /* category */ = {
 			isa = PBXGroup;
 			children = (
-				C2669CCA1E1E3EF100437C3A /* command */,
 				C23FBDED1E21C74F00391982 /* SATransferCommand+TypeUtils.h */,
 				C23FBDEE1E21C74F00391982 /* SATransferCommand+TypeUtils.m */,
 				C23FBDF11E226EAF00391982 /* NSString+sa.h */,
@@ -434,8 +440,8 @@
 		C23FBDE41E20E1A000391982 /* private */ = {
 			isa = PBXGroup;
 			children = (
-				C23FBDE51E20E1B400391982 /* SACommand+private.h */,
-				C23FBDE61E20E1B400391982 /* SACommand+private.m */,
+				C23FBDE51E20E1B400391982 /* SACommand+sa_private.h */,
+				C23FBDE61E20E1B400391982 /* SACommand+sa_private.m */,
 			);
 			name = private;
 			sourceTree = "<group>";
@@ -480,6 +486,8 @@
 				C25400B91E1F2738001595EE /* SATransferCommand.m */,
 				C25400BC1E1F2769001595EE /* SAReceiveCommand.h */,
 				C25400BD1E1F2769001595EE /* SAReceiveCommand.m */,
+				C2A21BC51E276AE200B462A4 /* SASendCommand.h */,
+				C2A21BC61E276AE200B462A4 /* SASendCommand.mm */,
 			);
 			name = command;
 			sourceTree = "<group>";
@@ -528,6 +536,8 @@
 		C2A218681E24E56200B462A4 /* public */ = {
 			isa = PBXGroup;
 			children = (
+				C2669CCA1E1E3EF100437C3A /* command */,
+				C208BDBD1E1DFC640087EC64 /* ui */,
 				C208BCC31E1DE8EC0087EC64 /* SendAnywhereSDK.h */,
 				C2A218671E24E52000B462A4 /* PaprikaSDK.h */,
 				C2A218661E24E4BD00B462A4 /* SendAnywhereSDK_Headers.h */,
@@ -566,6 +576,7 @@
 				C2A21B0A1E26370600B462A4 /* SATransferCommand.h in Headers */,
 				C25400B11E1F2728001595EE /* SACommand.h in Headers */,
 				C2A21B091E2636ED00B462A4 /* SendAnywhere.h in Headers */,
+				C2A21BC71E276AE200B462A4 /* SASendCommand.h in Headers */,
 				C2A21B0B1E26371600B462A4 /* SAReceiveCommand.h in Headers */,
 				C2D7965A1E24D9B3004B2E10 /* ScanQRViewController.h in Headers */,
 				C26DB2B21E235BCF00B62EAF /* paprika.h in Headers */,
@@ -575,7 +586,7 @@
 				C23FBDF31E226EAF00391982 /* NSString+sa.h in Headers */,
 				C2669CDB1E1E462300437C3A /* Logger.h in Headers */,
 				C26DB29E1E2338A600B62EAF /* StringUtil.h in Headers */,
-				C23FBDE71E20E1B400391982 /* SACommand+private.h in Headers */,
+				C23FBDE71E20E1B400391982 /* SACommand+sa_private.h in Headers */,
 				C208BCD11E1DE8EC0087EC64 /* SendAnywhereSDK.h in Headers */,
 				C23FBDEF1E21C74F00391982 /* SATransferCommand+TypeUtils.h in Headers */,
 				C26DB2AB1E233D8800B62EAF /* CommandManager.h in Headers */,
@@ -595,6 +606,7 @@
 				C2A2186D1E24E5EB00B462A4 /* PaprikaSDK_Headers.h in Headers */,
 				C2A2186C1E24E5EB00B462A4 /* SendAnywhereSDK_Headers.h in Headers */,
 				C2A2186B1E24E5EB00B462A4 /* PaprikaSDK.h in Headers */,
+				C2A21BC81E276AE200B462A4 /* SASendCommand.h in Headers */,
 				C2D796311E24CB9E004B2E10 /* SAReceiveCommand.h in Headers */,
 				C2D796321E24CB9E004B2E10 /* SATransferCommand.h in Headers */,
 				C2D796331E24CB9E004B2E10 /* EventUtil.h in Headers */,
@@ -605,7 +617,7 @@
 				C2D796381E24CB9E004B2E10 /* StringUtil.h in Headers */,
 				C2D796391E24CB9E004B2E10 /* DebugReceiveMainViewController.h in Headers */,
 				C2D7963A1E24CB9E004B2E10 /* SendAnywhere.h in Headers */,
-				C2D7963B1E24CB9E004B2E10 /* SACommand+private.h in Headers */,
+				C2D7963B1E24CB9E004B2E10 /* SACommand+sa_private.h in Headers */,
 				C2D7963D1E24CB9E004B2E10 /* SATransferCommand+TypeUtils.h in Headers */,
 				C2D7963E1E24CB9E004B2E10 /* DebugReceiveTableViewCell.h in Headers */,
 				C2D7963F1E24CB9E004B2E10 /* CommandManager.h in Headers */,
@@ -838,7 +850,8 @@
 				C25400BF1E1F2769001595EE /* SAReceiveCommand.m in Sources */,
 				C23FBDF01E21C74F00391982 /* SATransferCommand+TypeUtils.m in Sources */,
 				C26DB2A81E233B4600B62EAF /* CommonUtil.m in Sources */,
-				C23FBDE81E20E1B400391982 /* SACommand+private.m in Sources */,
+				C2A21BC91E276AE200B462A4 /* SASendCommand.mm in Sources */,
+				C23FBDE81E20E1B400391982 /* SACommand+sa_private.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -865,7 +878,8 @@
 				C2D796161E24CB9E004B2E10 /* SAReceiveCommand.m in Sources */,
 				C2D796171E24CB9E004B2E10 /* SATransferCommand+TypeUtils.m in Sources */,
 				C2D796181E24CB9E004B2E10 /* CommonUtil.m in Sources */,
-				C2D796191E24CB9E004B2E10 /* SACommand+private.m in Sources */,
+				C2A21BCA1E276AE200B462A4 /* SASendCommand.mm in Sources */,
+				C2D796191E24CB9E004B2E10 /* SACommand+sa_private.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1014,7 +1028,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.estmob.SendAnywhereSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SEND_ANYWHERE_SDK = YES;
+				SENDANYWHERE_SDK = YES;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -1034,7 +1048,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.estmob.SendAnywhereSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SEND_ANYWHERE_SDK = YES;
+				SENDANYWHERE_SDK = YES;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;

@@ -128,11 +128,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SendAnywhereSDK/CommandManager.m"
-            timestampString = "505647992.222025"
+            timestampString = "505907857.651042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "-didUpdateDeviceID:deviceId:"
             landmarkType = "7">
          </BreakpointContent>
@@ -144,11 +144,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SendAnywhereSDK/CommandManager.m"
-            timestampString = "505647994.235535"
+            timestampString = "505907857.651042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
             landmarkName = "-didUpdateAuthToken:token:"
             landmarkType = "7">
          </BreakpointContent>
@@ -176,12 +176,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SendAnywhereSDK/paprikaUtil.m"
-            timestampString = "505721881.9449"
+            timestampString = "505898366.997387"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "+convertParam:state:"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "+convertParamWithState:param:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -224,19 +224,17 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SendAnywhereSDK/DebugReceiveMainViewController.m"
-            timestampString = "505736089.082468"
+            timestampString = "505901001.715508"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "461"
-            endingLineNumber = "461"
-            landmarkName = "-handleReceiveKey:"
-            landmarkType = "7">
+            startingLineNumber = "468"
+            endingLineNumber = "468">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../paprika_cpplib/paprika/Transfer/ActiveHttp.cpp"
@@ -246,6 +244,54 @@
             startingLineNumber = "97"
             endingLineNumber = "97"
             landmarkName = "ActiveHttp::requestPerform(CURL* curl, uint64_t start, uint64_t&amp; filePos)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../paprika_cpplib/paprika/Transfer/ActiveHttp.cpp"
+            timestampString = "505910568.794387"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "ActiveHttp::requestPerform(CURL* curl, uint64_t start, uint64_t&amp; filePos)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SendAnywhereSDK/SATransferCommand.m"
+            timestampString = "505913559.490004"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "191"
+            endingLineNumber = "191"
+            landmarkName = "-handleTransferNotify:detailedState:param:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SendAnywhereSDK/SATransferCommand.m"
+            timestampString = "505913559.490004"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "194"
+            endingLineNumber = "194"
+            landmarkName = "-handleTransferNotify:detailedState:param:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -11,6 +11,8 @@
 #import "Logger.h"
 #import "paprika.h"
 
+#import <sys/time.h>
+
 DDLogLevel ddLogLevel = DDLogLevelOff;
 
 #ifndef SEND_ANYWHERE_SDK

@@ -7,7 +7,7 @@
 //
 
 #import "SAReceiveCommand.h"
-#import "SACommand+private.h"
+#import "SACommand+sa_private.h"
 #import <paprika.h>
 #import "NSString+sa.h"
 
@@ -18,24 +18,24 @@
 @implementation SAReceiveCommand
 
 - (void)executeWithKey:(NSString*)key destDir:(NSString*)destDir {
-    [self setParamWithKey:key destDir:destDir];
+    [self setParamWithTransferKey:key destDir:destDir];
     
     [super execute];
 }
 
 - (void)executeWithKey:(NSString*)key destDir:(NSString*)destDir dispatchQueue:(dispatch_queue_t)dispatchQueue {
-    [self setParamWithKey:key destDir:destDir];
+    [self setParamWithTransferKey:key destDir:destDir];
     
     [super executeWithDispatchQueue:dispatchQueue];
 }
 
-- (void)setParamWithKey:(NSString *)key {
+- (void)setParamWithTransferKey:(NSString *)key {
     [super clearmParams];
     [super setParamWithKey:SA_COMMAND_PARAM_TYPE value:@([key containsString:@"://"] ? 4 : 0)];
     [super setParamWithKey:SA_TRANSFER_PARAM_KEY value:key];
 }
 
-- (void)setParamWithKey:(NSString *)key destDir:(NSString *)destDir {
+- (void)setParamWithTransferKey:(NSString *)key destDir:(NSString *)destDir {
     [super clearmParams];
     [super setParamWithKey:SA_COMMAND_PARAM_TYPE value:@([key containsString:@"://"] ? 5 : 1)];
     [super setParamWithKey:SA_TRANSFER_PARAM_KEY value:key];
@@ -52,14 +52,6 @@
     PaprikaTask task = [super currentTask];
     
     return @"";
-}
-
-- (void)addErrorObserver:(id<SACommandErrorDelegate,SATransferErrorDelegate,SAReceiveErrorDelegate>)observer {
-    [super addErrorObserver:observer];
-}
-
-- (void)removeErrorObserver:(id<SACommandErrorDelegate,SATransferErrorDelegate,SAReceiveErrorDelegate>)observer {
-    [super removeErrorObserver:observer];
 }
 
 #pragma mark - handlers

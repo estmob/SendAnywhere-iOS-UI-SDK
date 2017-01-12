@@ -8,11 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+@class SASendCommand;
 @class SAReceiveCommand;
 @interface CommandManager : NSObject
 
 + (instancetype)sharedInstance;
 
+- (SASendCommand*)makeManagedSendCommand;
 - (SAReceiveCommand*)makeManagedReceiveCommand;
 
 @end

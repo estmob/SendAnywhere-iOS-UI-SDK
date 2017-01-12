@@ -57,7 +57,10 @@ SATransferPrepareDelegate, SATranferNotifyDelegate, SATransferErrorDelegate>
 - (void)prepareNavigation {
     self.navigationItem.title = @"Send Anywhere - Receiver";
     
-    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"QR code" style:UIBarButtonItemStylePlain target:self action:@selector(didPressQRcode:)];
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Close" style:UIBarButtonItemStylePlain target:self action:@selector(didpressClose:)];
+    self.navigationItem.leftBarButtonItem = item;
+    
+    item = [[UIBarButtonItem alloc] initWithTitle:@"QR code" style:UIBarButtonItemStylePlain target:self action:@selector(didPressQRcode:)];
     self.navigationItem.rightBarButtonItem = item;
 }
 
@@ -149,6 +152,10 @@ SATransferPrepareDelegate, SATranferNotifyDelegate, SATransferErrorDelegate>
     ScanQRViewController *vc = [ScanQRViewController new];
     vc.delegate = self;
     [self presentViewController:vc animated:YES completion:nil];
+}
+
+- (void)didpressClose:(UIButton*)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - scan QR code delegate

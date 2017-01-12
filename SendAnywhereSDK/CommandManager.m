@@ -10,6 +10,7 @@
 #import "Global.h"
 #import "SAReceiveCommand.h"
 #import "PreferenceManager.h"
+#import "SASendCommand.h"
 
 @interface CommandManager() <SACommandPrepareDelegate, SACommandNotifyDelegate, SATranferNotifyDelegate>
 
@@ -48,6 +49,10 @@
                          @(PAPRIKA_OPTION_PARALLEL_TRANSFER): @YES};
     }
     return self;
+}
+
+- (SASendCommand*)makeManagedSendCommand {
+    return (SASendCommand*)[self prepareManagedCommand:[SASendCommand new]];
 }
 
 - (SAReceiveCommand*)makeManagedReceiveCommand {

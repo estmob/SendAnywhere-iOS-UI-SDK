@@ -89,12 +89,12 @@ typedef NS_ENUM(NSInteger, SATransferType) {
 
 - (SATransferFileStatus)fileStatusWithIndex:(NSInteger)index;
 
-- (void)addPrepareObserver:(id<SACommandPrepareDelegate, SATransferPrepareDelegate>)observer;
-- (void)addErrorObserver:(id<SACommandErrorDelegate, SATransferErrorDelegate>)observer;
-- (void)addTransferObserver:(id<SATranferNotifyDelegate>)observer;
+- (void)addPrepareObserver:(id)observer;
+- (void)addErrorObserver:(id)observer;
+- (void)addTransferObserver:(id)observer;
 
-- (void)removePrepareObserver:(id<SACommandPrepareDelegate, SATransferPrepareDelegate>)observer;
-- (void)removeErrorObserver:(id<SACommandErrorDelegate, SATransferErrorDelegate>)observer;
-- (void)removeTransferObserver:(id<SATranferNotifyDelegate>)observer;
+- (void)removePrepareObserver:(id)observer;
+- (void)removeErrorObserver:(id)observer;
+- (void)removeTransferObserver:(id)observer;
 
 @end

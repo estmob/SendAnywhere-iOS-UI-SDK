@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "paprika.h"
 
 @interface PaprikaUtil : NSObject
 
-+ (id)convertParam:(const void*)param state:(PaprikaDetailedState)detailedState;
++ (id)convertParamWithState:(NSInteger)detailedState param:(const void*)param;
++ (const void*)convertOptionWithKey:(NSInteger)key option:(id)optionValue;
+
 
 @end

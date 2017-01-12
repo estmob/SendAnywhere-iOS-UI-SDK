@@ -116,12 +116,9 @@
 		C2A21B261E26413A00B462A4 /* paprika_example */ = {
 			isa = PBXGroup;
 			children = (
-				C2A21B271E26413A00B462A4 /* AppDelegate.swift */,
-				C2A21B291E26413A00B462A4 /* ViewController.swift */,
-				C2A21B2B1E26413A00B462A4 /* Main.storyboard */,
-				C2A21B2E1E26413A00B462A4 /* Assets.xcassets */,
-				C2A21B301E26413A00B462A4 /* LaunchScreen.storyboard */,
-				C2A21B331E26413A00B462A4 /* Info.plist */,
+				C2A21BCD1E276D9200B462A4 /* resource */,
+				C2A21BCC1E276D8C00B462A4 /* ui */,
+				C2A21BCB1E276D8600B462A4 /* main */,
 			);
 			path = paprika_example;
 			sourceTree = "<group>";
@@ -150,6 +147,33 @@
 				C2A21B611E2641B300B462A4 /* PaprikaSDK.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C2A21BCB1E276D8600B462A4 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				C2A21B271E26413A00B462A4 /* AppDelegate.swift */,
+			);
+			name = main;
+			sourceTree = "<group>";
+		};
+		C2A21BCC1E276D8C00B462A4 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				C2A21B291E26413A00B462A4 /* ViewController.swift */,
+			);
+			name = ui;
+			sourceTree = "<group>";
+		};
+		C2A21BCD1E276D9200B462A4 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				C2A21B2B1E26413A00B462A4 /* Main.storyboard */,
+				C2A21B2E1E26413A00B462A4 /* Assets.xcassets */,
+				C2A21B301E26413A00B462A4 /* LaunchScreen.storyboard */,
+				C2A21B331E26413A00B462A4 /* Info.plist */,
+			);
+			name = resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -53,7 +53,7 @@ void taskNotifyListener(PaprikaState state,
     
     SACommand *weakSelf = (__bridge SACommand*)userptr;
     
-    id obj = [PaprikaUtil convertParam:param state:detailedState];
+    id obj = [PaprikaUtil convertParamWithState:detailedState param:param];
     
     [weakSelf handleTaskNotify:state detailedState:detailedState param:obj];
     
@@ -117,8 +117,8 @@ void taskNotifyListener(PaprikaState state,
         } else {
             [self enqueueTask:task];
             DDLogInfo(@"Task create.");
-            [self setAuthToken];
-            [self setOptionValues];
+            [self setupAuthToken];
+            [self setupOptionValues];
             [self handleTaskStart];
             
             if (self.canceled) {
@@ -197,27 +197,27 @@ void taskNotifyListener(PaprikaState state,
     return defaultValue;
 }
 
-- (void)addPrepareObserver:(id<SACommandPrepareDelegate>)observer {
+- (void)addPrepareObserver:(id)observer {
     [self.prepareObservers addObject:observer];
 }
 
-- (void)addNotifyObserver:(id<SACommandNotifyDelegate>)observer {
+- (void)addNotifyObserver:(id)observer {
     [self.notifyObservers addObject:observer];
 }
 
-- (void)addErrorObserver:(id<SACommandErrorDelegate>)observer {
+- (void)addErrorObserver:(id)observer {
     [self.errorObservers addObject:observer];
 }
 
-- (void)removePrepareObserver:(id<SACommandPrepareDelegate>)observer {
+- (void)removePrepareObserver:(id)observer {
     [self.prepareObservers removeObject:observer];
 }
 
-- (void)removeNotifyObserver:(id<SACommandNotifyDelegate>)observer {
+- (void)removeNotifyObserver:(id)observer {
     [self.notifyObservers removeObject:observer];
 }
 
-- (void)removeErrorObserver:(id<SACommandErrorDelegate>)observer {
+- (void)removeErrorObserver:(id)observer {
     [self.errorObservers removeObject:observer];
 }
 
@@ -401,7 +401,7 @@ void taskNotifyListener(PaprikaState state,
     return nil;
 }
 
-- (void)setAuthToken {
+- (void)setupAuthToken {
     PaprikaTask task = [self currentTask];
     if (task == 0) {
         return;
@@ -416,7 +416,7 @@ void taskNotifyListener(PaprikaState state,
     }
 }
 
-- (void)setOptionValues {
+- (void)setupOptionValues {
     PaprikaTask task = [self currentTask];
     if (task == 0) {
         return;
@@ -424,16 +424,7 @@ void taskNotifyListener(PaprikaState state,
     self.taskOption = paprika_option_create();
     [self.optionDic enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
         PaprikaOptionKey optKey = (PaprikaOptionKey)[key integerValue];
-        const void *value = 0;
-        if ([obj isKindOfClass:[NSValue class]]) {
-            value = [obj pointerValue];
-        } else if ([obj isKindOfClass:[NSNumber class]]) {
-            value = (const void *)[obj integerValue];
-        } else if ([obj isKindOfClass:[NSString class]]) {
-            value = [obj UTF8String];
-        } else {
-            return;
-        }
+        const void *value = [PaprikaUtil convertOptionWithKey:optKey option:obj];
         paprika_option_set_value(self.taskOption, optKey, value);
     }];
     
