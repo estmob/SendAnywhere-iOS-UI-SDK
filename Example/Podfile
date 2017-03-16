@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SendAnywhereSDK_Example' do
+  pod 'SendAnywhereSDK', :path => '../'
+
+  target 'SendAnywhereSDK_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

@@ -1,0 +1,409 @@
+"open_in_limit_alert" = "Jusqu'à %d fichiers maximum.";
+"Play" = "Lecture";
+"Open In…" = "Ouvrir dans...";
+"%d_Contacts" = "%d_Contacts";
+"delete_file_title" = "Supprimer des fichiers";
+
+/*
+ * '\n' is line break.
+ * If you need to break line, do not use Enter key. just add '\n'
+*/
+"delete_file_desc" = "Voulez-vous vraiment supprimer %d fichiers de cet appareil ?\nLes fichiers supprimés ne peuvent pas être restaurés.";
+
+"delete_tod_card_title" = "Annuler les fichiers envoyés";
+
+/*
+ * '\n' is line break.
+ * If you need to break line, do not use Enter key. just add '\n'
+*/
+"delete_tod_card_desc" = "Voulez-vous vraiment supprimer ceci ?\nVotre ami(e) ne pourra plus recevoir le fichier.";
+
+"delete_upload_card_title" = "Supprimer le lien";
+
+/*
+ * '\n' is line break.
+ * If you need to break line, do not use Enter key. just add '\n'
+*/
+"delete_upload_card_desc" = "Voulez-vous vraiment supprimer ceci ?\nLes fichiers transférés seront supprimés et ne seront plus disponibles au téléchargement.";
+
+"rating_popup_title" = "Rate Send Anywhere";
+"rating_popup_msg" = "If you love using Send Anywhere, please consider rating us 5 stars in the App Store";
+"rating_popup_cancel" = "No, Thanks";
+"rating_popup_remind" = "Remind me later";
+"rating_popup_rate" = "Rate 5 stars";
+"profile_permission" = "Nous avons besoin de la permission de l'appareil photo pour prendre la photo du profil.";
+"saved_cameraroll" = "Enregistré sur la Pellicule";
+
+/*
+ * Do not translate 'system info' Only translate 'Describe your inquiry'
+ * '\n' is line break. If you need to break line, do not use Enter key. just add '\n'
+*/
+"feedback_mail" = "\n- Décrivez votre demande : \n\n\n ---System Info---\nModel: %@\nOs Ver.: %@\nApp Ver.: %@\nDevice Id: %@\n\n";
+
+"extension_guide" = "Veuillez rester sur cet écran jusqu'à la fin du transfert.";
+"folder_item" = "%d éléments";
+
+/*
+ * Please translate shortly.
+ * '\n' is line break. If you need to break line, do not use Enter key. just add '\n'
+*/
+"tooltip_photopreview" = "Appui long\npour aperçu";
+
+/*
+ * It's a tool tip like #28318863
+ * Please translate shortly.
+ * '\n' is line break. If you need to break line, do not use Enter key. just add '\n'
+*/
+"tooltip_menu" = "Choix par album,\ntrié par date";
+
+/*
+ * It's a tool tip like #28318863
+ * Please translate shortly.
+ * '\n' is line break. If you need to break line, do not use Enter key. just add '\n'
+*/
+"tooltip_musicplayer" = "Lire musique\nsur onglet Fichier";
+
+/*
+ * '\n' is line break.
+ * If you need to break line, do not use Enter key. just add '\n'
+*/
+"Grant_Photos" = "Send Anywhere n'a pas accès \nà vos photos ou à vos vidéos.";
+
+/*
+ * '\n' is line break.
+ * If you need to break line, do not use Enter key. just add '\n'
+*/
+"Grant_Contacts" = "Send Anywhere n'a pas accès \nà vos contacts.";
+
+"Grant_Desc" = "Vous pouvez configurer cela dans les Paramètres";
+
+/*
+ * %d : the number of folders
+ * %@ : name of destination folder
+ * 
+ * example : 5 Folders Moved to Adele
+*/
+"Moved_Folders" = "%d répertoires déplacés vers %@";
+
+/*
+ * %d : the number of files
+ * %@ : name of destination folder
+ * 
+ * example : 6 Files Moved to Beyonce
+*/
+"Moved_Files" = "%d fichiers déplacés vers %@";
+
+/*
+ * %d : the number of folders/files
+ * %@ : name of destination folder
+ * 
+ * example : 5 Folders, 6 Files Moved to 2017Music
+*/
+"Moved_Foleders_Files" = "%d répertoires, %d fichiers déplacés vers %@";
+
+/*
+ * %d : the number of folders
+ * %@ : name of destination folder
+ * 
+ * example : 5 Folders copied to 2017Music
+*/
+"Copied_Folders" = "%d répertoires copiés vers %@";
+
+/*
+ * %d : the number of files
+ * %@ : name of destination folder
+ * 
+ * example : 6 Files copied to 2017Music
+*/
+"Copied_Files" = "%d fichiers copiés vers %@";
+
+/* Please refer to #28309062 */
+"Copied_Foleders_Files" = "%d répertoires, %d fichiers copiés vers %@";
+
+"NSPhotoLibraryUsageDescription" = "Cela vous permet de choisir les photos à envoyer et d'enregistrer les photos reçues dans votre Pellicule.";
+"NSContactsUsageDescription" = "Cela vous permet de choisir les contacts (fichiers .vcf) à envoyer.";
+"NSLocationUsageDescription" = "Votre localisation est utilisée pour trouver les appareils proches.";
+"NSCameraUsageDescription" = "Cela vous permet de scanner un code QR ou de prendre une photo de profil.";
+"On Twitter" = "Sur Twitter";
+/* same as [UPDATE] button of Appstore details */
+
+"UPDATE" = "METTRE À JOUR";
+"About" = "À propos";
+/* Please translate it shortly (Fixed size like screenshot) */
+"Sent" = "Envoyé";
+/* ● Do not translate !!!! */
+"© 2017 Estmob Inc. All rights reserved" = "© 2017 Estmob Inc. All rights reserved";
+
+"On Google Plus" = "Sur Google+";
+"On Youtube" = "Sur YouTube";
+/* Please translate it shortly (Fixed size like screenshot) */
+"Received" = "Reçu";
+"Send Anywhere Official Website" = "Site officiel";
+"On Facebook" = "Sur Facebook";
+/* reload */
+"Refresh" = "Actualiser";
+"Are you sure you want to delete all history?" = "Voulez-vous vraiment supprimer tout l'historique ?";
+
+"Delete All" = "Tout supprimer";
+/* remove from list */
+"Remove" = "Supprimer";
+
+/* Related on music player */
+"Shuffle" = "Aléatoire";
+"Cancel" = "Annuler";
+"Change Password" = "Changer le mot de passe";
+/* Related on music player */
+"Repeat" = "Répéter";
+
+/* Related on music player */
+"Up Next" = "Liste de lecture";
+"Done" = "Terminé";
+"Invalid password" = "Mot de passe incorrect";
+"Password mismatch" = "Mot de passe non correspondant";
+"New Password" = "Nouveau mot de passe";
+"Unable to change password" = "Impossible de changer le mot de passe";
+"Password must be at least %d characters" = "Le mot de passe doit contenir au moins %d caractères";
+"Success" = "Réussi";
+"Verify Password" = "Confirmer le mot de passe";
+"File transfer canceled. Network unavailable." = "Transfert de fichier annulé. Réseau indisponible.";
+
+/*
+ * Setting menu
+ * Please refer to #28307937
+*/
+"Connect to Desktop" = "Installer l'application pour ordinateur";
+"Send" = "Envoyer";
+"Invalid email address. Please try again." = "Adresse e-mail invalide. Veuillez réessayez.";
+"Failed to send email. Please try again." = "Échec de l'envoi de l'e-mail. Veuillez réessayez.";
+"Email" = "E-mail";
+
+"A link to download Send Anywhere will be sent to your e-mail." = "Un lien de téléchargement de l'application pour ordinateur de Send Anywhere va être envoyé sur votre boîte e-mail";
+"Deselect" = "Désélectionner";
+
+"Select" = "Sélectionner";
+"No Contacts" = "Aucun contact";
+
+"Select Destination folder" = "Choix dossier de destination";
+"%d Items" = "%d éléments";
+"Close" = "Fermer";
+
+"Move" = "Déplacer";
+"Copy" = "Copier";
+"Some files couldn't be moved." = "Certains fichiers n'ont pas pu être déplacés.";
+"Unknown Device" = "Appareil inconnu";
+
+"No Files" = "Aucun fichier";
+"Sign In" = "Connexion";
+"Sign Out" = "Déconnexion";
+
+"Some files couldn't be copied." = "Certains fichiers n'ont pas pu être copiés.";
+
+"Enter your profile name which helps your friends find you." = "Saisissez le nom de votre profil pour que vos amis puissent vous trouver.";
+
+"edit" = "modifier";
+"Name" = "Nom";
+
+"Profile" = "Profil";
+"Choose Photo" = "Choisir une photo";
+
+"Take Photo" = "Prendre une photo";
+"No Items" = "Aucun élément";
+"Sort by Name" = "Trier par nom";
+"Go to Setting" = "Paramétrer";
+
+"Sort by Size" = "Trier par taille";
+"Sort by Date" = "Trier par date";
+"Untitled" = "Sans titre";
+"New Folder" = "Nouveau répertoire";
+"Enter a name for this folder." = "Saisissez le nom du nouveau répertoire.";
+/*
+ * This is a tab name. In the Activity tab, users can find their transfer history.
+ * Please translate it shortly (Fixed size like screenshot)
+*/
+"Activity" = "Activité";
+"Failed to create new folder." = "Échec de création du nouveau répertoire.";
+
+"More" = "Plus";
+
+"Notice" = "Message";
+"Receive" = "Recevoir";
+/*
+ * Setting menu
+ * Please refer to #28307937
+*/
+"Getting Started" = "Commencer";
+"FAQ" = "FAQ";
+/*
+ * Setting menu
+ * Please refer to #28307937
+*/
+"Settings" = "Paramètres";
+"Tell a Friend" = "En parler à un ami";
+"Send Feedback" = "Envoyer un commentaire";
+"Rate Us" = "Évaluez-nous";
+/* ● Do not translate this string!!!! */
+"[Estmob Support]" = "[Estmob Support]";
+"You can not send a mail now." = "Envoi de l'e-mail impossible. Veuillez consulter les paramètres de votre compte e-mail.";
+"There may be a problem with the mail server or network. Please try again." = "Il y a peut-être un problème avec le serveur d'e-mails ou le réseau. Veuillez réessayer.";
+"mail sent." = "E-mail envoyé.";
+
+/*
+ * '\n' is line break.
+ * If you need to break line, do not use Enter key. just add '\n'
+*/
+"[Send Anywhere] \nSend Data Directly, Anywhere in the World. \nJust Send Anywhere! \nhttp://send-anywhere.com" = "[Send Anywhere] \nTransfert de fichier vraiment simplifié - \nEnvoyez ce que vous voulez, où vous voulez \nhttps://send-anywhere.com";
+"Albums" = "Albums";
+
+"No Photos" = "Aucune photo";
+"%d Photos" = "%d photos";
+"%@ Photos" = "%@ photos";
+"Sort by Newest" = "Trier par plus récent";
+"Point the camera at the QR code." = "Pointez votre appareil photo sur un code QR.";
+
+"Sort by Oldest" = "Trier par plus ancien";
+
+"Enter the Key" = "Saisissez la clé";
+
+"You need camera permission for using QR Code scanner." = "Nous avons besoin de la permission de l'appareil photo pour scanner un code QR.";
+"Key does not exists." = "La clé n'est pas valide ou a expiré.";
+"No available disk spack." = "Espace insuffisant.";
+"Error occurred while transferring. (Code: %d)" = "Une erreur est survenue lors du transfert. (Code : %d)";
+"Input Key" = "Saisissez la clé";
+"Recent Devices" = "Appareils récents";
+"Delete" = "Supprimer";
+
+"Edit" = "Modifier";
+"Are you sure you want to delete all recent devices?" = "Voulez-vous vraiment supprimer tous les appareils récents ?";
+
+"%d Selected" = "%d sélectionnés";
+
+"Select All" = "Tout sélectionner";
+"OK" = "OK";
+"Deselect All" = "Tout désélectionner";
+
+/* Please translate it shortly (Fixed size like screenshot) */
+"Photos" = "Photos";
+/* Please translate it shortly (Fixed size like screenshot) */
+"Files" = "Fichiers";
+/* Please translate it shortly (Fixed size like screenshot) */
+"Contacts" = "Contacts";
+/* Please translate it shortly (Fixed size like screenshot) */
+"Videos" = "Vidéos";
+"Cellular data usage may result in additional charges." = "L'utilisation de données cellulaires peut entraîner des frais supplémentaires.";
+"Share" = "Partager";
+"Save Images or Videos" = "Enregis. sur Pellicule";
+"limit is 20GB." = "Jusqu'à 20 Go maximum.";
+"Failed to get file data..." = "Échec de l'obtention du fichier";
+
+/* Please translate it shortly (Fixed size like screenshot) */
+"6-Digit Key" = "Clé à 6 chiffres";
+/* Please translate it shortly (Fixed size like screenshot) */
+"To Device" = "Vers l'appareil";
+"Waiting" = "En attente";
+"MANAGE DEVICES" = "GÉRER LES APPAREILS";
+"RECEIVE" = "RECEVOIR";
+"NOTIFICATIONS" = "NOTIFICATIONS";
+"Save to Photo Album" = "Enregis. auto sur Pellicule";
+"Erase All Documents and Data" = "Effacer totalité fichiers/données";
+"Find Nearby Devices" = "Trouver appareils proches";
+/*
+ * Setting menu
+ * Please refer to #28307937
+*/
+"Notices & Events" = "Messages & événements";
+/*
+ * Setting menu
+ * Please refer to #28307937
+*/
+"Make My Device Discoverable" = "Rendre mon appareil visible";
+"Version" = "Version";
+"Version %@" = "Version %@";
+"Clear All Cache and Data" = "Vider tout le cache et les données";
+" Latest" = "La plus récente";
+"This will erase all of documents and data in Send Anywhere App." = "Cela supprimera la totalité des documents et des données dans l'application Send Anywhere.";
+"This will clear all of cache and data in Send Anywhere App." = "Cela videra les données en cache dans l'application Send Anywhere.";
+"Do you want to cancel this transfer?" = "Voulez-vous annuler ce transfert ?";
+
+"Please let the receiver know the 6-Digit Key" = "Donnez la clé à 6 chiffres au destinataire";
+"The key has been expired" = "La clé a expiré.";
+
+"Forgot password?" = "Mot de passe oublié ?";
+/*
+ * '\n' is line break.
+ * If you need to break line, do not use Enter key. just add '\n'
+*/
+"or Scan using\nSend Anywhere QR scanner." = "ou scannez à l'aide\ndu scanner QR de Send Anywhere";
+"Incorrect email or password" = "E-mail ou mot de passe incorrect.";
+"Password" = "Mot de passe";
+"Sign Up" = "Inscription";
+
+"By signing up, you are agreeing to the Terms of Service & Privacy Policy." = "En vous inscrivant, vous acceptez les Conditions d'utilisation et la Politique de confidentialité.";
+/* ● It must be exactly match 'Privacy Policy' in #28308360 (Include space) */
+"Privacy Policy" = "Politique de confidentialité";
+
+"Username already taken" = "Nom d'utilisateur déjà pris";
+/* ● It must be exactly match 'Terms of Service' in #28308360 (Include space) */
+"Terms of Service" = "Conditions d'utilisation";
+"Invalid username" = "Nom d'utilisateur invalide";
+"Account registration failed" = "Échec de l'inscription du compte";
+"Files have been sent." = "Les fichiers ont été envoyés.";
+"MY DEVICE" = "MON APPAREIL";
+"NEARBY DEVICE" = "APPAREIL PROCHE";
+"RECENT DEVICE" = "APPAREIL RÉCENT";
+
+"Sending..." = "Envoi...";
+"Receiving..." = "Réception...";
+"%@ of %@" = "%@ sur %@";
+"%@ • %d Items" = "%@ • %d éléments";
+"Completed" = "Terminé";
+"Other Party Canceled" = "L'autre partie a annulé";
+"%@ copied to clipboard" = "Copié dans le presse-papier";
+
+"Failed" = "Échec";
+"VIEW ALL" = "TOUT VOIR";
+
+"Canceled" = "Annulé";
+"Pause" = "Pause";
+"Paused" = "En pause";
+"Resume" = "Reprendre";
+"Expired" = "Expiré";
+"Exp. %d days" = "Exp. %d jours";
+"Are you sure you want to stop the transfer?" = "Voulez-vous vraiment arrêter le transfert ?";
+"Are you sure you want to delete this history?" = "Voulez-vous vraiment supprimer cet historique ?";
+"Exp. %02dH %02dM" = "Exp. %02dH %02dM";
+
+"The transfer failed due to an error on the other device." = "Le transfert a échoué à cause d'une erreur sur l'autre appareil.";
+"Disk is almost full. Delete some files and try again." = "Le stockage est presque plein. Libérez de l'espace en supprimant des applications ou des fichiers non utilisés, puis réessayez.";
+/*
+ * '\n' is line break.
+ * If you need to break line, do not use Enter key. just add '\n'
+*/
+"The key is not valid or has expired.\nPlease check the key again." = "La clé n'est pas valide ou a expiré.\nVeuillez revérifier la clé.";
+"This file has been deleted or canceled." = "Ce fichier a été supprimé ou annulé.";
+
+"Transferring" = "Transfert en cours";
+"Don't Show Again" = "Ne plus afficher";
+
+"No Videos" = "Aucune vidéo";
+"%d Videos" = "%d vidéos";
+"How it works" = "Mode de fonctionnement";
+
+"Share the link with the receiving device. Once the URL is clicked, the download begins automatically." = "Transférez des fichiers sur un serveur et partagez-les avec un lien valide 48h.";
+"Share Link" = "Lien de partage";
+"Input the 6-Digit Key on the receiving device by clicking ‘Receive’ on the Home screen." = "Quand la clé est saisie sur l'appareil récepteur, les fichiers sont envoyés automatiquement.";
+"Select the device on the Recent Device or Nearby Device list that you want to send files to." = "Envoi d'une notification à l'appareil récepteur indiquant l'envoi des fichiers.";
+"If you have any questions, please refer to the FAQ." = "En cas de questions, veuillez consulter la FAQ.";
+
+"Send Song" = "Envoyer cette chanson.";
+
+// related to push
+"rnoti_msg"="%@ veut envoyer les fichiers (%@)";
+"Network is unavailable. Do you want to continue transferring after changing the settings?" = "Les données cellulaires sont désactivées pour l'application Send Anywhere. Activez-les ou utilisez le Wi-Fi.";
+"Network is unavailable. Please try again after network is available." = "Réseau indisponible. Vérifiez votre connexion et réessayez.";
+
+
+"share_key_msg_format"="%@\nFichiers: %@\n\nCes fichiers peuvent être téléchargés à tout moment avant %@.";
+
+
+"rnoti_notice"="Message";
+"6digit_exp" = "La clé à 6 chiffres expire dans %@";

@@ -1,0 +1,410 @@
+"open_in_limit_alert" = "一度に%d個のファイルまで開けます。";
+"Play" = "この曲を再生";
+"Open In…" = "他のアプリで開く";
+"%d_Contacts" = "%d_Contacts";
+"delete_file_title" = "ファイルを削除しますか？";
+
+/*
+ * '\n' is line break.
+ * If you need to break line, do not use Enter key. just add '\n'
+*/
+"delete_file_desc" = "端末から%d個のファイルを削除します。削除されたファイルは復元できません。";
+
+"delete_tod_card_title" = "転送履歴を削除しますか？";
+
+/*
+ * '\n' is line break.
+ * If you need to break line, do not use Enter key. just add '\n'
+*/
+"delete_tod_card_desc" = "転送履歴を削除する場合、相手はもうファイルを受信できません。";
+
+"delete_upload_card_title" = "転送履歴を削除しますか？";
+
+/*
+ * '\n' is line break.
+ * If you need to break line, do not use Enter key. just add '\n'
+*/
+"delete_upload_card_desc" = "転送履歴を削除する場合、アップロードされたファイルおよびリンクが削除され、もうファイルを受信できません。";
+
+"rating_popup_title" = "レビューを書いて頂けますか？";
+"rating_popup_msg" = "いつもご利用いただきありがとうございます！ Send Anywhereが役に立つアプリだと思いましたら評価をお願いいたします。";
+"rating_popup_cancel" = "結構です";
+"rating_popup_remind" = "後でする";
+"rating_popup_rate" = "今すぐ評価する";
+"profile_permission" = "プロフィール写真を撮るため、カメラへのアクセスを許可してください。";
+"saved_cameraroll" = "カメラロールに保存しました。";
+
+/*
+ * Do not translate 'system info' Only translate 'Describe your inquiry'
+ * '\n' is line break. If you need to break line, do not use Enter key. just add '\n'
+*/
+"feedback_mail" = "\n- 不具合のご報告の祭は、不具合の具体的な内容を記入してくささい。 \n\n\n ---System Info---\nModel: %@\nOs Ver.: %@\nApp Ver.: %@\nDevice Id: %@\n\n";
+
+"extension_guide" = "転送完了前にこの画面が消えると、転送が中断されますのでご注意ください。";
+"folder_item" = "%d個のファイル";
+
+/*
+ * Please translate shortly.
+ * '\n' is line break. If you need to break line, do not use Enter key. just add '\n'
+*/
+"tooltip_photopreview" = "長押しで\nプレビュー";
+
+/*
+ * It's a tool tip like #28318863
+ * Please translate shortly.
+ * '\n' is line break. If you need to break line, do not use Enter key. just add '\n'
+*/
+"tooltip_menu" = "写真を\nアルバム別に表示";
+
+/*
+ * It's a tool tip like #28318863
+ * Please translate shortly.
+ * '\n' is line break. If you need to break line, do not use Enter key. just add '\n'
+*/
+"tooltip_musicplayer" = "ファイルタブで\n音楽を再生";
+
+/*
+ * '\n' is line break.
+ * If you need to break line, do not use Enter key. just add '\n'
+*/
+"Grant_Photos" = "Send Anywhereには写真と動画への\nアクセス権がありません";
+
+/*
+ * '\n' is line break.
+ * If you need to break line, do not use Enter key. just add '\n'
+*/
+"Grant_Contacts" = "Send Anywhereには連絡先への\nアクセス権がありません";
+
+"Grant_Desc" = "設定でアクセスを許可してください。";
+
+/*
+ * %d : the number of folders
+ * %@ : name of destination folder
+ * 
+ * example : 5 Folders Moved to Adele
+*/
+"Moved_Folders" = "%d個のフォルダが%@に移動されました。";
+
+/*
+ * %d : the number of files
+ * %@ : name of destination folder
+ * 
+ * example : 6 Files Moved to Beyonce
+*/
+"Moved_Files" = "%d個のファイルが%@に移動されました。";
+
+/*
+ * %d : the number of folders/files
+ * %@ : name of destination folder
+ * 
+ * example : 5 Folders, 6 Files Moved to 2017Music
+*/
+"Moved_Foleders_Files" = "%d個のフォルダ、%d個のファイルが%@に移動されました。";
+
+/*
+ * %d : the number of folders
+ * %@ : name of destination folder
+ * 
+ * example : 5 Folders copied to 2017Music
+*/
+"Copied_Folders" = "%d個のフォルダが%@にコピーされました。";
+
+/*
+ * %d : the number of files
+ * %@ : name of destination folder
+ * 
+ * example : 6 Files copied to 2017Music
+*/
+"Copied_Files" = "%d個のファイルが%@にコピーされました。";
+
+/* Please refer to #28309062 */
+"Copied_Foleders_Files" = "%d個のフォルダ、%d個のファイルが%@にコピーされました。";
+
+"NSPhotoLibraryUsageDescription" = "保存されている写真と動画をSend Anywhereに表示するため、iPhoneの写真へのアクセスを許可してください。";
+"NSContactsUsageDescription" = "保存されている連絡先を送信するため、連絡先へのアクセスを許可してください。";
+"NSLocationUsageDescription" = "周辺デバイスを検索するため、位置情報サービスへのアクセスを許可してください。";
+"NSCameraUsageDescription" = "QRコードとプロフィール写真を撮るため、カメラへのアクセスを許可してください。";
+"On Twitter" = "Twitter";
+/* same as [UPDATE] button of Appstore details */
+
+"UPDATE" = "アップデート";
+"About" = "情報";
+/* Please translate it shortly (Fixed size like screenshot) */
+"Sent" = "送信履歴";
+/* ● Do not translate !!!! */
+"© 2017 Estmob Inc. All rights reserved" = "© 2017 Estmob Inc. All rights reserved";
+
+"On Google Plus" = "Google+";
+"On Youtube" = "Youtube";
+/* Please translate it shortly (Fixed size like screenshot) */
+"Received" = "受信履歴";
+"Send Anywhere Official Website" = "公式ウェブサイト";
+"On Facebook" = "Facebook";
+/* reload */
+"Refresh" = "リロード";
+"Are you sure you want to delete all history?" = "すべての転送履歴を削除しますか？";
+
+"Delete All" = "全削除";
+/* remove from list */
+"Remove" = "プレイリストから削除";
+
+/* Related on music player */
+"Shuffle" = "シャッフル";
+"Cancel" = "キャンセル";
+"Change Password" = "パスワード変更";
+/* Related on music player */
+"Repeat" = "リピート";
+
+/* Related on music player */
+"Up Next" = "プレイリスト";
+"Done" = "完了";
+"Invalid password" = "無効なパスワードです。";
+"Password mismatch" = "パスワードが違います。";
+"New Password" = "新しいパスワード";
+"Unable to change password" = "パスワードを変更できません。";
+"Password must be at least %d characters" = "%d文字以上のパスワードを入力してください。";
+"Success" = "成功しました。";
+"Verify Password" = "新しいパスワード(確認)";
+"File transfer canceled. Network unavailable." = "ネットワークが切断されたため、ファイル転送が中断されました。";
+
+/*
+ * Setting menu
+ * Please refer to #28307937
+*/
+"Connect to Desktop" = "PC版 インストール";
+"Send" = "送信";
+"Invalid email address. Please try again." = "有効なメールアドレスではありません。";
+"Failed to send email. Please try again." = "メール送信に失敗しました。再度お試しください。";
+"Email" = "メールアドレス";
+
+"A link to download Send Anywhere will be sent to your e-mail." = "Send Anywhere PC版のダウンロードリンクを記入したメールアドレスにお送りします。";
+"Deselect" = "選択解除";
+
+"Select" = "選択";
+"No Contacts" = "連絡先が\n見つかりません";
+
+"Select Destination folder" = "目的フォルダを選択";
+"%d Items" = "%d個のファイル";
+"Close" = "閉じる";
+
+"Move" = "移動";
+"Copy" = "コピー";
+"Some files couldn't be moved." = "ファイルタブに保存されているファイルのみ移動されました。";
+"Unknown Device" = "不明なデバイス";
+
+"No Files" = "ファイルが\n見つかりません";
+"Sign In" = "ログイン";
+"Sign Out" = "ログアウト";
+
+"Some files couldn't be copied." = "ファイルタブに保存されているファイルのみコピーされました。";
+
+"Enter your profile name which helps your friends find you." = "プロフィール名を設定してください。他のデバイスに指定したプロフィール名が表示されます。";
+
+"edit" = "編集";
+"Name" = "プロフィール名";
+
+"Profile" = "プロフィール";
+"Choose Photo" = "アルバムから選ぶ";
+
+"Take Photo" = "写真を撮る";
+"No Items" = "表示する\n項目がありません";
+"Sort by Name" = "ファイル名順に並べ替える";
+"Go to Setting" = "設定へ";
+
+"Sort by Size" = "サイズ順に並べ替える";
+"Sort by Date" = "日付順に並べ替える";
+"Untitled" = "新しいフォルダ";
+"New Folder" = "新しいフォルダ";
+"Enter a name for this folder." = "フォルダ名を指定してください。";
+/*
+ * This is a tab name. In the Activity tab, users can find their transfer history.
+ * Please translate it shortly (Fixed size like screenshot)
+*/
+"Activity" = "転送履歴";
+"Failed to create new folder." = "フォルダの作成に失敗しました。";
+
+"More" = "もっと見る";
+
+"Notice" = "お知らせ";
+"Receive" = "受信";
+/*
+ * Setting menu
+ * Please refer to #28307937
+*/
+"Getting Started" = "はじめに";
+"FAQ" = "よくある質問";
+/*
+ * Setting menu
+ * Please refer to #28307937
+*/
+"Settings" = "設定";
+"Tell a Friend" = "友達に紹介";
+"Send Feedback" = "お問い合わせ";
+"Rate Us" = "評価とレビュー";
+/* ● Do not translate this string!!!! */
+"[Estmob Support]" = "[Estmob お客様サポート]";
+"You can not send a mail now." = "iPhoneにメールアカウントが追加されていないため、メールを送信できません。";
+"There may be a problem with the mail server or network. Please try again." = "ネットワークエラーが発生したのでメール送信に失敗しました。後ほどお試しください。";
+"mail sent." = "メールが送信されました。";
+
+/*
+ * '\n' is line break.
+ * If you need to break line, do not use Enter key. just add '\n'
+*/
+"[Send Anywhere] \nSend Data Directly, Anywhere in the World. \nJust Send Anywhere! \nhttp://send-anywhere.com" = "[Send Anywhere] \nいつでも！どこでも！制限無し！\n6桁のキーだけでできるファイル転送をぜひお楽しみください！\nhttps://send-anywhere.com";
+"Albums" = "アルバム";
+
+"No Photos" = "写真が\n見つかりません";
+"%d Photos" = "%d枚の写真";
+"%@ Photos" = "写真: %@枚";
+"Sort by Newest" = "新しい順に並べ替える";
+"Point the camera at the QR code." = "QRコードを読み取ってください";
+
+"Sort by Oldest" = "古い順に並べ替える";
+
+"Enter the Key" = "キーを入力してください。";
+
+"You need camera permission for using QR Code scanner." = "QRコードとプロフィール写真を撮るため、カメラへのアクセスを許可してください。";
+"Key does not exists." = "送信者が送信をキャンセルしたため、ファイルを受信できません。";
+"No available disk spack." = "空き容量が不足しています。";
+"Error occurred while transferring. (Code: %d)" = "ファイル転送中にエラー(エラーコード : %d)が発生しました。";
+"Input Key" = "キーまたは共有リンク";
+"Recent Devices" = "最近転送したデバイス";
+"Delete" = "削除";
+
+"Edit" = "編集";
+"Are you sure you want to delete all recent devices?" = "最近転送したデバイスをすべて削除しますか？";
+
+"%d Selected" = "%d個選択";
+
+"Select All" = "全選択";
+"OK" = "確認";
+"Deselect All" = "全解除";
+
+/* Please translate it shortly (Fixed size like screenshot) */
+"Photos" = "写真";
+/* Please translate it shortly (Fixed size like screenshot) */
+"Files" = "ファイル";
+/* Please translate it shortly (Fixed size like screenshot) */
+"Contacts" = "連絡先";
+/* Please translate it shortly (Fixed size like screenshot) */
+"Videos" = "動画";
+"Cellular data usage may result in additional charges." = "モバイルデータ通信(3G/LTE)なら料金プランに応じてデータ通信料が発生する可能性があります。";
+"Share" = "共有";
+"Save Images or Videos" = "カメラロールに保存";
+"limit is 20GB." = "一度に20GBまで送信可能です。";
+"Failed to get file data..." = "ファイルの読み込みに失敗しました。";
+
+/* Please translate it shortly (Fixed size like screenshot) */
+"6-Digit Key" = "6桁のキー";
+/* Please translate it shortly (Fixed size like screenshot) */
+"To Device" = "機器に送信";
+"Waiting" = "転送待ち中";
+"MANAGE DEVICES" = "デバイス管理";
+"RECEIVE" = "受信";
+"NOTIFICATIONS" = "プッシュ通知";
+"Save to Photo Album" = "カメラロールに自動保存";
+"Erase All Documents and Data" = "すべてのファイルを消去";
+"Find Nearby Devices" = "周辺デバイスを検索";
+/*
+ * Setting menu
+ * Please refer to #28307937
+*/
+"Notices & Events" = "お知らせ・イベント情報";
+/*
+ * Setting menu
+ * Please refer to #28307937
+*/
+"Make My Device Discoverable" = "周辺デバイスに表示";
+"Version" = "バージョン";
+"Version %@" = "バージョン %@";
+"Clear All Cache and Data" = "キャッシュデータを消去";
+" Latest" = "最新バージョン";
+"This will erase all of documents and data in Send Anywhere App." = "Send Anywhereアプリ(ファイルタブ)に保存されているすべてのコンテンツを消去します。消去されたファイルは復元できませんので注意してください。";
+"This will clear all of cache and data in Send Anywhere App." = "Send Anywhereアプリに保存されているすべてのキャッシュデータを消去します。";
+"Do you want to cancel this transfer?" = "転送をキャンセルしますか？";
+
+"Please let the receiver know the 6-Digit Key" = "6桁のキーを受信者にお伝えください";
+"The key has been expired" = "キーの使用期限が切れました。";
+
+"Forgot password?" = "パスワードをお忘れですか？";
+/*
+ * '\n' is line break.
+ * If you need to break line, do not use Enter key. just add '\n'
+*/
+"or Scan using\nSend Anywhere QR scanner." = "Send AnywhereでQRコードスキャン";
+"Incorrect email or password" = "メールアドレスまたはパスワードが違います。";
+"Password" = "パスワード";
+"Sign Up" = "会員登録";
+
+"By signing up, you are agreeing to the Terms of Service & Privacy Policy." = "会員登録することにより、利用規約とプライバシーポリシーに同意したものとみなします。";
+/* ● It must be exactly match 'Privacy Policy' in #28308360 (Include space) */
+"Privacy Policy" = "プライバシーポリシー";
+
+"Username already taken" = "すでに登録されているメールアドレスです。";
+/* ● It must be exactly match 'Terms of Service' in #28308360 (Include space) */
+"Terms of Service" = "利用規約";
+"Invalid username" = "無効なメールアドレスです。";
+"Account registration failed" = "会員登録に失敗しました。";
+"Files have been sent." = "ファイルが届きました。";
+"MY DEVICE" = "マイデバイス";
+"NEARBY DEVICE" = "周辺デバイス";
+"RECENT DEVICE" = "最近転送したデバイス";
+
+"Sending..." = "送信中...";
+"Receiving..." = "受信中…";
+"%@ of %@" = "%@ / %@";
+"%@ • %d Items" = "%@ • %d Files";
+"Completed" = "完了";
+"Other Party Canceled" = "相手が転送をキャンセル";
+"%@ copied to clipboard" = "クリップボードにコピーされました。";
+
+"Failed" = "失敗";
+"VIEW ALL" = "詳細";
+
+"Canceled" = "キャンセル";
+"Pause" = "一時停止";
+"Paused" = "一時停止";
+"Resume" = "転送再開";
+"Expired" = "期限切れ";
+"Exp. %d days" = "%d日後、期限切れ";
+"Are you sure you want to stop the transfer?" = "転送を一時停止しますか？";
+"Are you sure you want to delete this history?" = "転送履歴を削除しますか？";
+"Exp. %02dH %02dM" = "%02d時間 %02d分後、期限切れ";
+
+"The transfer failed due to an error on the other device." = "相手側のエラーで転送に失敗しました。";
+"Disk is almost full. Delete some files and try again." = "空き容量が不足しています。空き容量を増やしてからもう一度試してください。";
+/*
+ * '\n' is line break.
+ * If you need to break line, do not use Enter key. just add '\n'
+*/
+"The key is not valid or has expired.\nPlease check the key again." = "無効なキーまたは使用期限が切れたキーです。";
+"This file has been deleted or canceled." = "送信者が転送を一時停止またはキャンセルしたファイルです。";
+
+"Transferring" = "転送中";
+"Don't Show Again" = "今後表示しない";
+
+"No Videos" = "動画が\n見つかりません";
+"%d Videos" = "%d本の動画";
+"How it works" = "ファイル転送方法";
+
+"Share the link with the receiving device. Once the URL is clicked, the download begins automatically." = "ファイルをアップロードすると作成されるリンクで共有します。リンクは48時間使用可能です。";
+"Share Link" = "リンク共有";
+"Input the 6-Digit Key on the receiving device by clicking ‘Receive’ on the Home screen." = "ファイルを送受信するセキュリティキー。受信メニューにキーを入力すると転送が開始されます。
+";
+"Select the device on the Recent Device or Nearby Device list that you want to send files to." = "デバイスにファイル転送の通知を送ります。受信者はキーを入力せずにファイルを受信できます。";
+"If you have any questions, please refer to the FAQ." = "詳しい情報は「もっと見る＞よくある質問」を参考にしてください。";
+
+"Send Song" = "この曲を送信";
+
+// related to push
+"rnoti_msg"="%@さんがファイル(%@)を転送します。";
+"Network is unavailable. Do you want to continue transferring after changing the settings?" = "モバイルデータ通信がオフに設定されています。モバイルデータ通信設定を変更するか、Wi-Fiに接続してください。";
+"Network is unavailable. Please try again after network is available." = "ネットワークに接続できませんでした。後ほどお試しください。";
+
+
+"share_key_msg_format"="%@\n容量 : %@\n%@までダウンロードできます。";
+
+
+"rnoti_notice"="メッセージ";
+"6digit_exp" = "%@ 後にキーの使用期限が切れます";
