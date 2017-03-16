@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SendAnywhereSDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        SendAnywhere.withKey("d225967173e9d95550b8f2fca8e659bc5c0fbddc")
+        SendAnywhere.sharedInstance().downloadFileFilter = [.document]
         return true
     }
 
