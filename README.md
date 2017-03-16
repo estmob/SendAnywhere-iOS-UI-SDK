@@ -17,9 +17,6 @@ Please issue your API key from following link first:
 https://send-anywhere.com/web/page/api
 
 
-## Installation
-SendAnywhereSDK supports multiple methods for installing the library in a project.
-
 ### Installation with CocoaPods
 
 [CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like SendAnywhereSDK in your projects. You can install it with the following command:
@@ -46,25 +43,6 @@ Then, run the following command:
 ```bash
 $ pod install
 ```
-
-### Installation with Carthage
-
-[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
-
-You can install Carthage with [Homebrew](http://brew.sh/) using the following command:
-
-```bash
-$ brew update
-$ brew install carthage
-```
-
-To integrate AFNetworking into your Xcode project using Carthage, specify it in your `Cartfile`:
-
-```ogdl
-github "estmob/SendAnywhere-IOS-UI-SDK" ~> 4.0
-```
-
-Run `carthage` to build the framework and drag the built `AFNetworking.framework` into your Xcode project.
 
 ## Requirements
 
