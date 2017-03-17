@@ -1,2 +1,4 @@
 *.xcscmblueprint
 Example/SendAnywhereSDK.xcworkspace/xcuserdata
+Podfile.lock
+Example/Pods/Pods.xcodeproj/xcuserdata

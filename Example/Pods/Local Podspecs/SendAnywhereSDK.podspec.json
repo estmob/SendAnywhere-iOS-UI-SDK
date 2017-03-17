@@ -1,6 +1,6 @@
 {
   "name": "SendAnywhereSDK",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "summary": "SendAnywhereSDK is a kit for file transferring.",
   "description": "* SendAnywhereSDK is a kit for file transferring. *",
   "homepage": "https://send-anywhere.com",
@@ -13,18 +13,13 @@
   },
   "source": {
     "git": "https://github.com/dustmob/SendAnywhereSDK.git",
-    "tag": "4.0.1"
+    "tag": "4.0.2"
   },
   "social_media_url": "https://twitter.com/send_anywhere",
   "platforms": {
     "ios": "8.0"
   },
   "ios": {
-    "vendored_frameworks": "SendAnywhereSDK/Frameworks/SendAnywhereSDK.framework"
-  },
-  "frameworks": [
-    "Foundation",
-    "SystemConfiguration",
-    "UIKit"
-  ]
+    "vendored_frameworks": "SendAnywhereSDK.framework"
+  }
 }

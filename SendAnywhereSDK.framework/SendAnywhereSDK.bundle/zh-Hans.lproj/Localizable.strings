@@ -1,0 +1,409 @@
+"open_in_limit_alert" = "不超过%d个文件。";
+"Play" = "播放";
+"Open In…" = "用其他应用打开";
+"%d_Contacts" = "%d_Contacts";
+"delete_file_title" = "删除文件";
+
+/*
+ * '\n' is line break.
+ * If you need to break line, do not use Enter key. just add '\n'
+*/
+"delete_file_desc" = "确认删除设备上的%d个文件？\n删除的文件无法恢复。";
+
+"delete_tod_card_title" = "取消已发送文件";
+
+/*
+ * '\n' is line break.
+ * If you need to break line, do not use Enter key. just add '\n'
+*/
+"delete_tod_card_desc" = "确认删除？\n您的好友将无法接收该文件。";
+
+"delete_upload_card_title" = "删除链接";
+
+/*
+ * '\n' is line break.
+ * If you need to break line, do not use Enter key. just add '\n'
+*/
+"delete_upload_card_desc" = "确认删除？\n上传的文件将被移除，且以后无法下载。";
+
+"rating_popup_title" = "Rate Send Anywhere";
+"rating_popup_msg" = "If you love using Send Anywhere, please consider rating us 5 stars in the App Store";
+"rating_popup_cancel" = "No, Thanks";
+"rating_popup_remind" = "Remind me later";
+"rating_popup_rate" = "Rate 5 stars";
+"profile_permission" = "需要相机访问权限拍摄资料照片。";
+"saved_cameraroll" = "已存储至相机胶卷";
+
+/*
+ * Do not translate 'system info' Only translate 'Describe your inquiry'
+ * '\n' is line break. If you need to break line, do not use Enter key. just add '\n'
+*/
+"feedback_mail" = "\n- 描述问题： \n\n\n ---System Info---\nModel: %@\nOs Ver.: %@\nApp Ver.: %@\nDevice Id: %@\n\n";
+
+"extension_guide" = "请停留在此屏幕，直至传输完毕。";
+"folder_item" = "%d个项目";
+
+/*
+ * Please translate shortly.
+ * '\n' is line break. If you need to break line, do not use Enter key. just add '\n'
+*/
+"tooltip_photopreview" = "长按预览";
+
+/*
+ * It's a tool tip like #28318863
+ * Please translate shortly.
+ * '\n' is line break. If you need to break line, do not use Enter key. just add '\n'
+*/
+"tooltip_menu" = "按相册选择，\n按日期排序";
+
+/*
+ * It's a tool tip like #28318863
+ * Please translate shortly.
+ * '\n' is line break. If you need to break line, do not use Enter key. just add '\n'
+*/
+"tooltip_musicplayer" = "在文件标签页\n播放音乐";
+
+/*
+ * '\n' is line break.
+ * If you need to break line, do not use Enter key. just add '\n'
+*/
+"Grant_Photos" = "Send Anywhere无权访问\n照片和视频。";
+
+/*
+ * '\n' is line break.
+ * If you need to break line, do not use Enter key. just add '\n'
+*/
+"Grant_Contacts" = "Send Anywhere无权访问\n联系人。";
+
+"Grant_Desc" = "可在设置中配置";
+
+/*
+ * %d : the number of folders
+ * %@ : name of destination folder
+ * 
+ * example : 5 Folders Moved to Adele
+*/
+"Moved_Folders" = "%d个文件夹已移至%@";
+
+/*
+ * %d : the number of files
+ * %@ : name of destination folder
+ * 
+ * example : 6 Files Moved to Beyonce
+*/
+"Moved_Files" = "%d个文件已移至%@";
+
+/*
+ * %d : the number of folders/files
+ * %@ : name of destination folder
+ * 
+ * example : 5 Folders, 6 Files Moved to 2017Music
+*/
+"Moved_Foleders_Files" = "%d个文件夹，%d个文件已移至%@";
+
+/*
+ * %d : the number of folders
+ * %@ : name of destination folder
+ * 
+ * example : 5 Folders copied to 2017Music
+*/
+"Copied_Folders" = "%d个文件夹已拷贝至%@";
+
+/*
+ * %d : the number of files
+ * %@ : name of destination folder
+ * 
+ * example : 6 Files copied to 2017Music
+*/
+"Copied_Files" = "%d个文件已拷贝至%@";
+
+/* Please refer to #28309062 */
+"Copied_Foleders_Files" = "%d个文件夹，%d个文件已拷贝至%@";
+
+"NSPhotoLibraryUsageDescription" = "这可以让您选择要发送的照片，并将收到的照片存储至相机胶卷。";
+"NSContactsUsageDescription" = "这可以让您选择要发送的联系人（.vcf文件）。";
+"NSLocationUsageDescription" = "位置用于查找附近设备。";
+"NSCameraUsageDescription" = "这可以让您扫描二维码或拍摄资料照片。";
+"On Twitter" = "Twitter账户";
+/* same as [UPDATE] button of Appstore details */
+
+"UPDATE" = "更新";
+"About" = "关于";
+/* Please translate it shortly (Fixed size like screenshot) */
+"Sent" = "发出";
+/* ● Do not translate !!!! */
+"© 2017 Estmob Inc. All rights reserved" = "© 2017 Estmob Inc. All rights reserved";
+
+"On Google Plus" = "Google+账户";
+"On Youtube" = "Youtube账户";
+/* Please translate it shortly (Fixed size like screenshot) */
+"Received" = "收到";
+"Send Anywhere Official Website" = "官方网站";
+"On Facebook" = "Facebook账户";
+/* reload */
+"Refresh" = "刷新";
+"Are you sure you want to delete all history?" = "确认删除所有历史记录？";
+
+"Delete All" = "删除全部";
+/* remove from list */
+"Remove" = "移除";
+
+/* Related on music player */
+"Shuffle" = "随机";
+"Cancel" = "取消";
+"Change Password" = "更改密码";
+/* Related on music player */
+"Repeat" = "循环";
+
+/* Related on music player */
+"Up Next" = "播放列表";
+"Done" = "完成";
+"Invalid password" = "密码不正确";
+"Password mismatch" = "密码不一致";
+"New Password" = "新密码";
+"Unable to change password" = "无法更改密码";
+"Password must be at least %d characters" = "密码不能少于%d个字符";
+"Success" = "成功";
+"Verify Password" = "确认密码";
+"File transfer canceled. Network unavailable." = "文件传输取消。无网络。";
+
+/*
+ * Setting menu
+ * Please refer to #28307937
+*/
+"Connect to Desktop" = "安装桌面应用";
+"Send" = "发送";
+"Invalid email address. Please try again." = "邮箱地址无效。请重试。";
+"Failed to send email. Please try again." = "无法发送邮件。请重试。";
+"Email" = "邮箱";
+
+"A link to download Send Anywhere will be sent to your e-mail." = "Send Anywhere桌面应用下载链接将会发送到您的邮箱。";
+"Deselect" = "取消选择";
+
+"Select" = "选择";
+"No Contacts" = "无联系人";
+
+"Select Destination folder" = "选择目标文件夹";
+"%d Items" = "%d个项目";
+"Close" = "关闭";
+
+"Move" = "移动";
+"Copy" = "拷贝";
+"Some files couldn't be moved." = "部分文件无法移动。";
+"Unknown Device" = "未知设备";
+
+"No Files" = "无文件";
+"Sign In" = "登录";
+"Sign Out" = "退出";
+
+"Some files couldn't be copied." = "部分文件无法拷贝。";
+
+"Enter your profile name which helps your friends find you." = "输入您的资料名称，方便好友查找。";
+
+"edit" = "编辑";
+"Name" = "名称";
+
+"Profile" = "资料";
+"Choose Photo" = "选择照片";
+
+"Take Photo" = "拍摄照片";
+"No Items" = "无项目";
+"Sort by Name" = "按名称排序";
+"Go to Setting" = "打开设置";
+
+"Sort by Size" = "按大小排序";
+"Sort by Date" = "按日期排序";
+"Untitled" = "未命名";
+"New Folder" = "新建文件夹";
+"Enter a name for this folder." = "输入新文件夹名称。";
+/*
+ * This is a tab name. In the Activity tab, users can find their transfer history.
+ * Please translate it shortly (Fixed size like screenshot)
+*/
+"Activity" = "活动";
+"Failed to create new folder." = "无法创建新文件夹。";
+
+"More" = "更多";
+
+"Notice" = "通知";
+"Receive" = "接收";
+/*
+ * Setting menu
+ * Please refer to #28307937
+*/
+"Getting Started" = "入门指导";
+"FAQ" = "常见问题";
+/*
+ * Setting menu
+ * Please refer to #28307937
+*/
+"Settings" = "设置";
+"Tell a Friend" = "告诉好友";
+"Send Feedback" = "发送反馈";
+"Rate Us" = "给我们打分";
+/* ● Do not translate this string!!!! */
+"[Estmob Support]" = "[Estmob Support]";
+"You can not send a mail now." = "无法发送邮件。请检查邮箱账户设置。";
+"There may be a problem with the mail server or network. Please try again." = "邮件服务器或者网络可能出现问题。请重试。";
+"mail sent." = "邮件已发送。";
+
+/*
+ * '\n' is line break.
+ * If you need to break line, do not use Enter key. just add '\n'
+*/
+"[Send Anywhere] \nSend Data Directly, Anywhere in the World. \nJust Send Anywhere! \nhttp://send-anywhere.com" = "[Send Anywhere] \n文件传输，化繁为简 - \n可将任何文件发送到任何地方\nhttps://send-anywhere.com";
+"Albums" = "相册";
+
+"No Photos" = "无照片";
+"%d Photos" = "%d张照片";
+"%@ Photos" = "%@张照片";
+"Sort by Newest" = "时间从近到远";
+"Point the camera at the QR code." = "将相机朝向二维码。";
+
+"Sort by Oldest" = "时间从远到近";
+
+"Enter the Key" = "输入密钥";
+
+"You need camera permission for using QR Code scanner." = "需要相机访问权限扫描二维码。";
+"Key does not exists." = "密钥无效或已过期。";
+"No available disk spack." = "空间不足。";
+"Error occurred while transferring. (Code: %d)" = "传输时发生错误。（代码：%d）";
+"Input Key" = "输入密钥";
+"Recent Devices" = "最近活动的设备";
+"Delete" = "删除";
+
+"Edit" = "编辑";
+"Are you sure you want to delete all recent devices?" = "确认删除所有最近活动的设备？";
+
+"%d Selected" = "已选%d个";
+
+"Select All" = "选择全部";
+"OK" = "好";
+"Deselect All" = "取消选择全部";
+
+/* Please translate it shortly (Fixed size like screenshot) */
+"Photos" = "照片";
+/* Please translate it shortly (Fixed size like screenshot) */
+"Files" = "文件";
+/* Please translate it shortly (Fixed size like screenshot) */
+"Contacts" = "联系人";
+/* Please translate it shortly (Fixed size like screenshot) */
+"Videos" = "视频";
+"Cellular data usage may result in additional charges." = "使用移动数据可能会产生额外的资费。";
+"Share" = "分享";
+"Save Images or Videos" = "存储至相机胶卷";
+"limit is 20GB." = "不超过20GB。";
+"Failed to get file data..." = "无法获取文件数据";
+
+/* Please translate it shortly (Fixed size like screenshot) */
+"6-Digit Key" = "6位密匙";
+/* Please translate it shortly (Fixed size like screenshot) */
+"To Device" = "发送到设备";
+"Waiting" = "正在等待";
+"MANAGE DEVICES" = "管理设备";
+"RECEIVE" = "接收";
+"NOTIFICATIONS" = "通知";
+"Save to Photo Album" = "自动存储至相机胶卷";
+"Erase All Documents and Data" = "抹除全部文档和数据";
+"Find Nearby Devices" = "查找附近设备";
+/*
+ * Setting menu
+ * Please refer to #28307937
+*/
+"Notices & Events" = "通知和活动";
+/*
+ * Setting menu
+ * Please refer to #28307937
+*/
+"Make My Device Discoverable" = "将我的设备设为可见";
+"Version" = "版本";
+"Version %@" = "版本%@";
+"Clear All Cache and Data" = "清除全部缓存和数据";
+" Latest" = "最新";
+"This will erase all of documents and data in Send Anywhere App." = "这会抹除Send Anywhere应用中的全部文档和数据。";
+"This will clear all of cache and data in Send Anywhere App." = "这会清除Send Anywhere应用的缓存数据。";
+"Do you want to cancel this transfer?" = "取消此次传输？";
+
+"Please let the receiver know the 6-Digit Key" = "请告知接收者6位密匙";
+"The key has been expired" = "密钥已失效。";
+
+"Forgot password?" = "忘了密码？";
+/*
+ * '\n' is line break.
+ * If you need to break line, do not use Enter key. just add '\n'
+*/
+"or Scan using\nSend Anywhere QR scanner." = "或使用Send Anywhere\n二维码扫描仪扫描";
+"Incorrect email or password" = "邮箱或密码不正确。";
+"Password" = "密码";
+"Sign Up" = "注册";
+
+"By signing up, you are agreeing to the Terms of Service & Privacy Policy." = "注册即表示您同意服务条款和隐私政策。";
+/* ● It must be exactly match 'Privacy Policy' in #28308360 (Include space) */
+"Privacy Policy" = "隐私政策";
+
+"Username already taken" = "用户名已被占用";
+/* ● It must be exactly match 'Terms of Service' in #28308360 (Include space) */
+"Terms of Service" = "服务条款";
+"Invalid username" = "用户名无效";
+"Account registration failed" = "账户注册失败";
+"Files have been sent." = "文件已发送。";
+"MY DEVICE" = "我的设备";
+"NEARBY DEVICE" = "附近设备";
+"RECENT DEVICE" = "最近活动的设备";
+
+"Sending..." = "正在发送…";
+"Receiving..." = "正在接收…";
+"%@ of %@" = "%@/%@";
+"%@ • %d Items" = "%@ • %d个项目";
+"Completed" = "已完成";
+"Other Party Canceled" = "对方已取消";
+"%@ copied to clipboard" = "已拷贝至剪贴板";
+
+"Failed" = "失败";
+"VIEW ALL" = "查看全部";
+
+"Canceled" = "已取消";
+"Pause" = "暂停";
+"Paused" = "已暂停";
+"Resume" = "恢复";
+"Expired" = "已过期";
+"Exp. %d days" = "有效期%d天";
+"Are you sure you want to stop the transfer?" = "确认停止此次传输？";
+"Are you sure you want to delete this history?" = "确认删除此历史记录？";
+"Exp. %02dH %02dM" = "有效期%02d小时%02d分钟";
+
+"The transfer failed due to an error on the other device." = "由于另外一部设备出错，此次传输失败。";
+"Disk is almost full. Delete some files and try again." = "储存空间将满。删除不使用的应用或文件来释放空间，然后重试。";
+/*
+ * '\n' is line break.
+ * If you need to break line, do not use Enter key. just add '\n'
+*/
+"The key is not valid or has expired.\nPlease check the key again." = "密匙无效或者已失效。\n请检查密匙。";
+"This file has been deleted or canceled." = "此文件已被删除或取消。";
+
+"Transferring" = "正在传输";
+"Don't Show Again" = "不再提示";
+
+"No Videos" = "无视频";
+"%d Videos" = "%d个视频";
+"How it works" = "使用方法";
+
+"Share the link with the receiving device. Once the URL is clicked, the download begins automatically." = "将文件上传至服务器，并通过链接分享。链接有效期为48小时。";
+"Share Link" = "分享链接";
+"Input the 6-Digit Key on the receiving device by clicking ‘Receive’ on the Home screen." = "在接收设备上输入该密钥后，文件会被立即发送。";
+"Select the device on the Recent Device or Nearby Device list that you want to send files to." = "向接收设备发送关于正在发送文件的通知。";
+"If you have any questions, please refer to the FAQ." = "如有任何疑问，请参考常见问题。";
+
+"Send Song" = "发送此歌曲";
+
+// related to push
+"rnoti_msg"="%@想发送文件（%@）";
+"Network is unavailable. Do you want to continue transferring after changing the settings?" = "Send Anywhere应用移动数据设置已关闭。在设置中打开移动数据或使用Wi-Fi。";
+"Network is unavailable. Please try again after network is available." = "无网络。请检查连接并重试。";
+
+
+"share_key_msg_format"="%@\n文件：%@\n\n这些文件可在%@之前下载。";
+
+
+"rnoti_notice"="消息";
+"6digit_exp" = "6位密匙将在%@后失效";

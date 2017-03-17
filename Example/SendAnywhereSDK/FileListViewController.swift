@@ -61,7 +61,13 @@ class FileListViewController: UITableViewController, SAGlobalCommandNotifyDelega
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let url = urlList?[indexPath.row] {
-            sa_showSendView(withFiles: [url])
+            do {
+                let viewController = try sa_showSendView(withFiles: [url])
+                
+            } catch let error {
+                debugPrint(error.localizedDescription)
+            }
+            
         }
     }
     

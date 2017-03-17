@@ -4,7 +4,6 @@
 
 
 [![Version](https://img.shields.io/cocoapods/v/SendAnywhereSDK.svg?style=flat)](http://cocoapods.org/pods/SendAnywhereSDK)
-[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License](https://img.shields.io/cocoapods/l/SendAnywhereSDK.svg?style=flat)](http://cocoapods.org/pods/SendAnywhereSDK)
 [![Platform](https://img.shields.io/cocoapods/p/SendAnywhereSDK.svg?style=flat)](http://cocoapods.org/pods/SendAnywhereSDK)
 [![Twitter](https://img.shields.io/badge/twitter-@SendAnywhere-blue.svg?style=flat)](http://twitter.com/send_anywhere)
@@ -27,7 +26,7 @@ $ gem install cocoapods
 
 #### Podfile
 
-To integrate AFNetworking into your Xcode project using CocoaPods, specify it in your `Podfile`:
+To integrate SendAnywhereSDK into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
@@ -49,8 +48,26 @@ $ pod install
 | Minimum iOS Target  | iOS 8 |
 |:--------------------:|:-----:|
 
-## Usage
+## Troubleshooting
+If you have any problem or questions with Send Anywhere iOS SDK, please create new issue(https://github.com/estmob/SendAnywhere-iOS-UI-SDK/issues) or contact to our customer center(https://send-anywhere.zendesk.com).
 
+## Usage
+First look at the source code of [the provided demo](https://github.com/dustmob/SendAnywhereSDK/tree/master/Example).
+
+#### Initialization
+
+```swift
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        SendAnywhere.withKey("INPUT_YOUR_API_KEY")
+        return true
+}
+```
+
+#### Show a Send file UI.
+
+```swift
+try? sa_showSendView(withFiles: [<FILEURL>])
+```
 
 ## License
 

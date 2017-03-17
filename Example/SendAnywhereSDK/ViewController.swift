@@ -22,7 +22,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func didPressReceiveBtn(_ sender: UIButton) {
-        sa_showReceiveView()
+        do {
+            let viewController = try sa_showReceiveView()
+            
+        } catch let error {
+            debugPrint(error.localizedDescription)
+        }
+        
     }
 }
 

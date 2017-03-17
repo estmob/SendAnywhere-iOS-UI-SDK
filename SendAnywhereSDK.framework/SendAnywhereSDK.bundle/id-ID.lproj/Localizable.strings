@@ -1,0 +1,409 @@
+"open_in_limit_alert" = "Batas hingga %d Berkas.";
+"Play" = "Memutar";
+"Open In…" = "Buka di App Lain";
+"%d_Contacts" = "%d_Contacts";
+"delete_file_title" = "Hapus Berkas";
+
+/*
+ * '\n' is line break.
+ * If you need to break line, do not use Enter key. just add '\n'
+*/
+"delete_file_desc" = "Apakah Anda yakin ingin menghapus %d berkas dari perangkat ini?\nBerkas yang sudah dihapus tidak dapat dikembalikan.";
+
+"delete_tod_card_title" = "Batalkan Berkas Terkirim";
+
+/*
+ * '\n' is line break.
+ * If you need to break line, do not use Enter key. just add '\n'
+*/
+"delete_tod_card_desc" = "Apakah Anda yakin ingin menghapusnya?\nTeman Anda tidak akan dapat menerima berkas tersebut lagi.";
+
+"delete_upload_card_title" = "Hapus Tautan";
+
+/*
+ * '\n' is line break.
+ * If you need to break line, do not use Enter key. just add '\n'
+*/
+"delete_upload_card_desc" = "Apakah Anda yakin ingin menghapusnya?\nBerkas terunggah akan dihapus dan tidak lagi tersedia untuk diunduh.";
+
+"rating_popup_title" = "Rate Send Anywhere";
+"rating_popup_msg" = "If you love using Send Anywhere, please consider rating us 5 stars in the App Store";
+"rating_popup_cancel" = "No, Thanks";
+"rating_popup_remind" = "Remind me later";
+"rating_popup_rate" = "Rate 5 stars";
+"profile_permission" = "Kami meminta izin kamera untuk mengambil foto profil.";
+"saved_cameraroll" = "Tersimpan ke Rol Kamera";
+
+/*
+ * Do not translate 'system info' Only translate 'Describe your inquiry'
+ * '\n' is line break. If you need to break line, do not use Enter key. just add '\n'
+*/
+"feedback_mail" = "\n- Jelaskan pertanyaan Anda : \n\n\n ---System Info---\nModel: %@\nOs Ver.: %@\nApp Ver.: %@\nDevice Id: %@\n\n";
+
+"extension_guide" = "Mohon tunggu di layar ini hingga pemindahan selesai.";
+"folder_item" = "%d Item";
+
+/*
+ * Please translate shortly.
+ * '\n' is line break. If you need to break line, do not use Enter key. just add '\n'
+*/
+"tooltip_photopreview" = "Tekan dan tahan\nuntuk pratinjau";
+
+/*
+ * It's a tool tip like #28318863
+ * Please translate shortly.
+ * '\n' is line break. If you need to break line, do not use Enter key. just add '\n'
+*/
+"tooltip_menu" = "Pilih berdasarkan album.\nsusun berdasarkan tanggal";
+
+/*
+ * It's a tool tip like #28318863
+ * Please translate shortly.
+ * '\n' is line break. If you need to break line, do not use Enter key. just add '\n'
+*/
+"tooltip_musicplayer" = "Putar musik\ntab yang bukan berkas";
+
+/*
+ * '\n' is line break.
+ * If you need to break line, do not use Enter key. just add '\n'
+*/
+"Grant_Photos" = "Send Anywhere tidak memiliki akses \nke foto atau video Anda.";
+
+/*
+ * '\n' is line break.
+ * If you need to break line, do not use Enter key. just add '\n'
+*/
+"Grant_Contacts" = "Send Anywhere tidak memiliki akses \nke kontak Anda.";
+
+"Grant_Desc" = "Ini dapat dikonfigurasi di Pengaturan";
+
+/*
+ * %d : the number of folders
+ * %@ : name of destination folder
+ * 
+ * example : 5 Folders Moved to Adele
+*/
+"Moved_Folders" = "%d Folder Dipindahkan ke %@";
+
+/*
+ * %d : the number of files
+ * %@ : name of destination folder
+ * 
+ * example : 6 Files Moved to Beyonce
+*/
+"Moved_Files" = "%d Berkas Dipindahkan ke %@";
+
+/*
+ * %d : the number of folders/files
+ * %@ : name of destination folder
+ * 
+ * example : 5 Folders, 6 Files Moved to 2017Music
+*/
+"Moved_Foleders_Files" = "%d Folder, %d Berkas Dipindahkan ke %@";
+
+/*
+ * %d : the number of folders
+ * %@ : name of destination folder
+ * 
+ * example : 5 Folders copied to 2017Music
+*/
+"Copied_Folders" = "%d Folder Disalin ke %@";
+
+/*
+ * %d : the number of files
+ * %@ : name of destination folder
+ * 
+ * example : 6 Files copied to 2017Music
+*/
+"Copied_Files" = "%d Berkas Disalin ke %@";
+
+/* Please refer to #28309062 */
+"Copied_Foleders_Files" = "%d Folder, %d Berkas Disalin ke %@";
+
+"NSPhotoLibraryUsageDescription" = "Ini memungkinkan Anda memilih foto mana yang ingin dikirim, dan menyimpan foto yang diterima ke rol kamera Anda.";
+"NSContactsUsageDescription" = "Ini memungkinkan Anda memilih kontak mana (berkas .vcf) yang ingin dikirim.";
+"NSLocationUsageDescription" = "Lokasi Anda digunakan untuk menemukan perangkat di sekitar.";
+"NSCameraUsageDescription" = "Ini memungkinkan Anda untuk memindai kode QR atau mengambil foto profil.";
+"On Twitter" = "Di Twitter";
+/* same as [UPDATE] button of Appstore details */
+
+"UPDATE" = "PEMBARUAN";
+"About" = "Tentang";
+/* Please translate it shortly (Fixed size like screenshot) */
+"Sent" = "Terkirim";
+/* ● Do not translate !!!! */
+"© 2017 Estmob Inc. All rights reserved" = "© 2017 Estmob Inc. All rights reserved";
+
+"On Google Plus" = "Di Google+";
+"On Youtube" = "Di Youtube";
+/* Please translate it shortly (Fixed size like screenshot) */
+"Received" = "Diterima";
+"Send Anywhere Official Website" = "Situs Web Resmi";
+"On Facebook" = "Di Facebook";
+/* reload */
+"Refresh" = "Segarkan";
+"Are you sure you want to delete all history?" = "Apakah Anda yakin ingin menghapus seluruh riwayat?";
+
+"Delete All" = "Hapus Semua";
+/* remove from list */
+"Remove" = "Hapus";
+
+/* Related on music player */
+"Shuffle" = "Acak";
+"Cancel" = "Batalkan";
+"Change Password" = "Ganti Kata Sandi";
+/* Related on music player */
+"Repeat" = "Ulang";
+
+/* Related on music player */
+"Up Next" = "Daftar Putar";
+"Done" = "Selesai";
+"Invalid password" = "Kata sandi salah";
+"Password mismatch" = "Kata sandi tidak cocok";
+"New Password" = "Kata Sandi Baru";
+"Unable to change password" = "Tidak dapat mengganti kata sandi";
+"Password must be at least %d characters" = "Kata sandi minimal terdiri dari %d karakter";
+"Success" = "Sukses";
+"Verify Password" = "Konfirmasikan kata sandi";
+"File transfer canceled. Network unavailable." = "Pemindahan berkas dibatalkan. Jaringan tidak tersedia.";
+
+/*
+ * Setting menu
+ * Please refer to #28307937
+*/
+"Connect to Desktop" = "Pasang Aplikasi Desktop";
+"Send" = "Kirim";
+"Invalid email address. Please try again." = "Alamat email tidak sah. Silakan coba kembali.";
+"Failed to send email. Please try again." = "Gagal mengirim email. Silakan coba kembali.";
+"Email" = "Email";
+
+"A link to download Send Anywhere will be sent to your e-mail." = "Tautan unduhan dari aplikasi desktop Send Anywhere akan dikirimkan ke email Anda.";
+"Deselect" = "Batalkan Pilihan";
+
+"Select" = "Pilih";
+"No Contacts" = "Tidak ada Kontak";
+
+"Select Destination folder" = "Pilih Folder Tujuan";
+"%d Items" = "%d Item";
+"Close" = "Tutup";
+
+"Move" = "Pindahkan";
+"Copy" = "Salin";
+"Some files couldn't be moved." = "Beberapa berkas tidak dapat dipindahkan.";
+"Unknown Device" = "Perangkat Tak Dikenal";
+
+"No Files" = "Tidak ada Berkas";
+"Sign In" = "Masuk";
+"Sign Out" = "Keluar";
+
+"Some files couldn't be copied." = "Beberapa berkas tidak dapat disalin.";
+
+"Enter your profile name which helps your friends find you." = "Masukkan nama profil Anda agar teman-teman dapat menemukan Anda.";
+
+"edit" = "edit";
+"Name" = "Nama";
+
+"Profile" = "Profil";
+"Choose Photo" = "Pilih Foto";
+
+"Take Photo" = "Ambil Foto";
+"No Items" = "Tidak ada item";
+"Sort by Name" = "Sortir berdasarkan";
+"Go to Setting" = "Buka Pengaturan";
+
+"Sort by Size" = "Sortir berdasarkan Ukuran";
+"Sort by Date" = "Sortir berdasarkan Tanggal";
+"Untitled" = "Tidak berjudul";
+"New Folder" = "Folder Baru";
+"Enter a name for this folder." = "Masukkan nama folder baru.";
+/*
+ * This is a tab name. In the Activity tab, users can find their transfer history.
+ * Please translate it shortly (Fixed size like screenshot)
+*/
+"Activity" = "Aktivitas";
+"Failed to create new folder." = "Gagal menciptakan folder baru.";
+
+"More" = "Lainnya";
+
+"Notice" = "Pemberitahuan";
+"Receive" = "Terima";
+/*
+ * Setting menu
+ * Please refer to #28307937
+*/
+"Getting Started" = "Memulai";
+"FAQ" = "TJU";
+/*
+ * Setting menu
+ * Please refer to #28307937
+*/
+"Settings" = "Pengaturan";
+"Tell a Friend" = "Beritahukan Teman";
+"Send Feedback" = "Kirimkan Masukan";
+"Rate Us" = "Nilai kami";
+/* ● Do not translate this string!!!! */
+"[Estmob Support]" = "[Estmob Support]";
+"You can not send a mail now." = "Tidak dapat mengirimkan email. Silakan periksa pengaturan akun email Anda.";
+"There may be a problem with the mail server or network. Please try again." = "Kemungkinan terjadi masalah dengan mail server atau jaringan. Silakan coba kembali.";
+"mail sent." = "Email terkirim.";
+
+/*
+ * '\n' is line break.
+ * If you need to break line, do not use Enter key. just add '\n'
+*/
+"[Send Anywhere] \nSend Data Directly, Anywhere in the World. \nJust Send Anywhere! \nhttp://send-anywhere.com" = "[Send Anywhere] \nPemindahan berkas disederhakan - \nKirim apapun yang Anda mau kapan saja \nhttps://send-anywhere.com";
+"Albums" = "Album";
+
+"No Photos" = "Tidak Ada Foto";
+"%d Photos" = "%d Foto";
+"%@ Photos" = "%@ Foto";
+"Sort by Newest" = "Sortir berdasarkan yang Terbaru";
+"Point the camera at the QR code." = "Arahkan kamera Anda ke kode QR.";
+
+"Sort by Oldest" = "Sortir berdasarkan yang Terlama";
+
+"Enter the Key" = "Masukkan Kunci";
+
+"You need camera permission for using QR Code scanner." = "Kami meminta izin kamera untuk memindai Kode QR.";
+"Key does not exists." = "Kunci ini tidak sah atau telah habis masa berlakunya.";
+"No available disk spack." = "Tidak cukup ruang.";
+"Error occurred while transferring. (Code: %d)" = "Terjadi kesalahan saat pemindahan. (Kode : %d)";
+"Input Key" = "Masukkan Kunci";
+"Recent Devices" = "Perangkat Terbaru";
+"Delete" = "Hapus";
+
+"Edit" = "Edit";
+"Are you sure you want to delete all recent devices?" = "Apakah Anda yakin ingin menghapus semua perangkat terbaru?";
+
+"%d Selected" = "%d Terpilih";
+
+"Select All" = "Pilih Semua";
+"OK" = "OKE";
+"Deselect All" = "Batalkan Semua Pilihan";
+
+/* Please translate it shortly (Fixed size like screenshot) */
+"Photos" = "Foto";
+/* Please translate it shortly (Fixed size like screenshot) */
+"Files" = "Berkas";
+/* Please translate it shortly (Fixed size like screenshot) */
+"Contacts" = "Kontak";
+/* Please translate it shortly (Fixed size like screenshot) */
+"Videos" = "Video";
+"Cellular data usage may result in additional charges." = "Penggunaan data seluler dapat mengakibatkan biaya tambahan.";
+"Share" = "Bagikan";
+"Save Images or Videos" = "Simpan ke Roll Kamera";
+"limit is 20GB." = "Batas hingga 20GB.";
+"Failed to get file data..." = "Gagal mendapatkan data berkas";
+
+/* Please translate it shortly (Fixed size like screenshot) */
+"6-Digit Key" = "Kunci 6 Angka";
+/* Please translate it shortly (Fixed size like screenshot) */
+"To Device" = "Ke Perangkat";
+"Waiting" = "Menunggu";
+"MANAGE DEVICES" = "KELOLA PERANGKAT";
+"RECEIVE" = "TERIMA";
+"NOTIFICATIONS" = "PEMBERITAHUAN";
+"Save to Photo Album" = "SImpan Auto ke Rol Kamera";
+"Erase All Documents and Data" = "Hapus Semua Dokumen dan Data";
+"Find Nearby Devices" = "Temukan Perangkat di Sekitar";
+/*
+ * Setting menu
+ * Please refer to #28307937
+*/
+"Notices & Events" = "Pemberitahuan & Event";
+/*
+ * Setting menu
+ * Please refer to #28307937
+*/
+"Make My Device Discoverable" = "Buat Perangkat Dapat Ditemukan";
+"Version" = "Versi";
+"Version %@" = "Versi %@";
+"Clear All Cache and Data" = "Bersihkan Semua Cache dan Data";
+" Latest" = "Terbaru";
+"This will erase all of documents and data in Send Anywhere App." = "Ini akan menghapus semua dokumen dan data di Aplikasi Send Anywhere.";
+"This will clear all of cache and data in Send Anywhere App." = "Ini akan menghapus data cache untuk Aplikasi Send Anywhere.";
+"Do you want to cancel this transfer?" = "Apakah Anda mau membatalkan pemindahan ini?";
+
+"Please let the receiver know the 6-Digit Key" = "Beri tahukan kunci 6 angka pada penerima";
+"The key has been expired" = "Kunci telah berakhir masanya.";
+
+"Forgot password?" = "Lupa kata sandi?";
+/*
+ * '\n' is line break.
+ * If you need to break line, do not use Enter key. just add '\n'
+*/
+"or Scan using\nSend Anywhere QR scanner." = "atau pindai menggunakan\npemindai QR Send Anywhere";
+"Incorrect email or password" = "Email atau kata sandi salah.";
+"Password" = "Kata sandi";
+"Sign Up" = "Daftar";
+
+"By signing up, you are agreeing to the Terms of Service & Privacy Policy." = "Dengan mendaftar, Anda setuju dengan Ketentuan Layanan & Kebijakan Privasi.";
+/* ● It must be exactly match 'Privacy Policy' in #28308360 (Include space) */
+"Privacy Policy" = "Kebijakan Privasi";
+
+"Username already taken" = "Nama pengguna sudah digunakan";
+/* ● It must be exactly match 'Terms of Service' in #28308360 (Include space) */
+"Terms of Service" = "Ketentuan Layanan";
+"Invalid username" = "Nama pengguna tidak sah";
+"Account registration failed" = "Pendaftaran akun gagal";
+"Files have been sent." = "Berkas telah terkirim.";
+"MY DEVICE" = "PERANGKAT SAYA";
+"NEARBY DEVICE" = "PERANGKAT DI SEKITAR";
+"RECENT DEVICE" = "PERANGKAT TERBARU";
+
+"Sending..." = "Mengirim...";
+"Receiving..." = "Menerima...";
+"%@ of %@" = "%@ dari %@";
+"%@ • %d Items" = "%@ • %d Item";
+"Completed" = "Selesai";
+"Other Party Canceled" = "Dibatalkan Oleh Pihak Satunya";
+"%@ copied to clipboard" = "Tersalin ke papan klip";
+
+"Failed" = "Gagal";
+"VIEW ALL" = "LIHAT SEMUA";
+
+"Canceled" = "Dibatalkan";
+"Pause" = "Hentikan sejenak";
+"Paused" = "Dihentikan Sejenak";
+"Resume" = "Lanjutkan";
+"Expired" = "Masa berlaku habis";
+"Exp. %d days" = "Masa berlaku habis dalam %d hari";
+"Are you sure you want to stop the transfer?" = "Apakah Anda yakin ingin menghentikan pemindahan?";
+"Are you sure you want to delete this history?" = "Apakah Anda yakin ingin menghapus riwayat ini?";
+"Exp. %02dH %02dM" = "Masa berlaku : %02d Jam %02d Menit";
+
+"The transfer failed due to an error on the other device." = "Pemindahan gagal akibat kesalahan pada perangkat satunya.";
+"Disk is almost full. Delete some files and try again." = "Penyimpanan hampir penuh. Kosongkan ruang dengan cara menghapus aplikasi atau berkas tidak terpakai, kemudian coba kembali.";
+/*
+ * '\n' is line break.
+ * If you need to break line, do not use Enter key. just add '\n'
+*/
+"The key is not valid or has expired.\nPlease check the key again." = "Kunci tidak sah atau telah habis masa berlakunya.\nSilakan periksa kunci kembali.";
+"This file has been deleted or canceled." = "Berkas ini telah dihapus atau dibatalkan.";
+
+"Transferring" = "Memindahkan";
+"Don't Show Again" = "Jangan Tunjukkan Lagi";
+
+"No Videos" = "Tidak ada Video";
+"%d Videos" = "%d Video";
+"How it works" = "Cara kerjanya";
+
+"Share the link with the receiving device. Once the URL is clicked, the download begins automatically." = "Unggah berkas ke server dan bagikan menggunakan tautan. Tautan berlaku selama 48 jam.";
+"Share Link" = "Bagikan Tautan";
+"Input the 6-Digit Key on the receiving device by clicking ‘Receive’ on the Home screen." = "Saat kunci dimasukkan pada perangkat penerima, berkas akan dikirimkan dengan segera.";
+"Select the device on the Recent Device or Nearby Device list that you want to send files to." = "Kirimkan pemberitahuan ke perangkat penerima bahwa berkas sedang dikirimkan.";
+"If you have any questions, please refer to the FAQ." = "Jika ada pertanyaan, silakan mengacu pada TJU.";
+
+"Send Song" = "Kirim Lagu ini";
+
+// related to push
+"rnoti_msg"="%@ Ingin Mengirimkan Berkas (%@)";
+"Network is unavailable. Do you want to continue transferring after changing the settings?" = "Pengaturan data seluler Aplikasi Send Anywhere sedang tidak menyala. Nyalakan data selular pada pengaturan atau gunakan Wi-Fi.";
+"Network is unavailable. Please try again after network is available." = "Jaringan tidak tersedia. Periksa koneksi Anda dan coba kembali.";
+
+
+"share_key_msg_format"="%@\nBerkas: %@\n\nBerkas-berkas Ini Dapat Diunduh Kapan Saja Sebelum %@.";
+
+
+"rnoti_notice"="Pesan";
+"6digit_exp" = "Kunci 6 angka akan kedaluarsa dalam %@";
