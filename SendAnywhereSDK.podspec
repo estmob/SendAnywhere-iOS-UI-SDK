@@ -13,7 +13,6 @@ Pod::Spec.new do |s|
   s.description      = '* SendAnywhereSDK is a kit for file transferring. *'
 
   s.homepage         = 'https://send-anywhere.com'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'doyoung park' => 'do@estmob.com' }
   s.source           = { :git => 'https://github.com/dustmob/SendAnywhereSDK.git', :tag => s.version.to_s }
@@ -21,6 +20,5 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-  # s.source_files = 'SendAnywhereSDK/Classes/**/*'
   s.ios.vendored_frameworks = 'SendAnywhereSDK/Frameworks/SendAnywhereSDK.framework'
 end
