@@ -73,8 +73,8 @@ do {
 }
 ```
 
-<img src="./SampleImage/send_waiting.png" style="width: 300px" />
-<img src="./SampleImage/send_complete.png" style="width: 300px" />
+![](./SampleImage/send_waiting.png)
+![](./SampleImage/send_complete.png)
 
 #### Show a Receive file UI.
 
@@ -86,8 +86,8 @@ do {
 }
 ```
 
-<img src="./SampleImage/receive_waiting.png" style="width: 300px" />
-<img src="./SampleImage/receive_complete.png" style="width: 300px" />
+![](./SampleImage/receive_waiting.png)
+![](./SampleImage/receive_complete.png)
 
 #### Send files without UI.
 
