@@ -8,17 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSInteger, SASendFileResultType) {
-    SASendFileResultTypeSucceed,
-    SASendFileResultTypeInvalidArgument,
-    SASendFileResultTypeFailed
-};
-
+@class SASendCommand;
+@class SAReceiveCommand;
 @interface UIViewController (SendAnywhere)
     
-- (SASendFileResultType)sa_showSendViewWithFiles:(NSArray<NSURL*>*)fileURLs;
-- (SASendFileResultType)sa_showSendViewWithDatas:(NSDictionary<NSString*, NSData*>*)datas;
+- (SASendCommand*)sa_showSendViewWithFiles:(NSArray<NSURL*>*)fileURLs error:(NSError**)error;
+- (SASendCommand*)sa_showSendViewWithDatas:(NSDictionary<NSString*, NSData*>*)datas error:(NSError**)error;
 
-- (void)sa_showReceiveView;
+- (SAReceiveCommand*)sa_showReceiveViewWithError:(NSError**)error;
 
 @end
