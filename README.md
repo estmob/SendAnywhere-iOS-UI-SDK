@@ -66,7 +66,88 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 #### Show a Send file UI.
 
 ```swift
-try? sa_showSendView(withFiles: [<FILEURL>])
+do {
+    let viewController = try sa_showSendView(withFiles: [fileURL])
+} catch let error {
+
+}
+```
+
+<img src="./SampleImage/send_waiting.png" style="width: 300px" />
+<img src="./SampleImage/send_complete.png" style="width: 300px" />
+
+#### Show a Receive file UI.
+
+```swift
+do {
+    let viewController = try sa_showReceiveView()
+} catch let error {
+
+}
+```
+
+<img src="./SampleImage/receive_waiting.png" style="width: 300px" />
+<img src="./SampleImage/receive_complete.png" style="width: 300px" />
+
+#### Send files without UI.
+
+```swift
+if let fileInfo = SAFileInfo(fileName: <fileName>, path: <filePath>, size: <fileSize>, time: <fileTime>, data: <fileData> or nil) {
+    if let command = SASendCommand.makeInstance() {
+        command.setParamWith([fileInfo], mode: PAPRIKA_TRANSFER_DIRECT)
+        command.addPrepareObserver(<observer>)
+        command.execute(completion: nil)
+    }    
+}
+```
+
+#### Receive files without UI.
+
+```swift
+key : 6 digit (ex. 348477)
+
+if let command = SAReceiveCommand.makeInstance() {
+    command.transferType = .receive
+    command.addErrorObserver(<observer>)
+    command.addPrepareObserver(<observer>)
+    command.addNotifyObserver(<observer>)
+    command.execute(withKey: key)
+}
+```
+
+#### Transfer notification delegate.
+
+|Delegate|description|
+|:--------------------:|:-----:|
+|SACommandPrepareDelegate|update authtoken, update device id|
+|SACommandNotifyDelegate|command start, finish|
+|SACommandErrorDelegate|command error|
+|SATransferPrepareDelegate|fileListUpdated,keyUpdated etc|
+|SATransferNotifyDelegate|transfer start, progress, finish etc|
+|SATransferErrorDelegate|transfer error|
+|SAReceiveErrorDelegate|receive error (key not exists, no disk space etc)|
+
+#### Global notification delegate.
+
+```swift
+public protocol SAGlobalCommandNotifyDelegate : NSObjectProtocol {
+
+    optional public func willGlobalCommandStart(_ sender: SACommand!)
+
+    optional public func didGlobalCommandFinish(_ sender: SACommand!)
+
+    optional public func didGlobalTransferFileListUpdated(_ sender: SATransferCommand!)
+
+    optional public func willGlobalTransferStart(_ sender: SATransferCommand!)
+
+    optional public func willGlobalTransferFileStart(_ sender: SATransferCommand!)
+
+    optional public func didGlobalTransferFileFinish(_ sender: SATransferCommand!, fileIndex: Int, filePath: String!)
+
+    optional public func didGlobalTransferFinish(_ sender: SATransferCommand!)
+
+    optional public func didGlobalTransferError(_ sender: SATransferCommand!)
+}
 ```
 
 ## License

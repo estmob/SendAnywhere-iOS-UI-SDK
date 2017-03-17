@@ -254,6 +254,7 @@ typedef struct {
     const wchar_t* fullPath;
     unsigned long long size;
     unsigned long long sent;
+    bool isExcluded;
 } PaprikaTransferFileState;
 
 typedef struct {

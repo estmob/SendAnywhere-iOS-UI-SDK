@@ -8,14 +8,14 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SendAnywhereSDK'
-  s.version          = '4.0.3'
+  s.version          = '4.0.4'
   s.summary          = 'SendAnywhereSDK is a kit for file transferring.'
   s.description      = '* SendAnywhereSDK is a kit for file transferring. *'
 
   s.homepage         = 'https://send-anywhere.com'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'doyoung park' => 'do@estmob.com' }
-  s.source           = { :git => 'https://github.com/dustmob/SendAnywhereSDK.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/estmob/SendAnywhere-iOS-UI-SDK.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/send_anywhere'
 
   s.ios.deployment_target = '8.0'
