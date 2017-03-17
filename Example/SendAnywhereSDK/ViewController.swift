@@ -20,10 +20,6 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    @IBAction func didPressSendBtn(_ sender: UIButton) {
-        //sa_showSendView(withDatas: [])
-    }
     
     @IBAction func didPressReceiveBtn(_ sender: UIButton) {
         sa_showReceiveView()

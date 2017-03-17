@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SASendCommand.h"
+#import "SAReceiveCommand.h"
 
-@class SASendCommand;
-@class SAReceiveCommand;
 @interface UIViewController (SendAnywhere)
     
 - (SASendCommand*)sa_showSendViewWithFiles:(NSArray<NSURL*>*)fileURLs error:(NSError**)error;

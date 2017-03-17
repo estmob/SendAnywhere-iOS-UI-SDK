@@ -50,6 +50,7 @@
 		C2806FEF1E7A9D400061C7CD /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		C2806FF01E7A9D400061C7CD /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		C2806FF11E7A9E190061C7CD /* FileListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileListViewController.swift; sourceTree = "<group>"; };
+		C2D2B5251E7B827100EF2D28 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C62D6D46A7045CB0A56F9764 /* Pods-SendAnywhereSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SendAnywhereSDK_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SendAnywhereSDK_Example/Pods-SendAnywhereSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
 		D191A75CD6A57BD3425996FE /* Pods_SendAnywhereSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SendAnywhereSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA51C979E9E22B94F51F68C5 /* Pods_SendAnywhereSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SendAnywhereSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,6 +150,7 @@
 		A12DFE65B167087ED07F9BD7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C2D2B5251E7B827100EF2D28 /* Foundation.framework */,
 				DA51C979E9E22B94F51F68C5 /* Pods_SendAnywhereSDK_Example.framework */,
 				D191A75CD6A57BD3425996FE /* Pods_SendAnywhereSDK_Tests.framework */,
 			);
@@ -421,7 +423,7 @@
 		607FACED1AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -463,13 +465,14 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)";
 			};
 			name = Debug;
 		};
 		607FACEE1AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -503,6 +506,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
