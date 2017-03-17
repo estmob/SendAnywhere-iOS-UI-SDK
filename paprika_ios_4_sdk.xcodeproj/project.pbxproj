@@ -1,0 +1,1129 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2A9EF97886E7D52297A75A23 /* libPods-paprika_sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC096BC98CCFB1C2FAB83AB3 /* libPods-paprika_sdk.a */; };
+		3E017753874FE05092252E73 /* libPods-SendAnywhereSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14EE3DED822CD9F3E8014C60 /* libPods-SendAnywhereSDK.a */; };
+		A6BD754D4AA82D610A51C856 /* libPods-SendAnywhereSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14EE3DED822CD9F3E8014C60 /* libPods-SendAnywhereSDK.a */; };
+		C208BCD11E1DE8EC0087EC64 /* SendAnywhereSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = C208BCC31E1DE8EC0087EC64 /* SendAnywhereSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C208BDC11E1E15CB0087EC64 /* DebugReceiveMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C208BDBF1E1E15CB0087EC64 /* DebugReceiveMainViewController.m */; };
+		C23FBDE71E20E1B400391982 /* SACommand+sa_private.h in Headers */ = {isa = PBXBuildFile; fileRef = C23FBDE51E20E1B400391982 /* SACommand+sa_private.h */; };
+		C23FBDE81E20E1B400391982 /* SACommand+sa_private.m in Sources */ = {isa = PBXBuildFile; fileRef = C23FBDE61E20E1B400391982 /* SACommand+sa_private.m */; };
+		C23FBDEF1E21C74F00391982 /* SATransferCommand+TypeUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = C23FBDED1E21C74F00391982 /* SATransferCommand+TypeUtils.h */; };
+		C23FBDF01E21C74F00391982 /* SATransferCommand+TypeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C23FBDEE1E21C74F00391982 /* SATransferCommand+TypeUtils.m */; };
+		C23FBDF31E226EAF00391982 /* NSString+sa.h in Headers */ = {isa = PBXBuildFile; fileRef = C23FBDF11E226EAF00391982 /* NSString+sa.h */; };
+		C23FBDF41E226EAF00391982 /* NSString+sa.m in Sources */ = {isa = PBXBuildFile; fileRef = C23FBDF21E226EAF00391982 /* NSString+sa.m */; };
+		C25400B11E1F2728001595EE /* SACommand.h in Headers */ = {isa = PBXBuildFile; fileRef = C25400AF1E1F2728001595EE /* SACommand.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C25400B21E1F2728001595EE /* SACommand.m in Sources */ = {isa = PBXBuildFile; fileRef = C25400B01E1F2728001595EE /* SACommand.m */; };
+		C25400BB1E1F2738001595EE /* SATransferCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = C25400B91E1F2738001595EE /* SATransferCommand.m */; };
+		C25400BF1E1F2769001595EE /* SAReceiveCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = C25400BD1E1F2769001595EE /* SAReceiveCommand.m */; };
+		C25400C21E1F316D001595EE /* TransferManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C25400C01E1F316D001595EE /* TransferManager.h */; };
+		C25400C31E1F316D001595EE /* TransferManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C25400C11E1F316D001595EE /* TransferManager.m */; };
+		C25400C51E1F4D53001595EE /* libpaprika.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C208BCB71E1DE8A50087EC64 /* libpaprika.a */; };
+		C25400D01E1F4DC3001595EE /* libboost_filesystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C25400C71E1F4DC3001595EE /* libboost_filesystem.a */; };
+		C25400D11E1F4DC3001595EE /* libboost_regex.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C25400C81E1F4DC3001595EE /* libboost_regex.a */; };
+		C25400D21E1F4DC3001595EE /* libboost_system.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C25400C91E1F4DC3001595EE /* libboost_system.a */; };
+		C25400D31E1F4DC3001595EE /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C25400CA1E1F4DC3001595EE /* libcrypto.a */; };
+		C25400D41E1F4DC3001595EE /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C25400CB1E1F4DC3001595EE /* libcurl.a */; };
+		C25400D51E1F4DC3001595EE /* libjsoncpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C25400CC1E1F4DC3001595EE /* libjsoncpp.a */; };
+		C25400D61E1F4DC3001595EE /* libmicrohttpd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C25400CD1E1F4DC3001595EE /* libmicrohttpd.a */; };
+		C25400D71E1F4DC3001595EE /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C25400CE1E1F4DC3001595EE /* libssl.a */; };
+		C25400D81E1F4DC3001595EE /* liburiparser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C25400CF1E1F4DC3001595EE /* liburiparser.a */; };
+		C25400DA1E1F865A001595EE /* libz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C25400D91E1F865A001595EE /* libz.a */; };
+		C25400DC1E1F8FFF001595EE /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C25400DB1E1F8FFF001595EE /* libc++.tbd */; };
+		C25400DE1E1F91EA001595EE /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C25400DD1E1F91EA001595EE /* CoreTelephony.framework */; };
+		C25400E01E1F920B001595EE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C25400DF1E1F920B001595EE /* SystemConfiguration.framework */; };
+		C254FB8D1E24C8D300B5B7C1 /* SADebugReceiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C254FB8B1E24C8D300B5B7C1 /* SADebugReceiveViewController.m */; };
+		C2669CC01E1E213000437C3A /* SendAnywhere.m in Sources */ = {isa = PBXBuildFile; fileRef = C2669CBE1E1E213000437C3A /* SendAnywhere.m */; };
+		C2669CC61E1E238100437C3A /* PreferenceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C2669CC41E1E238100437C3A /* PreferenceManager.h */; };
+		C2669CC71E1E238100437C3A /* PreferenceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C2669CC51E1E238100437C3A /* PreferenceManager.m */; };
+		C2669CD41E1E41A200437C3A /* DebugReceiveTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C2669CD21E1E41A200437C3A /* DebugReceiveTableViewDataSource.m */; };
+		C2669CD81E1E430800437C3A /* DebugReceiveTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2669CD61E1E430800437C3A /* DebugReceiveTableViewCell.m */; };
+		C2669CDB1E1E462300437C3A /* Logger.h in Headers */ = {isa = PBXBuildFile; fileRef = C2669CD91E1E462300437C3A /* Logger.h */; };
+		C2669CDC1E1E462300437C3A /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = C2669CDA1E1E462300437C3A /* Logger.m */; };
+		C2669CE11E1E499900437C3A /* EventUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C2669CDF1E1E499900437C3A /* EventUtil.h */; };
+		C2669CE21E1E499900437C3A /* EventUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C2669CE01E1E499900437C3A /* EventUtil.m */; };
+		C26DB29E1E2338A600B62EAF /* StringUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C26DB29C1E2338A600B62EAF /* StringUtil.h */; };
+		C26DB29F1E2338A600B62EAF /* StringUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C26DB29D1E2338A600B62EAF /* StringUtil.m */; };
+		C26DB2A71E233B4600B62EAF /* CommonUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C26DB2A51E233B4600B62EAF /* CommonUtil.h */; };
+		C26DB2A81E233B4600B62EAF /* CommonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C26DB2A61E233B4600B62EAF /* CommonUtil.m */; };
+		C26DB2AB1E233D8800B62EAF /* CommandManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C26DB2A91E233D8800B62EAF /* CommandManager.h */; };
+		C26DB2AC1E233D8800B62EAF /* CommandManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C26DB2AA1E233D8800B62EAF /* CommandManager.m */; };
+		C26DB2B21E235BCF00B62EAF /* paprika.h in Headers */ = {isa = PBXBuildFile; fileRef = C26DB2AF1E235B5200B62EAF /* paprika.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C26DB2B71E246F9000B62EAF /* libpaprika_c.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C208BCAD1E1DE8980087EC64 /* libpaprika_c.a */; };
+		C26DB2BC1E247E6100B62EAF /* PaprikaUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C26DB2BA1E247E6100B62EAF /* PaprikaUtil.h */; };
+		C26DB2BD1E247E6100B62EAF /* PaprikaUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C26DB2BB1E247E6100B62EAF /* PaprikaUtil.m */; };
+		C2A218651E24E45000B462A4 /* PaprikaSDK-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2A218641E24E45000B462A4 /* PaprikaSDK-Info.plist */; };
+		C2A2186B1E24E5EB00B462A4 /* PaprikaSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = C2A218671E24E52000B462A4 /* PaprikaSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2A2186C1E24E5EB00B462A4 /* SendAnywhereSDK_Headers.h in Headers */ = {isa = PBXBuildFile; fileRef = C2A218661E24E4BD00B462A4 /* SendAnywhereSDK_Headers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2A2186D1E24E5EB00B462A4 /* PaprikaSDK_Headers.h in Headers */ = {isa = PBXBuildFile; fileRef = C2A2186A1E24E59D00B462A4 /* PaprikaSDK_Headers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2A2186E1E24E61600B462A4 /* SendAnywhereSDK_Headers.h in Headers */ = {isa = PBXBuildFile; fileRef = C2A218661E24E4BD00B462A4 /* SendAnywhereSDK_Headers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2A21B091E2636ED00B462A4 /* SendAnywhere.h in Headers */ = {isa = PBXBuildFile; fileRef = C2669CBD1E1E213000437C3A /* SendAnywhere.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2A21B0A1E26370600B462A4 /* SATransferCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = C25400B81E1F2738001595EE /* SATransferCommand.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2A21B0B1E26371600B462A4 /* SAReceiveCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = C25400BC1E1F2769001595EE /* SAReceiveCommand.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2A21BC71E276AE200B462A4 /* SASendCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = C2A21BC51E276AE200B462A4 /* SASendCommand.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2A21BC81E276AE200B462A4 /* SASendCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = C2A21BC51E276AE200B462A4 /* SASendCommand.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2A21BC91E276AE200B462A4 /* SASendCommand.mm in Sources */ = {isa = PBXBuildFile; fileRef = C2A21BC61E276AE200B462A4 /* SASendCommand.mm */; };
+		C2A21BCA1E276AE200B462A4 /* SASendCommand.mm in Sources */ = {isa = PBXBuildFile; fileRef = C2A21BC61E276AE200B462A4 /* SASendCommand.mm */; };
+		C2D796071E24CB9E004B2E10 /* DebugReceiveTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C2669CD21E1E41A200437C3A /* DebugReceiveTableViewDataSource.m */; };
+		C2D796081E24CB9E004B2E10 /* SACommand.m in Sources */ = {isa = PBXBuildFile; fileRef = C25400B01E1F2728001595EE /* SACommand.m */; };
+		C2D796091E24CB9E004B2E10 /* PaprikaUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C26DB2BB1E247E6100B62EAF /* PaprikaUtil.m */; };
+		C2D7960A1E24CB9E004B2E10 /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = C2669CDA1E1E462300437C3A /* Logger.m */; };
+		C2D7960B1E24CB9E004B2E10 /* CommandManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C26DB2AA1E233D8800B62EAF /* CommandManager.m */; };
+		C2D7960C1E24CB9E004B2E10 /* EventUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C2669CE01E1E499900437C3A /* EventUtil.m */; };
+		C2D7960D1E24CB9E004B2E10 /* SATransferCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = C25400B91E1F2738001595EE /* SATransferCommand.m */; };
+		C2D7960E1E24CB9E004B2E10 /* DebugReceiveTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2669CD61E1E430800437C3A /* DebugReceiveTableViewCell.m */; };
+		C2D7960F1E24CB9E004B2E10 /* TransferManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C25400C11E1F316D001595EE /* TransferManager.m */; };
+		C2D796101E24CB9E004B2E10 /* NSString+sa.m in Sources */ = {isa = PBXBuildFile; fileRef = C23FBDF21E226EAF00391982 /* NSString+sa.m */; };
+		C2D796111E24CB9E004B2E10 /* SendAnywhere.m in Sources */ = {isa = PBXBuildFile; fileRef = C2669CBE1E1E213000437C3A /* SendAnywhere.m */; };
+		C2D796121E24CB9E004B2E10 /* StringUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C26DB29D1E2338A600B62EAF /* StringUtil.m */; };
+		C2D796131E24CB9E004B2E10 /* SADebugReceiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C254FB8B1E24C8D300B5B7C1 /* SADebugReceiveViewController.m */; };
+		C2D796141E24CB9E004B2E10 /* PreferenceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C2669CC51E1E238100437C3A /* PreferenceManager.m */; };
+		C2D796151E24CB9E004B2E10 /* DebugReceiveMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C208BDBF1E1E15CB0087EC64 /* DebugReceiveMainViewController.m */; };
+		C2D796161E24CB9E004B2E10 /* SAReceiveCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = C25400BD1E1F2769001595EE /* SAReceiveCommand.m */; };
+		C2D796171E24CB9E004B2E10 /* SATransferCommand+TypeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C23FBDEE1E21C74F00391982 /* SATransferCommand+TypeUtils.m */; };
+		C2D796181E24CB9E004B2E10 /* CommonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C26DB2A61E233B4600B62EAF /* CommonUtil.m */; };
+		C2D796191E24CB9E004B2E10 /* SACommand+sa_private.m in Sources */ = {isa = PBXBuildFile; fileRef = C23FBDE61E20E1B400391982 /* SACommand+sa_private.m */; };
+		C2D7961B1E24CB9E004B2E10 /* libpaprika_c.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C208BCAD1E1DE8980087EC64 /* libpaprika_c.a */; };
+		C2D7961C1E24CB9E004B2E10 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C25400DF1E1F920B001595EE /* SystemConfiguration.framework */; };
+		C2D7961D1E24CB9E004B2E10 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C25400DD1E1F91EA001595EE /* CoreTelephony.framework */; };
+		C2D7961E1E24CB9E004B2E10 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C25400DB1E1F8FFF001595EE /* libc++.tbd */; };
+		C2D7961F1E24CB9E004B2E10 /* libz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C25400D91E1F865A001595EE /* libz.a */; };
+		C2D796201E24CB9E004B2E10 /* libboost_filesystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C25400C71E1F4DC3001595EE /* libboost_filesystem.a */; };
+		C2D796211E24CB9E004B2E10 /* libboost_regex.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C25400C81E1F4DC3001595EE /* libboost_regex.a */; };
+		C2D796221E24CB9E004B2E10 /* libboost_system.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C25400C91E1F4DC3001595EE /* libboost_system.a */; };
+		C2D796231E24CB9E004B2E10 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C25400CA1E1F4DC3001595EE /* libcrypto.a */; };
+		C2D796241E24CB9E004B2E10 /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C25400CB1E1F4DC3001595EE /* libcurl.a */; };
+		C2D796251E24CB9E004B2E10 /* libjsoncpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C25400CC1E1F4DC3001595EE /* libjsoncpp.a */; };
+		C2D796261E24CB9E004B2E10 /* libmicrohttpd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C25400CD1E1F4DC3001595EE /* libmicrohttpd.a */; };
+		C2D796271E24CB9E004B2E10 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C25400CE1E1F4DC3001595EE /* libssl.a */; };
+		C2D796281E24CB9E004B2E10 /* liburiparser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C25400CF1E1F4DC3001595EE /* liburiparser.a */; };
+		C2D796291E24CB9E004B2E10 /* libpaprika.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C208BCB71E1DE8A50087EC64 /* libpaprika.a */; };
+		C2D7962C1E24CB9E004B2E10 /* CommonUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C26DB2A51E233B4600B62EAF /* CommonUtil.h */; };
+		C2D7962D1E24CB9E004B2E10 /* PaprikaUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C26DB2BA1E247E6100B62EAF /* PaprikaUtil.h */; };
+		C2D7962E1E24CB9E004B2E10 /* SACommand.h in Headers */ = {isa = PBXBuildFile; fileRef = C25400AF1E1F2728001595EE /* SACommand.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2D7962F1E24CB9E004B2E10 /* paprika.h in Headers */ = {isa = PBXBuildFile; fileRef = C26DB2AF1E235B5200B62EAF /* paprika.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2D796301E24CB9E004B2E10 /* SADebugReceiveViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C254FB8A1E24C8D300B5B7C1 /* SADebugReceiveViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2D796311E24CB9E004B2E10 /* SAReceiveCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = C25400BC1E1F2769001595EE /* SAReceiveCommand.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2D796321E24CB9E004B2E10 /* SATransferCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = C25400B81E1F2738001595EE /* SATransferCommand.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2D796331E24CB9E004B2E10 /* EventUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C2669CDF1E1E499900437C3A /* EventUtil.h */; };
+		C2D796341E24CB9E004B2E10 /* TransferManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C25400C01E1F316D001595EE /* TransferManager.h */; };
+		C2D796351E24CB9E004B2E10 /* NSString+sa.h in Headers */ = {isa = PBXBuildFile; fileRef = C23FBDF11E226EAF00391982 /* NSString+sa.h */; };
+		C2D796361E24CB9E004B2E10 /* DebugReceiveTableViewDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = C2669CD11E1E41A200437C3A /* DebugReceiveTableViewDataSource.h */; };
+		C2D796371E24CB9E004B2E10 /* Logger.h in Headers */ = {isa = PBXBuildFile; fileRef = C2669CD91E1E462300437C3A /* Logger.h */; };
+		C2D796381E24CB9E004B2E10 /* StringUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C26DB29C1E2338A600B62EAF /* StringUtil.h */; };
+		C2D796391E24CB9E004B2E10 /* DebugReceiveMainViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C208BDBE1E1E15CB0087EC64 /* DebugReceiveMainViewController.h */; };
+		C2D7963A1E24CB9E004B2E10 /* SendAnywhere.h in Headers */ = {isa = PBXBuildFile; fileRef = C2669CBD1E1E213000437C3A /* SendAnywhere.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2D7963B1E24CB9E004B2E10 /* SACommand+sa_private.h in Headers */ = {isa = PBXBuildFile; fileRef = C23FBDE51E20E1B400391982 /* SACommand+sa_private.h */; };
+		C2D7963D1E24CB9E004B2E10 /* SATransferCommand+TypeUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = C23FBDED1E21C74F00391982 /* SATransferCommand+TypeUtils.h */; };
+		C2D7963E1E24CB9E004B2E10 /* DebugReceiveTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = C2669CD51E1E430800437C3A /* DebugReceiveTableViewCell.h */; };
+		C2D7963F1E24CB9E004B2E10 /* CommandManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C26DB2A91E233D8800B62EAF /* CommandManager.h */; };
+		C2D796401E24CB9E004B2E10 /* PreferenceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C2669CC41E1E238100437C3A /* PreferenceManager.h */; };
+		C2D7965A1E24D9B3004B2E10 /* ScanQRViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C2D796581E24D9B3004B2E10 /* ScanQRViewController.h */; };
+		C2D7965B1E24D9B3004B2E10 /* ScanQRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D796591E24D9B3004B2E10 /* ScanQRViewController.m */; };
+		C2D7965E1E24DEEE004B2E10 /* ScanQRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D796591E24D9B3004B2E10 /* ScanQRViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C208BCAC1E1DE8980087EC64 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C208BCA51E1DE8980087EC64 /* paprika_c.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0099F09404BA41B7A9739502;
+			remoteInfo = paprika_c;
+		};
+		C208BCAE1E1DE8980087EC64 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C208BCA51E1DE8980087EC64 /* paprika_c.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DFB82948EB6648E393762610;
+			remoteInfo = sendanywhere;
+		};
+		C208BCB61E1DE8A50087EC64 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C208BCB01E1DE8A50087EC64 /* paprika.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D09D8A5754F74C5DBFA5F378;
+			remoteInfo = paprika;
+		};
+		C208BCD81E1DE8F80087EC64 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C208BCB01E1DE8A50087EC64 /* paprika.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = AFC672AF96F742518A949B54;
+			remoteInfo = paprika;
+		};
+		C2A21B051E2635CE00B462A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C208BCA51E1DE8980087EC64 /* paprika_c.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 495592EB38B544C5A3198C43;
+			remoteInfo = sendanywhere;
+		};
+		C2D796021E24CB9E004B2E10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C208BCA51E1DE8980087EC64 /* paprika_c.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 05EE156055DE486286FCDC3D;
+			remoteInfo = paprika_c;
+		};
+		C2D796041E24CB9E004B2E10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C208BCB01E1DE8A50087EC64 /* paprika.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = AFC672AF96F742518A949B54;
+			remoteInfo = paprika;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		08A961540954582F724AA9BA /* Pods-paprika_ios_4_sdk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-paprika_ios_4_sdk.release.xcconfig"; path = "Pods/Target Support Files/Pods-paprika_ios_4_sdk/Pods-paprika_ios_4_sdk.release.xcconfig"; sourceTree = "<group>"; };
+		14EE3DED822CD9F3E8014C60 /* libPods-SendAnywhereSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SendAnywhereSDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		57441259CFA30ED372633854 /* Pods-paprika_sdk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-paprika_sdk.release.xcconfig"; path = "Pods/Target Support Files/Pods-paprika_sdk/Pods-paprika_sdk.release.xcconfig"; sourceTree = "<group>"; };
+		6F48382F8669A2C3ECEB05AE /* Pods-paprika_ios_4_sdkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-paprika_ios_4_sdkTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-paprika_ios_4_sdkTests/Pods-paprika_ios_4_sdkTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7812A6B16D08E0BF47E1090E /* Pods-paprika_ios_4_sdkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-paprika_ios_4_sdkTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-paprika_ios_4_sdkTests/Pods-paprika_ios_4_sdkTests.release.xcconfig"; sourceTree = "<group>"; };
+		7ADCC007F57CA7F5DC1B45BA /* Pods-paprika_sdk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-paprika_sdk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-paprika_sdk/Pods-paprika_sdk.debug.xcconfig"; sourceTree = "<group>"; };
+		7B6BF96ACACF3E5F5D14C98E /* libPods-paprika_ios_4_sdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-paprika_ios_4_sdk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		95FDC48DDD7AABA71D759095 /* Pods-SendAnywhereSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SendAnywhereSDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SendAnywhereSDK/Pods-SendAnywhereSDK.debug.xcconfig"; sourceTree = "<group>"; };
+		9B13B4F1B04F1E74A1A4D01D /* Pods-SendAnywhereSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SendAnywhereSDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-SendAnywhereSDK/Pods-SendAnywhereSDK.release.xcconfig"; sourceTree = "<group>"; };
+		BC08F3726A92591D4A3AA608 /* libPods-paprika_ios_4_sdkTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-paprika_ios_4_sdkTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C208BCA51E1DE8980087EC64 /* paprika_c.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = paprika_c.xcodeproj; path = ../paprika_cpplib/build/clib/paprika/paprika_c.xcodeproj; sourceTree = "<group>"; };
+		C208BCB01E1DE8A50087EC64 /* paprika.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = paprika.xcodeproj; path = ../paprika_cpplib/build/paprika/paprika.xcodeproj; sourceTree = "<group>"; };
+		C208BCC11E1DE8EC0087EC64 /* SendAnywhereSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SendAnywhereSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C208BCC31E1DE8EC0087EC64 /* SendAnywhereSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SendAnywhereSDK.h; sourceTree = "<group>"; };
+		C208BCC41E1DE8EC0087EC64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C208BDBE1E1E15CB0087EC64 /* DebugReceiveMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugReceiveMainViewController.h; sourceTree = "<group>"; };
+		C208BDBF1E1E15CB0087EC64 /* DebugReceiveMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugReceiveMainViewController.m; sourceTree = "<group>"; };
+		C23FBDE51E20E1B400391982 /* SACommand+sa_private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SACommand+sa_private.h"; sourceTree = "<group>"; };
+		C23FBDE61E20E1B400391982 /* SACommand+sa_private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SACommand+sa_private.m"; sourceTree = "<group>"; };
+		C23FBDED1E21C74F00391982 /* SATransferCommand+TypeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SATransferCommand+TypeUtils.h"; sourceTree = "<group>"; };
+		C23FBDEE1E21C74F00391982 /* SATransferCommand+TypeUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SATransferCommand+TypeUtils.m"; sourceTree = "<group>"; };
+		C23FBDF11E226EAF00391982 /* NSString+sa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+sa.h"; sourceTree = "<group>"; };
+		C23FBDF21E226EAF00391982 /* NSString+sa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+sa.m"; sourceTree = "<group>"; };
+		C25400AF1E1F2728001595EE /* SACommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SACommand.h; sourceTree = "<group>"; };
+		C25400B01E1F2728001595EE /* SACommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SACommand.m; sourceTree = "<group>"; };
+		C25400B81E1F2738001595EE /* SATransferCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SATransferCommand.h; sourceTree = "<group>"; };
+		C25400B91E1F2738001595EE /* SATransferCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SATransferCommand.m; sourceTree = "<group>"; };
+		C25400BC1E1F2769001595EE /* SAReceiveCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAReceiveCommand.h; sourceTree = "<group>"; };
+		C25400BD1E1F2769001595EE /* SAReceiveCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAReceiveCommand.m; sourceTree = "<group>"; };
+		C25400C01E1F316D001595EE /* TransferManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransferManager.h; sourceTree = "<group>"; };
+		C25400C11E1F316D001595EE /* TransferManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransferManager.m; sourceTree = "<group>"; };
+		C25400C71E1F4DC3001595EE /* libboost_filesystem.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_filesystem.a; path = ../paprika_cpplib/iOS/lib/libboost_filesystem.a; sourceTree = "<group>"; };
+		C25400C81E1F4DC3001595EE /* libboost_regex.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_regex.a; path = ../paprika_cpplib/iOS/lib/libboost_regex.a; sourceTree = "<group>"; };
+		C25400C91E1F4DC3001595EE /* libboost_system.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_system.a; path = ../paprika_cpplib/iOS/lib/libboost_system.a; sourceTree = "<group>"; };
+		C25400CA1E1F4DC3001595EE /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = ../paprika_cpplib/iOS/lib/libcrypto.a; sourceTree = "<group>"; };
+		C25400CB1E1F4DC3001595EE /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../paprika_cpplib/iOS/lib/libcurl.a; sourceTree = "<group>"; };
+		C25400CC1E1F4DC3001595EE /* libjsoncpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjsoncpp.a; path = ../paprika_cpplib/iOS/lib/libjsoncpp.a; sourceTree = "<group>"; };
+		C25400CD1E1F4DC3001595EE /* libmicrohttpd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmicrohttpd.a; path = ../paprika_cpplib/iOS/lib/libmicrohttpd.a; sourceTree = "<group>"; };
+		C25400CE1E1F4DC3001595EE /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = ../paprika_cpplib/iOS/lib/libssl.a; sourceTree = "<group>"; };
+		C25400CF1E1F4DC3001595EE /* liburiparser.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liburiparser.a; path = ../paprika_cpplib/iOS/lib/liburiparser.a; sourceTree = "<group>"; };
+		C25400D91E1F865A001595EE /* libz.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libz.a; path = ../paprika_cpplib/iOS/lib/libz.a; sourceTree = "<group>"; };
+		C25400DB1E1F8FFF001595EE /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		C25400DD1E1F91EA001595EE /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		C25400DF1E1F920B001595EE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C254FB8A1E24C8D300B5B7C1 /* SADebugReceiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SADebugReceiveViewController.h; sourceTree = "<group>"; };
+		C254FB8B1E24C8D300B5B7C1 /* SADebugReceiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SADebugReceiveViewController.m; sourceTree = "<group>"; };
+		C2669CBD1E1E213000437C3A /* SendAnywhere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendAnywhere.h; sourceTree = "<group>"; };
+		C2669CBE1E1E213000437C3A /* SendAnywhere.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendAnywhere.m; sourceTree = "<group>"; };
+		C2669CC21E1E227700437C3A /* Global.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
+		C2669CC41E1E238100437C3A /* PreferenceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferenceManager.h; sourceTree = "<group>"; };
+		C2669CC51E1E238100437C3A /* PreferenceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferenceManager.m; sourceTree = "<group>"; };
+		C2669CD11E1E41A200437C3A /* DebugReceiveTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugReceiveTableViewDataSource.h; sourceTree = "<group>"; };
+		C2669CD21E1E41A200437C3A /* DebugReceiveTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugReceiveTableViewDataSource.m; sourceTree = "<group>"; };
+		C2669CD51E1E430800437C3A /* DebugReceiveTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugReceiveTableViewCell.h; sourceTree = "<group>"; };
+		C2669CD61E1E430800437C3A /* DebugReceiveTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugReceiveTableViewCell.m; sourceTree = "<group>"; };
+		C2669CD91E1E462300437C3A /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
+		C2669CDA1E1E462300437C3A /* Logger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Logger.m; sourceTree = "<group>"; };
+		C2669CDE1E1E469200437C3A /* EventDef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventDef.h; sourceTree = "<group>"; };
+		C2669CDF1E1E499900437C3A /* EventUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventUtil.h; sourceTree = "<group>"; };
+		C2669CE01E1E499900437C3A /* EventUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventUtil.m; sourceTree = "<group>"; };
+		C26DB29C1E2338A600B62EAF /* StringUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringUtil.h; sourceTree = "<group>"; };
+		C26DB29D1E2338A600B62EAF /* StringUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringUtil.m; sourceTree = "<group>"; };
+		C26DB2A51E233B4600B62EAF /* CommonUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonUtil.h; sourceTree = "<group>"; };
+		C26DB2A61E233B4600B62EAF /* CommonUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonUtil.m; sourceTree = "<group>"; };
+		C26DB2A91E233D8800B62EAF /* CommandManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommandManager.h; sourceTree = "<group>"; };
+		C26DB2AA1E233D8800B62EAF /* CommandManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommandManager.m; sourceTree = "<group>"; };
+		C26DB2AE1E235B5200B62EAF /* paprika_sdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = paprika_sdk.h; path = ../../paprika_cpplib/clib/paprika/paprika_sdk.h; sourceTree = "<group>"; };
+		C26DB2AF1E235B5200B62EAF /* paprika.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = paprika.h; path = ../../paprika_cpplib/clib/paprika/paprika.h; sourceTree = "<group>"; };
+		C26DB2B31E24627700B62EAF /* libSystem.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libSystem.tbd; path = usr/lib/libSystem.tbd; sourceTree = SDKROOT; };
+		C26DB2BA1E247E6100B62EAF /* PaprikaUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaprikaUtil.h; sourceTree = "<group>"; };
+		C26DB2BB1E247E6100B62EAF /* PaprikaUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaprikaUtil.m; sourceTree = "<group>"; };
+		C26DB2BE1E249E7000B62EAF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		C26DB2C01E24B45100B62EAF /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		C2A218641E24E45000B462A4 /* PaprikaSDK-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "PaprikaSDK-Info.plist"; sourceTree = SOURCE_ROOT; };
+		C2A218661E24E4BD00B462A4 /* SendAnywhereSDK_Headers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SendAnywhereSDK_Headers.h; sourceTree = "<group>"; };
+		C2A218671E24E52000B462A4 /* PaprikaSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaprikaSDK.h; sourceTree = "<group>"; };
+		C2A2186A1E24E59D00B462A4 /* PaprikaSDK_Headers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaprikaSDK_Headers.h; sourceTree = "<group>"; };
+		C2A21B731E27086500B462A4 /* libSystem.B.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libSystem.B.tbd; path = usr/lib/libSystem.B.tbd; sourceTree = SDKROOT; };
+		C2A21BC51E276AE200B462A4 /* SASendCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SASendCommand.h; sourceTree = "<group>"; };
+		C2A21BC61E276AE200B462A4 /* SASendCommand.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SASendCommand.mm; sourceTree = "<group>"; };
+		C2D796461E24CB9E004B2E10 /* PaprikaSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PaprikaSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2D796581E24D9B3004B2E10 /* ScanQRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanQRViewController.h; sourceTree = "<group>"; };
+		C2D796591E24D9B3004B2E10 /* ScanQRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanQRViewController.m; sourceTree = "<group>"; };
+		CC096BC98CCFB1C2FAB83AB3 /* libPods-paprika_sdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-paprika_sdk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F25FA646FE87C9EF7B778AC3 /* Pods-paprika_ios_4_sdk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-paprika_ios_4_sdk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-paprika_ios_4_sdk/Pods-paprika_ios_4_sdk.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C208BCBD1E1DE8EC0087EC64 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C26DB2B71E246F9000B62EAF /* libpaprika_c.a in Frameworks */,
+				C25400E01E1F920B001595EE /* SystemConfiguration.framework in Frameworks */,
+				C25400DE1E1F91EA001595EE /* CoreTelephony.framework in Frameworks */,
+				C25400DC1E1F8FFF001595EE /* libc++.tbd in Frameworks */,
+				C25400DA1E1F865A001595EE /* libz.a in Frameworks */,
+				C25400D01E1F4DC3001595EE /* libboost_filesystem.a in Frameworks */,
+				C25400D11E1F4DC3001595EE /* libboost_regex.a in Frameworks */,
+				C25400D21E1F4DC3001595EE /* libboost_system.a in Frameworks */,
+				C25400D31E1F4DC3001595EE /* libcrypto.a in Frameworks */,
+				C25400D41E1F4DC3001595EE /* libcurl.a in Frameworks */,
+				C25400D51E1F4DC3001595EE /* libjsoncpp.a in Frameworks */,
+				C25400D61E1F4DC3001595EE /* libmicrohttpd.a in Frameworks */,
+				C25400D71E1F4DC3001595EE /* libssl.a in Frameworks */,
+				C25400D81E1F4DC3001595EE /* liburiparser.a in Frameworks */,
+				C25400C51E1F4D53001595EE /* libpaprika.a in Frameworks */,
+				A6BD754D4AA82D610A51C856 /* libPods-SendAnywhereSDK.a in Frameworks */,
+				3E017753874FE05092252E73 /* libPods-SendAnywhereSDK.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2D7961A1E24CB9E004B2E10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2D7961B1E24CB9E004B2E10 /* libpaprika_c.a in Frameworks */,
+				C2D7961C1E24CB9E004B2E10 /* SystemConfiguration.framework in Frameworks */,
+				C2D7961D1E24CB9E004B2E10 /* CoreTelephony.framework in Frameworks */,
+				C2D7961E1E24CB9E004B2E10 /* libc++.tbd in Frameworks */,
+				C2D7961F1E24CB9E004B2E10 /* libz.a in Frameworks */,
+				C2D796201E24CB9E004B2E10 /* libboost_filesystem.a in Frameworks */,
+				C2D796211E24CB9E004B2E10 /* libboost_regex.a in Frameworks */,
+				C2D796221E24CB9E004B2E10 /* libboost_system.a in Frameworks */,
+				C2D796231E24CB9E004B2E10 /* libcrypto.a in Frameworks */,
+				C2D796241E24CB9E004B2E10 /* libcurl.a in Frameworks */,
+				C2D796251E24CB9E004B2E10 /* libjsoncpp.a in Frameworks */,
+				C2D796261E24CB9E004B2E10 /* libmicrohttpd.a in Frameworks */,
+				C2D796271E24CB9E004B2E10 /* libssl.a in Frameworks */,
+				C2D796281E24CB9E004B2E10 /* liburiparser.a in Frameworks */,
+				C2D796291E24CB9E004B2E10 /* libpaprika.a in Frameworks */,
+				2A9EF97886E7D52297A75A23 /* libPods-paprika_sdk.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0B2977D142CD11FF0F80A99B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C2A21B731E27086500B462A4 /* libSystem.B.tbd */,
+				C26DB2C01E24B45100B62EAF /* libstdc++.tbd */,
+				C26DB2BE1E249E7000B62EAF /* Security.framework */,
+				C26DB2B31E24627700B62EAF /* libSystem.tbd */,
+				C25400DF1E1F920B001595EE /* SystemConfiguration.framework */,
+				C25400DD1E1F91EA001595EE /* CoreTelephony.framework */,
+				C25400DB1E1F8FFF001595EE /* libc++.tbd */,
+				C25400D91E1F865A001595EE /* libz.a */,
+				C25400C71E1F4DC3001595EE /* libboost_filesystem.a */,
+				C25400C81E1F4DC3001595EE /* libboost_regex.a */,
+				C25400C91E1F4DC3001595EE /* libboost_system.a */,
+				C25400CA1E1F4DC3001595EE /* libcrypto.a */,
+				C25400CB1E1F4DC3001595EE /* libcurl.a */,
+				C25400CC1E1F4DC3001595EE /* libjsoncpp.a */,
+				C25400CD1E1F4DC3001595EE /* libmicrohttpd.a */,
+				C25400CE1E1F4DC3001595EE /* libssl.a */,
+				C25400CF1E1F4DC3001595EE /* liburiparser.a */,
+				7B6BF96ACACF3E5F5D14C98E /* libPods-paprika_ios_4_sdk.a */,
+				BC08F3726A92591D4A3AA608 /* libPods-paprika_ios_4_sdkTests.a */,
+				14EE3DED822CD9F3E8014C60 /* libPods-SendAnywhereSDK.a */,
+				CC096BC98CCFB1C2FAB83AB3 /* libPods-paprika_sdk.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AB6988147E71F91BE906DADF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F25FA646FE87C9EF7B778AC3 /* Pods-paprika_ios_4_sdk.debug.xcconfig */,
+				08A961540954582F724AA9BA /* Pods-paprika_ios_4_sdk.release.xcconfig */,
+				6F48382F8669A2C3ECEB05AE /* Pods-paprika_ios_4_sdkTests.debug.xcconfig */,
+				7812A6B16D08E0BF47E1090E /* Pods-paprika_ios_4_sdkTests.release.xcconfig */,
+				95FDC48DDD7AABA71D759095 /* Pods-SendAnywhereSDK.debug.xcconfig */,
+				9B13B4F1B04F1E74A1A4D01D /* Pods-SendAnywhereSDK.release.xcconfig */,
+				7ADCC007F57CA7F5DC1B45BA /* Pods-paprika_sdk.debug.xcconfig */,
+				57441259CFA30ED372633854 /* Pods-paprika_sdk.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C208BC791E1DE5420087EC64 = {
+			isa = PBXGroup;
+			children = (
+				C208BCB01E1DE8A50087EC64 /* paprika.xcodeproj */,
+				C208BCA51E1DE8980087EC64 /* paprika_c.xcodeproj */,
+				C208BCC21E1DE8EC0087EC64 /* SendAnywhereSDK */,
+				C208BC841E1DE5420087EC64 /* Products */,
+				AB6988147E71F91BE906DADF /* Pods */,
+				0B2977D142CD11FF0F80A99B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C208BC841E1DE5420087EC64 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C208BCC11E1DE8EC0087EC64 /* SendAnywhereSDK.framework */,
+				C2D796461E24CB9E004B2E10 /* PaprikaSDK.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C208BCA61E1DE8980087EC64 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C208BCAD1E1DE8980087EC64 /* libpaprika_c.a */,
+				C208BCAF1E1DE8980087EC64 /* libsendanywhere.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C208BCB11E1DE8A50087EC64 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C208BCB71E1DE8A50087EC64 /* libpaprika.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C208BCC21E1DE8EC0087EC64 /* SendAnywhereSDK */ = {
+			isa = PBXGroup;
+			children = (
+				C2A218691E24E58100B462A4 /* resource */,
+				C2A218681E24E56200B462A4 /* public */,
+				C26DB2AD1E235AB300B62EAF /* paprika */,
+				C23FBDE41E20E1A000391982 /* private */,
+				C23FBDDA1E20E0F300391982 /* category */,
+				C2669CDD1E1E463000437C3A /* util */,
+				C2669CC31E1E236B00437C3A /* manager */,
+				C2669CC11E1E225F00437C3A /* global */,
+				C2669CB71E1E20ED00437C3A /* main */,
+			);
+			path = SendAnywhereSDK;
+			sourceTree = "<group>";
+		};
+		C208BDBD1E1DFC640087EC64 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				C2D796521E24D99F004B2E10 /* receive */,
+				C2669CD01E1E40ED00437C3A /* debug */,
+			);
+			name = ui;
+			sourceTree = "<group>";
+		};
+		C23FBDDA1E20E0F300391982 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				C23FBDED1E21C74F00391982 /* SATransferCommand+TypeUtils.h */,
+				C23FBDEE1E21C74F00391982 /* SATransferCommand+TypeUtils.m */,
+				C23FBDF11E226EAF00391982 /* NSString+sa.h */,
+				C23FBDF21E226EAF00391982 /* NSString+sa.m */,
+			);
+			name = category;
+			sourceTree = "<group>";
+		};
+		C23FBDE41E20E1A000391982 /* private */ = {
+			isa = PBXGroup;
+			children = (
+				C23FBDE51E20E1B400391982 /* SACommand+sa_private.h */,
+				C23FBDE61E20E1B400391982 /* SACommand+sa_private.m */,
+			);
+			name = private;
+			sourceTree = "<group>";
+		};
+		C2669CB71E1E20ED00437C3A /* main */ = {
+			isa = PBXGroup;
+			children = (
+				C2669CBD1E1E213000437C3A /* SendAnywhere.h */,
+				C2669CBE1E1E213000437C3A /* SendAnywhere.m */,
+			);
+			name = main;
+			sourceTree = "<group>";
+		};
+		C2669CC11E1E225F00437C3A /* global */ = {
+			isa = PBXGroup;
+			children = (
+				C2669CC21E1E227700437C3A /* Global.h */,
+				C2669CDE1E1E469200437C3A /* EventDef.h */,
+			);
+			name = global;
+			sourceTree = "<group>";
+		};
+		C2669CC31E1E236B00437C3A /* manager */ = {
+			isa = PBXGroup;
+			children = (
+				C2669CC41E1E238100437C3A /* PreferenceManager.h */,
+				C2669CC51E1E238100437C3A /* PreferenceManager.m */,
+				C25400C01E1F316D001595EE /* TransferManager.h */,
+				C25400C11E1F316D001595EE /* TransferManager.m */,
+				C26DB2A91E233D8800B62EAF /* CommandManager.h */,
+				C26DB2AA1E233D8800B62EAF /* CommandManager.m */,
+			);
+			name = manager;
+			sourceTree = "<group>";
+		};
+		C2669CCA1E1E3EF100437C3A /* command */ = {
+			isa = PBXGroup;
+			children = (
+				C25400AF1E1F2728001595EE /* SACommand.h */,
+				C25400B01E1F2728001595EE /* SACommand.m */,
+				C25400B81E1F2738001595EE /* SATransferCommand.h */,
+				C25400B91E1F2738001595EE /* SATransferCommand.m */,
+				C25400BC1E1F2769001595EE /* SAReceiveCommand.h */,
+				C25400BD1E1F2769001595EE /* SAReceiveCommand.m */,
+				C2A21BC51E276AE200B462A4 /* SASendCommand.h */,
+				C2A21BC61E276AE200B462A4 /* SASendCommand.mm */,
+			);
+			name = command;
+			sourceTree = "<group>";
+		};
+		C2669CD01E1E40ED00437C3A /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				C208BDBE1E1E15CB0087EC64 /* DebugReceiveMainViewController.h */,
+				C254FB8A1E24C8D300B5B7C1 /* SADebugReceiveViewController.h */,
+				C254FB8B1E24C8D300B5B7C1 /* SADebugReceiveViewController.m */,
+				C208BDBF1E1E15CB0087EC64 /* DebugReceiveMainViewController.m */,
+				C2669CD11E1E41A200437C3A /* DebugReceiveTableViewDataSource.h */,
+				C2669CD21E1E41A200437C3A /* DebugReceiveTableViewDataSource.m */,
+				C2669CD51E1E430800437C3A /* DebugReceiveTableViewCell.h */,
+				C2669CD61E1E430800437C3A /* DebugReceiveTableViewCell.m */,
+			);
+			name = debug;
+			sourceTree = "<group>";
+		};
+		C2669CDD1E1E463000437C3A /* util */ = {
+			isa = PBXGroup;
+			children = (
+				C2669CD91E1E462300437C3A /* Logger.h */,
+				C2669CDA1E1E462300437C3A /* Logger.m */,
+				C2669CDF1E1E499900437C3A /* EventUtil.h */,
+				C2669CE01E1E499900437C3A /* EventUtil.m */,
+				C26DB29C1E2338A600B62EAF /* StringUtil.h */,
+				C26DB29D1E2338A600B62EAF /* StringUtil.m */,
+				C26DB2A51E233B4600B62EAF /* CommonUtil.h */,
+				C26DB2A61E233B4600B62EAF /* CommonUtil.m */,
+				C26DB2BA1E247E6100B62EAF /* PaprikaUtil.h */,
+				C26DB2BB1E247E6100B62EAF /* PaprikaUtil.m */,
+			);
+			name = util;
+			sourceTree = "<group>";
+		};
+		C26DB2AD1E235AB300B62EAF /* paprika */ = {
+			isa = PBXGroup;
+			children = (
+				C26DB2AE1E235B5200B62EAF /* paprika_sdk.h */,
+				C26DB2AF1E235B5200B62EAF /* paprika.h */,
+			);
+			name = paprika;
+			sourceTree = "<group>";
+		};
+		C2A218681E24E56200B462A4 /* public */ = {
+			isa = PBXGroup;
+			children = (
+				C2669CCA1E1E3EF100437C3A /* command */,
+				C208BDBD1E1DFC640087EC64 /* ui */,
+				C208BCC31E1DE8EC0087EC64 /* SendAnywhereSDK.h */,
+				C2A218671E24E52000B462A4 /* PaprikaSDK.h */,
+				C2A218661E24E4BD00B462A4 /* SendAnywhereSDK_Headers.h */,
+				C2A2186A1E24E59D00B462A4 /* PaprikaSDK_Headers.h */,
+			);
+			name = public;
+			sourceTree = "<group>";
+		};
+		C2A218691E24E58100B462A4 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				C208BCC41E1DE8EC0087EC64 /* Info.plist */,
+				C2A218641E24E45000B462A4 /* PaprikaSDK-Info.plist */,
+			);
+			name = resource;
+			sourceTree = "<group>";
+		};
+		C2D796521E24D99F004B2E10 /* receive */ = {
+			isa = PBXGroup;
+			children = (
+				C2D796581E24D9B3004B2E10 /* ScanQRViewController.h */,
+				C2D796591E24D9B3004B2E10 /* ScanQRViewController.m */,
+			);
+			name = receive;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C208BCBE1E1DE8EC0087EC64 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C26DB2A71E233B4600B62EAF /* CommonUtil.h in Headers */,
+				C26DB2BC1E247E6100B62EAF /* PaprikaUtil.h in Headers */,
+				C2A21B0A1E26370600B462A4 /* SATransferCommand.h in Headers */,
+				C25400B11E1F2728001595EE /* SACommand.h in Headers */,
+				C2A21B091E2636ED00B462A4 /* SendAnywhere.h in Headers */,
+				C2A21BC71E276AE200B462A4 /* SASendCommand.h in Headers */,
+				C2A21B0B1E26371600B462A4 /* SAReceiveCommand.h in Headers */,
+				C2D7965A1E24D9B3004B2E10 /* ScanQRViewController.h in Headers */,
+				C26DB2B21E235BCF00B62EAF /* paprika.h in Headers */,
+				C2A2186E1E24E61600B462A4 /* SendAnywhereSDK_Headers.h in Headers */,
+				C2669CE11E1E499900437C3A /* EventUtil.h in Headers */,
+				C25400C21E1F316D001595EE /* TransferManager.h in Headers */,
+				C23FBDF31E226EAF00391982 /* NSString+sa.h in Headers */,
+				C2669CDB1E1E462300437C3A /* Logger.h in Headers */,
+				C26DB29E1E2338A600B62EAF /* StringUtil.h in Headers */,
+				C23FBDE71E20E1B400391982 /* SACommand+sa_private.h in Headers */,
+				C208BCD11E1DE8EC0087EC64 /* SendAnywhereSDK.h in Headers */,
+				C23FBDEF1E21C74F00391982 /* SATransferCommand+TypeUtils.h in Headers */,
+				C26DB2AB1E233D8800B62EAF /* CommandManager.h in Headers */,
+				C2669CC61E1E238100437C3A /* PreferenceManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2D7962B1E24CB9E004B2E10 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2D7962C1E24CB9E004B2E10 /* CommonUtil.h in Headers */,
+				C2D7962D1E24CB9E004B2E10 /* PaprikaUtil.h in Headers */,
+				C2D7962E1E24CB9E004B2E10 /* SACommand.h in Headers */,
+				C2D7962F1E24CB9E004B2E10 /* paprika.h in Headers */,
+				C2D796301E24CB9E004B2E10 /* SADebugReceiveViewController.h in Headers */,
+				C2A2186D1E24E5EB00B462A4 /* PaprikaSDK_Headers.h in Headers */,
+				C2A2186C1E24E5EB00B462A4 /* SendAnywhereSDK_Headers.h in Headers */,
+				C2A2186B1E24E5EB00B462A4 /* PaprikaSDK.h in Headers */,
+				C2A21BC81E276AE200B462A4 /* SASendCommand.h in Headers */,
+				C2D796311E24CB9E004B2E10 /* SAReceiveCommand.h in Headers */,
+				C2D796321E24CB9E004B2E10 /* SATransferCommand.h in Headers */,
+				C2D796331E24CB9E004B2E10 /* EventUtil.h in Headers */,
+				C2D796341E24CB9E004B2E10 /* TransferManager.h in Headers */,
+				C2D796351E24CB9E004B2E10 /* NSString+sa.h in Headers */,
+				C2D796361E24CB9E004B2E10 /* DebugReceiveTableViewDataSource.h in Headers */,
+				C2D796371E24CB9E004B2E10 /* Logger.h in Headers */,
+				C2D796381E24CB9E004B2E10 /* StringUtil.h in Headers */,
+				C2D796391E24CB9E004B2E10 /* DebugReceiveMainViewController.h in Headers */,
+				C2D7963A1E24CB9E004B2E10 /* SendAnywhere.h in Headers */,
+				C2D7963B1E24CB9E004B2E10 /* SACommand+sa_private.h in Headers */,
+				C2D7963D1E24CB9E004B2E10 /* SATransferCommand+TypeUtils.h in Headers */,
+				C2D7963E1E24CB9E004B2E10 /* DebugReceiveTableViewCell.h in Headers */,
+				C2D7963F1E24CB9E004B2E10 /* CommandManager.h in Headers */,
+				C2D796401E24CB9E004B2E10 /* PreferenceManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		C208BCC01E1DE8EC0087EC64 /* SendAnywhereSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C208BCD21E1DE8EC0087EC64 /* Build configuration list for PBXNativeTarget "SendAnywhereSDK" */;
+			buildPhases = (
+				CAE20A5FE3F459710524B6CF /* [CP] Check Pods Manifest.lock */,
+				C208BCBC1E1DE8EC0087EC64 /* Sources */,
+				C208BCBD1E1DE8EC0087EC64 /* Frameworks */,
+				C208BCBE1E1DE8EC0087EC64 /* Headers */,
+				C208BCBF1E1DE8EC0087EC64 /* Resources */,
+				20C09B327A657C193DBD7E41 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C2A21B061E2635CE00B462A4 /* PBXTargetDependency */,
+				C208BCD91E1DE8F80087EC64 /* PBXTargetDependency */,
+			);
+			name = SendAnywhereSDK;
+			productName = SendAnywhereSDK;
+			productReference = C208BCC11E1DE8EC0087EC64 /* SendAnywhereSDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C2D796001E24CB9E004B2E10 /* PaprikaSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2D796431E24CB9E004B2E10 /* Build configuration list for PBXNativeTarget "PaprikaSDK" */;
+			buildPhases = (
+				5DEA67E45A4C39F75115D79C /* [CP] Check Pods Manifest.lock */,
+				C2D796061E24CB9E004B2E10 /* Sources */,
+				C2D7961A1E24CB9E004B2E10 /* Frameworks */,
+				C2D7962B1E24CB9E004B2E10 /* Headers */,
+				C2D796411E24CB9E004B2E10 /* Resources */,
+				7924F16F5305982E0E36C84C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C2D796011E24CB9E004B2E10 /* PBXTargetDependency */,
+				C2D796031E24CB9E004B2E10 /* PBXTargetDependency */,
+			);
+			name = PaprikaSDK;
+			productName = SendAnywhereSDK;
+			productReference = C2D796461E24CB9E004B2E10 /* PaprikaSDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C208BC7A1E1DE5420087EC64 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = do;
+				TargetAttributes = {
+					C208BCC01E1DE8EC0087EC64 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = WXATB2S4F3;
+						ProvisioningStyle = Automatic;
+					};
+					C2D796001E24CB9E004B2E10 = {
+						DevelopmentTeam = WXATB2S4F3;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = C208BC7D1E1DE5420087EC64 /* Build configuration list for PBXProject "paprika_ios_4_sdk" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C208BC791E1DE5420087EC64;
+			productRefGroup = C208BC841E1DE5420087EC64 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C208BCB11E1DE8A50087EC64 /* Products */;
+					ProjectRef = C208BCB01E1DE8A50087EC64 /* paprika.xcodeproj */;
+				},
+				{
+					ProductGroup = C208BCA61E1DE8980087EC64 /* Products */;
+					ProjectRef = C208BCA51E1DE8980087EC64 /* paprika_c.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				C208BCC01E1DE8EC0087EC64 /* SendAnywhereSDK */,
+				C2D796001E24CB9E004B2E10 /* PaprikaSDK */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C208BCAD1E1DE8980087EC64 /* libpaprika_c.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libpaprika_c.a;
+			remoteRef = C208BCAC1E1DE8980087EC64 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C208BCAF1E1DE8980087EC64 /* libsendanywhere.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libsendanywhere.a;
+			remoteRef = C208BCAE1E1DE8980087EC64 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C208BCB71E1DE8A50087EC64 /* libpaprika.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libpaprika.a;
+			remoteRef = C208BCB61E1DE8A50087EC64 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C208BCBF1E1DE8EC0087EC64 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2A218651E24E45000B462A4 /* PaprikaSDK-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2D796411E24CB9E004B2E10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		20C09B327A657C193DBD7E41 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SendAnywhereSDK/Pods-SendAnywhereSDK-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5DEA67E45A4C39F75115D79C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7924F16F5305982E0E36C84C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-paprika_sdk/Pods-paprika_sdk-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CAE20A5FE3F459710524B6CF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C208BCBC1E1DE8EC0087EC64 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2D7965B1E24D9B3004B2E10 /* ScanQRViewController.m in Sources */,
+				C2669CD41E1E41A200437C3A /* DebugReceiveTableViewDataSource.m in Sources */,
+				C25400B21E1F2728001595EE /* SACommand.m in Sources */,
+				C26DB2BD1E247E6100B62EAF /* PaprikaUtil.m in Sources */,
+				C2669CDC1E1E462300437C3A /* Logger.m in Sources */,
+				C26DB2AC1E233D8800B62EAF /* CommandManager.m in Sources */,
+				C2669CE21E1E499900437C3A /* EventUtil.m in Sources */,
+				C25400BB1E1F2738001595EE /* SATransferCommand.m in Sources */,
+				C2669CD81E1E430800437C3A /* DebugReceiveTableViewCell.m in Sources */,
+				C25400C31E1F316D001595EE /* TransferManager.m in Sources */,
+				C23FBDF41E226EAF00391982 /* NSString+sa.m in Sources */,
+				C2669CC01E1E213000437C3A /* SendAnywhere.m in Sources */,
+				C26DB29F1E2338A600B62EAF /* StringUtil.m in Sources */,
+				C254FB8D1E24C8D300B5B7C1 /* SADebugReceiveViewController.m in Sources */,
+				C2669CC71E1E238100437C3A /* PreferenceManager.m in Sources */,
+				C208BDC11E1E15CB0087EC64 /* DebugReceiveMainViewController.m in Sources */,
+				C25400BF1E1F2769001595EE /* SAReceiveCommand.m in Sources */,
+				C23FBDF01E21C74F00391982 /* SATransferCommand+TypeUtils.m in Sources */,
+				C26DB2A81E233B4600B62EAF /* CommonUtil.m in Sources */,
+				C2A21BC91E276AE200B462A4 /* SASendCommand.mm in Sources */,
+				C23FBDE81E20E1B400391982 /* SACommand+sa_private.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2D796061E24CB9E004B2E10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2D7965E1E24DEEE004B2E10 /* ScanQRViewController.m in Sources */,
+				C2D796071E24CB9E004B2E10 /* DebugReceiveTableViewDataSource.m in Sources */,
+				C2D796081E24CB9E004B2E10 /* SACommand.m in Sources */,
+				C2D796091E24CB9E004B2E10 /* PaprikaUtil.m in Sources */,
+				C2D7960A1E24CB9E004B2E10 /* Logger.m in Sources */,
+				C2D7960B1E24CB9E004B2E10 /* CommandManager.m in Sources */,
+				C2D7960C1E24CB9E004B2E10 /* EventUtil.m in Sources */,
+				C2D7960D1E24CB9E004B2E10 /* SATransferCommand.m in Sources */,
+				C2D7960E1E24CB9E004B2E10 /* DebugReceiveTableViewCell.m in Sources */,
+				C2D7960F1E24CB9E004B2E10 /* TransferManager.m in Sources */,
+				C2D796101E24CB9E004B2E10 /* NSString+sa.m in Sources */,
+				C2D796111E24CB9E004B2E10 /* SendAnywhere.m in Sources */,
+				C2D796121E24CB9E004B2E10 /* StringUtil.m in Sources */,
+				C2D796131E24CB9E004B2E10 /* SADebugReceiveViewController.m in Sources */,
+				C2D796141E24CB9E004B2E10 /* PreferenceManager.m in Sources */,
+				C2D796151E24CB9E004B2E10 /* DebugReceiveMainViewController.m in Sources */,
+				C2D796161E24CB9E004B2E10 /* SAReceiveCommand.m in Sources */,
+				C2D796171E24CB9E004B2E10 /* SATransferCommand+TypeUtils.m in Sources */,
+				C2D796181E24CB9E004B2E10 /* CommonUtil.m in Sources */,
+				C2A21BCA1E276AE200B462A4 /* SASendCommand.mm in Sources */,
+				C2D796191E24CB9E004B2E10 /* SACommand+sa_private.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C208BCD91E1DE8F80087EC64 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = paprika;
+			targetProxy = C208BCD81E1DE8F80087EC64 /* PBXContainerItemProxy */;
+		};
+		C2A21B061E2635CE00B462A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = sendanywhere;
+			targetProxy = C2A21B051E2635CE00B462A4 /* PBXContainerItemProxy */;
+		};
+		C2D796011E24CB9E004B2E10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = paprika_c;
+			targetProxy = C2D796021E24CB9E004B2E10 /* PBXContainerItemProxy */;
+		};
+		C2D796031E24CB9E004B2E10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = paprika;
+			targetProxy = C2D796041E24CB9E004B2E10 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C208BC951E1DE5420087EC64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"${SRCROOT}/../paprika_cpplib/clib/paprika\"";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = "${SRCROOT}/../paprika_cpplib/iOS/lib";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C208BC961E1DE5420087EC64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"${SRCROOT}/../paprika_cpplib/clib/paprika\"";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = "${SRCROOT}/../paprika_cpplib/iOS/lib";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C208BCD31E1DE8EC0087EC64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95FDC48DDD7AABA71D759095 /* Pods-SendAnywhereSDK.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = WXATB2S4F3;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SendAnywhereSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.estmob.SendAnywhereSDK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SENDANYWHERE_SDK = YES;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C208BCD41E1DE8EC0087EC64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B13B4F1B04F1E74A1A4D01D /* Pods-SendAnywhereSDK.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = WXATB2S4F3;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SendAnywhereSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.estmob.SendAnywhereSDK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SENDANYWHERE_SDK = YES;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		C2D796441E24CB9E004B2E10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7ADCC007F57CA7F5DC1B45BA /* Pods-paprika_sdk.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = WXATB2S4F3;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SendAnywhereSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.estmob.SendAnywhereSDK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C2D796451E24CB9E004B2E10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57441259CFA30ED372633854 /* Pods-paprika_sdk.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = WXATB2S4F3;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SendAnywhereSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.estmob.SendAnywhereSDK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C208BC7D1E1DE5420087EC64 /* Build configuration list for PBXProject "paprika_ios_4_sdk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C208BC951E1DE5420087EC64 /* Debug */,
+				C208BC961E1DE5420087EC64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C208BCD21E1DE8EC0087EC64 /* Build configuration list for PBXNativeTarget "SendAnywhereSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C208BCD31E1DE8EC0087EC64 /* Debug */,
+				C208BCD41E1DE8EC0087EC64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2D796431E24CB9E004B2E10 /* Build configuration list for PBXNativeTarget "PaprikaSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2D796441E24CB9E004B2E10 /* Debug */,
+				C2D796451E24CB9E004B2E10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C208BC7A1E1DE5420087EC64 /* Project object */;
+}

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "3D5E04DD79ABA16F4A8C8FBF1CAD9CEE0CF931C7",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "3D5E04DD79ABA16F4A8C8FBF1CAD9CEE0CF931C7" : 9223372036854775807,
+    "B9F47DF572EB47964ACCF9BE2FBC0C2337BB6816" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "6F9D5E96-3308-42D7-A524-A06B0F3AA9A0",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "3D5E04DD79ABA16F4A8C8FBF1CAD9CEE0CF931C7" : "paprika_ios_4_sdk\/",
+    "B9F47DF572EB47964ACCF9BE2FBC0C2337BB6816" : ".."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "paprika_example",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "paprika_example\/paprika_example.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/estmob\/paprika_ios_4_sdk.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3D5E04DD79ABA16F4A8C8FBF1CAD9CEE0CF931C7"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/estmob\/paprika_cpplib.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B9F47DF572EB47964ACCF9BE2FBC0C2337BB6816"
+    }
+  ]
+}
