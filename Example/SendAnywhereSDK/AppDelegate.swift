@@ -17,10 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-//        SendAnywhere.withKey("INPUT_YOUR_API_KEY")
-        SendAnywhere.withKey("d225967173e9d95550b8f2fca8e659bc5c0fbddc")
-        SendAnywhere.sharedInstance().downloadFileFilter = [.document]
-
+        SendAnywhere.withKey("INPUT_YOUR_API_KEY")
         
         // If you want to download files of document type, Uncomment this line.
         //SendAnywhere.sharedInstance().downloadFileFilter = [.document]
