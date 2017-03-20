@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SendAnywhereSDK'
-  s.version          = '4.0.6'
+  s.version          = '4.0.7'
   s.summary          = 'SendAnywhereSDK is a kit for file transferring.'
   s.description      = '* SendAnywhereSDK is a kit for file transferring. *'
 
