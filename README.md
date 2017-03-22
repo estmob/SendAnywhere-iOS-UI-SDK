@@ -92,19 +92,19 @@ do {
 #### If you want to download file of specific type.
 
 ```swift
-// If you want to download files of document type, Uncomment this line.
+// If you want to download files of document type.
 SendAnywhere.sharedInstance().downloadFileFilter = [.document]
 
-// If you want to download files of image type, Uncomment this line.
+// If you want to download files of image type.
 SendAnywhere.sharedInstance().downloadFileFilter = [.image]
 
-// If you want to download files of audio type, Uncomment this line.
+// If you want to download files of audio type.
 SendAnywhere.sharedInstance().downloadFileFilter = [.audio]
 
-// If you want to download files of media type, Uncomment this line.
+// If you want to download files of media type.
 SendAnywhere.sharedInstance().downloadFileFilter = [.image, .video, .audio]
 
-// If you want to download files of custom file pattern, Uncomment this line.
+// If you want to download files of custom file pattern.
 SendAnywhere.sharedInstance().customFilePattern = "((.+)(\\.(?i)(jpg|jpeg|png|gif))$)"
 ```
 
