@@ -89,6 +89,25 @@ do {
 ![](./SampleImage/receive_waiting.png)
 ![](./SampleImage/receive_complete.png)
 
+#### If you want to download file of specific type.
+
+```swift
+// If you want to download files of document type, Uncomment this line.
+SendAnywhere.sharedInstance().downloadFileFilter = [.document]
+
+// If you want to download files of image type, Uncomment this line.
+SendAnywhere.sharedInstance().downloadFileFilter = [.image]
+
+// If you want to download files of audio type, Uncomment this line.
+SendAnywhere.sharedInstance().downloadFileFilter = [.audio]
+
+// If you want to download files of media type, Uncomment this line.
+SendAnywhere.sharedInstance().downloadFileFilter = [.image, .video, .audio]
+
+// If you want to download files of custom file pattern, Uncomment this line.
+SendAnywhere.sharedInstance().customFilePattern = "((.+)(\\.(?i)(jpg|jpeg|png|gif))$)"
+```
+
 #### Send files without UI.
 
 ```swift

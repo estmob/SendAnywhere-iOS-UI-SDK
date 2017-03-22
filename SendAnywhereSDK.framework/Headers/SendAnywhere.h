@@ -12,6 +12,9 @@
 typedef NS_OPTIONS(NSInteger, SAFileFilterType) {
     SAFileFilterTypeNone            = 0,
     SAFileFilterTypeDocument        = 1 << 0,
+    SAFileFilterTypeImage           = 1 << 1,
+    SAFileFilterTypeVideo           = 1 << 2,
+    SAFileFilterTypeAudio           = 1 << 3
 };
 
 @interface SendAnywhere : NSObject
