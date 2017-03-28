@@ -355,7 +355,7 @@
 "Receiving..." = "받는 중...";
 "%@ of %@" = "%@/%@";
 "%@ • %d Items" = "%@ • %d Files";
-"Completed" = "완료";
+"Completed" = "완료 됨.";
 "Other Party Canceled" = "상대방이 취소";
 "%@ copied to clipboard" = "클립보드에 \n복사되었습니다.";
 

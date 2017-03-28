@@ -355,7 +355,7 @@
 "Receiving..." = "Receiving...";
 "%@ of %@" = "%@ of %@";
 "%@ • %d Items" = "%@ • %d Items";
-"Completed" = "Completed";
+"Completed" = "Completed.";
 "Other Party Canceled" = "Other Party Canceled";
 "%@ copied to clipboard" = "Copied to clipboard";
 
