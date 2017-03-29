@@ -47,6 +47,8 @@ typedef NS_OPTIONS(NSInteger, SAFileFilterType) {
 
 @property (nonatomic, readonly) BOOL isTransferring;
 
+@property (nonatomic, assign) BOOL isLogging;
+
 /**
  *  Returns the SendAnywhereSDK singleton object.
  */

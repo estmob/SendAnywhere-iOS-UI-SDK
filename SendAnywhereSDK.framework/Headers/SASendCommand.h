@@ -31,7 +31,6 @@
 
 - (void)setupResource;
 - (size_t)getBuf:(char*)buf start:(unsigned long long)start length:(size_t)length;
-- (void)tryToDeleteDump;
 
 @end
 

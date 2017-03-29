@@ -1,5 +1,5 @@
 PODS:
-  - SendAnywhereSDK (4.0.4)
+  - SendAnywhereSDK (4.0.10)
 
 DEPENDENCIES:
   - SendAnywhereSDK (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  SendAnywhereSDK: b19a8b88d7a07958d88c3c07094f1a7fba09323e
+  SendAnywhereSDK: 4842656ce1a8de426a87f67ff246bb243b5943b3
 
 PODFILE CHECKSUM: edb5d23e978a4b5d3e84bf4d59b37ecd6bd75bca
 
