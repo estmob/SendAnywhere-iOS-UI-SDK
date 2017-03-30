@@ -17,6 +17,8 @@ typedef NS_OPTIONS(NSInteger, SAFileFilterType) {
     SAFileFilterTypeAudio           = 1 << 3
 };
 
+extern NSString *SATransferKeyCopiedNotification;
+
 @interface SendAnywhere : NSObject
 
 /**
