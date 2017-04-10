@@ -42,6 +42,8 @@ extern NSString *SATransferKeyCopiedNotification;
  */
 @property (nonatomic, retain) NSString *customFilePattern;
 
+@property (nonatomic, assign) NSTimeInterval transferTimeout;
+
 @property (nonatomic, readonly) NSString *apiKey;
 
 @property (nonatomic, readonly) BOOL isWifiMode;

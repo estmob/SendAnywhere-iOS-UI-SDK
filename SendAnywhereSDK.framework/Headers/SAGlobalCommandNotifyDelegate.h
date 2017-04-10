@@ -14,13 +14,14 @@
 @protocol SAGlobalCommandNotifyDelegate <NSObject>
 @optional
 - (void)willGlobalCommandStart:(SACommand*)sender;
-- (void)didGlobalCommandFinish:(SACommand*)sender;
+- (void)didGlobalCommandFinish:(SACommand*)sender transferred:(NSInteger)transferred excluded:(NSInteger)excluded;
 - (void)didGlobalTransferFileListUpdated:(SATransferCommand*)sender;
 - (void)willGlobalTransferStart:(SATransferCommand*)sender;
 - (void)willGlobalTransferFileStart:(SATransferCommand*)sender;
 - (void)didGlobalTransferFileFinish:(SATransferCommand*)sender fileIndex:(NSInteger)fileIndex filePath:(NSString*)filePath;
 - (void)didGlobalTransferFinish:(SATransferCommand*)sender;
 - (void)didGlobalTransferError:(SATransferCommand*)sender;
+- (void)didGlobalTransferCancel:(SATransferCommand*)sender;
 
 @end
 

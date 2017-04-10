@@ -239,6 +239,10 @@ typedef enum {
 
     // PAPRIKA_TASK_QUERY_KEYINFO
     PAPRIKA_VALUE_KEY_INFO,
+
+    // PAPRIKA_TASK_UPLOAD
+    PAPRIKA_VALUE_UPLOAD_CREATED_TIME,
+    PAPRIKA_VALUE_UPLOAD_KEY_TIMEOUT,
 } PaprikaValue;
 
 typedef void* PaprikaTask;

@@ -89,6 +89,8 @@ typedef NS_ENUM(NSInteger, SATransferFileStatus) {
 - (unsigned long long)fileTransferredSizeWithIndex:(NSInteger)index;
 - (unsigned long long)fileSizeWithIndex:(NSInteger)index;
 
+- (NSArray<NSString*>*)excludedFiles;
+
 - (void)updateFilePath:(NSString*)filePath index:(NSInteger)index;
 
 - (void)addPrepareObserver:(id)observer;

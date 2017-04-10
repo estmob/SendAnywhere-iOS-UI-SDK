@@ -34,6 +34,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If you want to download files of custom file pattern, Uncomment this line.
         //SendAnywhere.sharedInstance().customFilePattern = "((.+)(\\.(?i)(jpg|jpeg|png|gif))$)"
         
+        SendAnywhere.sharedInstance().transferTimeout = 5
+        
         return true
     }
 
