@@ -2,6 +2,9 @@
   <img src="https://dj8mgfv7cr8nn.cloudfront.net/assets/img/brand/logo_sendanywhere_retina.png" alt="SendAnywhere" title="SendAnywhere">
 </p>
 
+## ⚠️ DEPRECATED
+
+**This project is no longer maintained and has been deprecated. No further updates or support will be provided.**
 
 [![Version](https://img.shields.io/cocoapods/v/SendAnywhereSDK.svg?style=flat)](http://cocoapods.org/pods/SendAnywhereSDK)
 [![License](https://img.shields.io/cocoapods/l/SendAnywhereSDK.svg?style=flat)](http://cocoapods.org/pods/SendAnywhereSDK)
